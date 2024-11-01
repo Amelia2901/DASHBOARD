@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Akikita.id</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="left">
+        <i class="fas fa-bars menu-icon"> </i>
+        <div class="logo">
+          <img alt="Logo" height="40" src="Image/logo.jpg" width="40" />
+        </div>
+      </div>
+      <div class="icons">
+        <a class="cart-icon" href="https://akikita.web.id/search/">
+          <i class="fas fa-search"> </i>
+        </a>
+        <a href="https://akikita.web.id/shop-2/">
+          <i class="fas fa-store"> </i>
+        </a>
+        <a href="https://akikita.web.id/wishlist/">
+          <i class="fas fa-heart"> </i>
+        </a>
+        <a href="https://akikita.web.id/cart-2/">
+          <i class="fas fa-shopping-cart"> </i>
+        </a>
+        <a href="https://akikita.web.id/my-account-2/">
+          <i class="fas fa-user"> </i>
+        </a>
+      </div>
+    </div>
+    <div class="banner">
+      <div class="slides">
+        <img class="slide fade" alt="Banner Image 1" src="Image/Slide 1.png" />
+        <img class="slide fade" alt="Banner Image 2" src="Image/Slide 2.png" />
+        <img class="slide fade" alt="Banner Image 3" src="Image/Slide 3.png" />
+      </div>
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      <div class="text"></div>
+    </div>
+
+    <div class="container">
+      <div class="header">
+        <h1>Ini adalah percobaa</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="header">
+        <h1>Proses Pemesanan di Akikita.id</h1>
+        <a href="#"> Pasang Akimu Dengan Akikita </a>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">STEP 1</div>
+          <img
+            alt="Image of a computer and mobile phone displaying the Akikita website"
+            height="200"
+            src="https://storage.googleapis.com/a1aa/image/Daf82LaeiZtLDUOQ1ganxRoiRCQUelg51KYXfg14thFnsejdC.jpg"
+            width="300"
+          />
+          <h2>Pilih Aki Kendaraanmu</h2>
+          <p>Kunjungi Website Akikita</p>
+        </div>
+        <div class="step">
+          <div class="step-number">STEP 2</div>
+          <img
+            alt="Image of a mobile phone and calendar displaying scheduling options"
+            height="200"
+            src="https://storage.googleapis.com/a1aa/image/v5jnEXMHeCy7OiLMgNT9SMehkGDll8z7B7sf6dDe7czeY9jdC.jpg"
+            width="300"
+          />
+          <h2>Tentukan Waktu &amp; Lokasi Pemasangan</h2>
+          <p>Kunjungi Website Akikita</p>
+        </div>
+        <div class="step">
+          <div class="step-number">STEP 3</div>
+          <img
+            alt="Image of a technician with a battery ready for installation"
+            height="200"
+            src="https://storage.googleapis.com/a1aa/image/TPhkeH8jFKxfkUfvofj5dFwXp354hxnh6MKWYVBkJsgqsejdC.jpg"
+            width="300"
+          />
+          <h2>Teknisi Akikita Datang Untuk Pasang Aki</h2>
+          <p>Kunjungi Website Akikita</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="products"></div>
+    <div class="mobile-icons">
+      <a href="https://akikita.web.id/shop-2/">
+        <i class="fas fa-store"> </i>
+      </a>
+      <a href="https://akikita.web.id/search/">
+        <i class="fas fa-search"> </i>
+      </a>
+      <a href="https://akikita.web.id/wishlist/">
+        <i class="fas fa-heart"> </i>
+      </a>
+      <a href="https://akikita.web.id/my-account-2/">
+        <i class="fas fa-user"> </i>
+      </a>
+    </div>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+
+      function changeSlide(n) {
+        slideIndex += n;
+        let slides = document.getElementsByClassName("slide");
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        if (slideIndex < 1) {
+          slideIndex = slides.length;
+        }
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
