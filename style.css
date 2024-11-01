@@ -237,7 +237,7 @@ body {
 
 .search-box {
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow for better visibility */
   display: flex;
@@ -252,7 +252,7 @@ body {
   z-index: 1;
 }
 .search-box div {
-  flex: 1 1 30%;
+  flex: 1 1 10%;
   display: flex;
   flex-direction: column;
 }
@@ -270,22 +270,33 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .search-box button {
-  padding: 10px 20px;
+  padding: 15px; /* Reduce vertical padding to decrease button height */
   font-size: 16px;
   color: #fff;
   background-color: #95c64d;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  align-self: flex-end;
+  width: 10%; /* Adjust width as needed */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: 45px;
+  margin-top: auto;
 }
+
+.search-box button span.material-symbols-outlined {
+  margin-right: 8px; /* Space between icon and text */
+}
+
 .search-box h2 {
   width: 100%; /* Make it full width */
   text-align: left; /* Center the title */
   font-size: 20px; /* Set font size */
   color: #333; /* Set text color */
-  margin-bottom: 15px; /* Space below the title */
+  margin-bottom: 10px; /* Space below the title */
+  margin-top: -5px;
 }
 
 .container {
