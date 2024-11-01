@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  /* display: grid; */
+  /* place-items: center; */
 }
 .header {
   display: flex;
@@ -9,6 +11,24 @@ body {
   padding: 10px 20px;
   background-color: #fff;
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.background-div {
+  width: 95%; /* Lebar 95% dari kontainer */
+  height: 300px; /* Tinggi pendek */
+  background-image: url("Image/Slide 1.png"); /* Ganti dengan path foto Anda */
+  background-size: cover; /* Agar foto menutupi seluruh area div */
+  background-position: center; /* Memusatkan foto */
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  display: flex; /* Menambahkan display flex untuk menempatkan elemen di dalamnya */
+  color: white; /* Warna teks (opsional) */
+  text-align: center; /* Menyelaraskan teks di tengah */
+}
+.proses-pemesanan {
+  margin-top: 7% !important;
 }
 .header .left {
   display: flex;
@@ -266,4 +286,105 @@ body {
   font-size: 20px; /* Set font size */
   color: #333; /* Set text color */
   margin-bottom: 15px; /* Space below the title */
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header h1 {
+  font-size: 24px;
+  color: #333;
+}
+.header a {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+.special-offer,
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.special-offer {
+  width: 30%;
+  background-color: #fff;
+  border: 2px solid #8bc34a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-right: 20px;
+}
+.special-offer h2 {
+  font-size: 18px;
+  color: #8bc34a;
+  margin-bottom: 10px;
+}
+.special-offer p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.special-offer img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.special-offer .price {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.special-offer .stock {
+  font-size: 14px;
+  color: #8bc34a;
+}
+.product-grid {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-card {
+  width: 30%;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.product-card h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.product-card .price {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.product-card .stock {
+  font-size: 14px;
+  color: #8bc34a;
+}
+.product-card .wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 5px;
 }
