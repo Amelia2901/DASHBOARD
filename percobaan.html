@@ -1,0 +1,260 @@
+<label for="brand">Select Brand</label>
+<select id="brand">
+  <!-- Options akan diisi dari API -->
+</select>
+
+<div id="model-container" style="display: none">
+  <label for="model">Select Model</label>
+  <select id="model">
+    <option value="">Model</option>
+  </select>
+</div>
+
+<div id="fuel-container" style="display: none">
+  <label for="fuels">Select Fuels</label>
+  <select id="fuels">
+    <option value="">Fuels</option>
+    <option value="BENSIN">Bensin</option>
+    <option value="DIESEL">Diesel</option>
+    <option value="NONE">None</option>
+  </select>
+</div>
+
+<div id="transmission-container" style="display: none">
+  <label for="type_transmission">Type Transmissions</label>
+  <select id="type_transmission">
+    <option value="">Type Transmissions</option>
+    <option value="MANUAL">Manual</option>
+    <option value="MATIC">Matic</option>
+    <option value="NONE">None</option>
+  </select>
+</div>
+
+<div id="year-container" style="display: none">
+  <label for="year">Year</label>
+  <select id="year">
+    <option value="">Year</option>
+    <!-- Opsi tahun diisi secara dinamis -->
+  </select>
+</div>
+
+<button id="searchButton" style="display: none">
+  <span class="material-symbols-outlined"> search </span>
+  <p>Search</p>
+</button>
+
+<div id="results" style="margin-top: 20px"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  // Fungsi untuk memuat data merek
+  function loadBrandOptions() {
+    $.ajax({
+      url: "https://ams.akikita.web.id/api/filter/brand",
+      method: "GET",
+      success: function (response) {
+        if (response.status === "success") {
+          $("#brand").empty().append('<option value="">Select Brand</option>');
+          response.data.forEach(function (brand) {
+            $("#brand").append(
+              $("<option>", {
+                value: brand,
+                text: brand,
+              })
+            );
+          });
+        } else {
+          alert("Data brand tidak ditemukan");
+        }
+      },
+      error: function () {
+        alert("Gagal memuat data brand");
+      },
+    });
+  }
+
+  // Fungsi untuk memuat data model berdasarkan brand yang dipilih
+  function loadModelOptions(selectedBrand) {
+    $.ajax({
+      url: `https://ams.akikita.web.id/api/filter/brand/${encodeURIComponent(
+        selectedBrand
+      )}`,
+      method: "GET",
+      success: function (response) {
+        if (response.status === "success") {
+          $("#model-container").show();
+          $("#model").empty().append('<option value="">Model</option>');
+          response.data.forEach(function (model) {
+            $("#model").append(
+              $("<option>", {
+                value: model,
+                text: model,
+              })
+            );
+          });
+        } else {
+          alert("Data model tidak ditemukan");
+        }
+      },
+      error: function () {
+        alert("Gagal memuat data model");
+      },
+    });
+  }
+
+  // Fungsi untuk memuat detail model berdasarkan model yang dipilih
+  function loadModelDetails(selectedModel) {
+    $.ajax({
+      url: `https://ams.akikita.web.id/api/filter/model/${encodeURIComponent(
+        selectedModel
+      )}`,
+      method: "GET",
+      success: function (response) {
+        if (response.status === "success") {
+          $("#fuel-container").show();
+          $("#transmission-container").show();
+          $("#year-container").show();
+          $("#searchButton").show();
+
+          // Kosongkan opsi tahun sebelumnya dan isi dari 1965 sampai 2024
+          $("#year").empty().append('<option value="">Year</option>');
+          for (let year = 1965; year <= 2024; year++) {
+            $("#year").append(
+              $("<option>", {
+                value: year,
+                text: year,
+              })
+            );
+          }
+        } else {
+          alert("Detail model tidak ditemukan");
+        }
+      },
+      error: function () {
+        alert("Gagal memuat detail model");
+      },
+    });
+  }
+
+  // Fungsi untuk mencari berdasarkan kriteria yang dipilih
+  function search() {
+    const selectedBrand = $("#brand").val();
+    const selectedModel = $("#model").val();
+    const selectedFuel = $("#fuels").val();
+    const selectedTransmission = $("#type_transmission").val();
+    const selectedYear = $("#year").val();
+
+    if (
+      !selectedModel ||
+      !selectedFuel ||
+      !selectedTransmission ||
+      !selectedYear
+    ) {
+      alert("Silakan pilih semua kriteria.");
+      return;
+    }
+
+    $.ajax({
+      url: `https://ams.akikita.web.id/api/filter/model/${encodeURIComponent(
+        selectedModel
+      )}`,
+      method: "GET",
+      success: function (response) {
+        if (response.status === "success") {
+          const filteredData = response.data.filter((item) => {
+            const year = parseInt(item.starting_year);
+            return (
+              item.brand.toUpperCase() === selectedBrand.toUpperCase() &&
+              item.fuel_type === selectedFuel &&
+              item.transmission === selectedTransmission &&
+              year <= selectedYear
+            );
+          });
+
+          displayResults(filteredData);
+        } else {
+          alert("Data tidak ditemukan");
+        }
+      },
+      error: function () {
+        alert("Gagal memuat data");
+      },
+    });
+  }
+
+  // Fungsi untuk menampilkan hasil pencarian
+  function displayResults(data) {
+    $("#results").empty();
+    if (data.length === 0) {
+      $("#results").append(
+        "<p>Tidak ada data yang sesuai dengan kriteria.</p>"
+      );
+      return;
+    }
+
+    const resultsHtml = data
+      .map(
+        (item) => `
+      <div>
+        <h4>${item.model} (${item.starting_year} - ${item.ending_year})</h4>
+        <p>Fuel Type: ${item.fuel_type}</p>
+        <p>Transmission: ${item.transmission}</p>
+        <p>Battery Size Category: ${item.battery_size_category}</p>
+        <p>Batteries:</p>
+        <ul>
+          ${item.batteries
+            .map(
+              (battery) =>
+                `<li>${battery.name} - ${battery.price_retail} IDR</li>`
+            )
+            .join("")}
+        </ul>
+      </div>
+    `
+      )
+      .join("");
+
+    $("#results").append(resultsHtml);
+  }
+
+  // Panggil fungsi loadBrandOptions ketika halaman dimuat
+  $(document).ready(function () {
+    loadBrandOptions();
+  });
+
+  // Panggil fungsi loadModelOptions ketika ada perubahan pada pilihan merek
+  $("#brand").on("change", function () {
+    const selectedBrand = $(this).val();
+    if (selectedBrand) {
+      loadModelOptions(selectedBrand);
+    } else {
+      $("#model-container").hide();
+      $("#fuel-container").hide();
+      $("#transmission-container").hide();
+      $("#year-container").hide();
+      $("#searchButton").hide();
+      $("#model").empty().append('<option value="">Model</option>');
+    }
+  });
+
+  // Panggil fungsi loadModelDetails ketika ada perubahan pada pilihan model
+  $("#model").on("change", function () {
+    const selectedModel = $(this).val();
+    if (selectedModel) {
+      loadModelDetails(selectedModel);
+    } else {
+      $("#fuel-container").hide();
+      $("#transmission-container").hide();
+      $("#year-container").hide();
+      $("#searchButton").hide();
+      $("#fuels").val("");
+      $("#type_transmission").val("");
+      $("#year").val("");
+    }
+  });
+
+  // Panggil fungsi search ketika tombol search diklik
+  $("#searchButton").on("click", function () {
+    search();
+  });
+</script>
