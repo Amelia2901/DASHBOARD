@@ -341,7 +341,6 @@
         });
       }
 
-      // Fungsi untuk menampilkan hasil pencarian
       function displayResults(data) {
         $("#results").empty();
         if (data.length === 0) {
@@ -354,22 +353,28 @@
         const resultsHtml = data
           .map(
             (item) => `
-      <div>
-        <h4>${item.model} (${item.starting_year} - ${item.ending_year})</h4>
-        <p>Fuel Type: ${item.fuel_type}</p>
-        <p>Transmission: ${item.transmission}</p>
-        <p>Battery Size Category: ${item.battery_size_category}</p>
-        <p>Batteries:</p>
-        <ul>
-          ${item.batteries
-            .map(
-              (battery) =>
-                `<li>${battery.name} - ${battery.price_retail} IDR</li>`
-            )
-            .join("")}
-        </ul>
-      </div>
-    `
+        <div class="card">
+          <div class="card-header">
+            <h4>${item.model} (${item.starting_year} - ${item.ending_year})</h4>
+          </div>
+          <div class="card-body">
+            <p><strong>Fuel Type:</strong> ${item.fuel_type}</p>
+            <p><strong>Transmission:</strong> ${item.transmission}</p>
+            <p><strong>Battery Size Category:</strong> ${
+              item.battery_size_category
+            }</p>
+            <p><strong>Batteries:</strong></p>
+            <ul>
+              ${item.batteries
+                .map(
+                  (battery) =>
+                    `<li>${battery.name} - ${battery.price_retail} IDR</li>`
+                )
+                .join("")}
+            </ul>
+          </div>
+        </div>
+      `
           )
           .join("");
 
