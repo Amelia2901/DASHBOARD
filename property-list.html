@@ -362,7 +362,9 @@
                       </div>
                       <div class="p-4 pb-0">
                         <h5 class="text-primary mb-3">Rp ${battery.price_retail.toLocaleString()}</h5>
-                        <a class="d-block h5 mb-2" href="#">${battery.name}</a>
+                        <a class="d-block h5 mb-2 battery-link" href="#" data-battery-id="${
+                          battery.id
+                        }">${battery.name}</a>
                         <p><i class="fas fa-car-battery text-primary me-2"></i>Size: ${
                           item.battery_size_category
                         } - ${battery.name_alternate}</p>
@@ -427,6 +429,15 @@
               alert('Model belum dipilih');
             }
           });
+        });
+      </script>
+
+      <!-- Perpindahan ke halaman detail -->
+      <script>
+        $(document).on('click', '.battery-link', function (e) {
+          e.preventDefault(); // Mencegah aksi default link
+          const batteryId = $(this).data('battery-id');
+          window.location.href = `detail.html?batteryId=${batteryId}`;
         });
       </script>
 

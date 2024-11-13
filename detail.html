@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AMS - STORE</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container-xxl bg-white p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Navbar Start -->
+      <div class="container-fluid nav-bar bg-transparent">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+          <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+            <div class="icon p-2 me-2">
+              <img
+                class="img-fluid"
+                src="img/logo1.jpg"
+                alt="Icon"
+                style="width: 35px; height: 35px"
+              />
+            </div>
+            <h3 class="m-0 text-primary">Akita.id</h3>
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="index.html" class="nav-item nav-link active">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <!-- Icon Store -->
+              </a>
+              <a href="cart.html" class="nav-item nav-link">
+                <i class="fas fa-shopping-cart"></i>
+                <!-- Icon Cart -->
+              </a>
+              <a href="wishlist.html" class="nav-item nav-link">
+                <i class="fas fa-heart"></i>
+                <!-- Icon Wishlist -->
+              </a>
+              <a href="about.html" class="nav-item nav-link">
+                <i class="fas fa-user"></i>
+                <!-- Icon User -->
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+      <style>
+          body {
+              font-family: 'Arial', sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f9f9f9;
+          }
+          .container {
+              width: 80%;
+              margin: 0 auto;
+              padding: 20px;
+          }
+          .breadcrumb {
+              font-size: 14px;
+              color: #888;
+              margin-bottom: 20px;
+          }
+          .breadcrumb a {
+              color: #888;
+              text-decoration: none;
+          }
+          .breadcrumb a:hover {
+              text-decoration: underline;
+          }
+          .product {
+              display: flex;
+              background-color: #fff;
+              padding: 20px;
+              border-radius: 10px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+          .product-images {
+              width: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+          .product-images img {
+              width: 100%;
+              border: 1px solid #ddd;
+              border-radius: 5px;
+          }
+          .product-details {
+              width: 50%;
+              padding-left: 20px;
+          }
+          .product-details h1 {
+              font-size: 28px;
+              margin-bottom: 10px;
+              color: #333;
+          }
+          .product-details p {
+              color: #666;
+              margin-bottom: 20px;
+              line-height: 1.6;
+          }
+          .product-details .price {
+              font-size: 24px;
+              color: black;
+              margin-bottom: 10px;
+          }
+          .product-details .price del {
+              color: #888;
+              margin-right: 10px;
+          }
+          .product-details .rating {
+              color: #f39c12;
+              margin-bottom: 20px;
+          }
+          .product-details .free-delivery {
+              background-color: #f9f9f9;
+              padding: 10px;
+              border: 1px solid #ddd;
+              margin-bottom: 20px;
+              display: flex;
+              align-items: center;
+              border-radius: 5px;
+          }
+          .product-details .free-delivery i {
+              margin-right: 10px;
+          }
+          .product-details .quantity {
+              display: flex;
+              align-items: center;
+              margin-bottom: 20px;
+          }
+          .product-details .quantity input {
+              width: 40px;
+              text-align: center;
+              margin: 0 10px;
+              border: 1px solid #ddd;
+              border-radius: 5px;
+              padding: 5px;
+          }
+          .product-details .quantity button {
+              background-color: #ddd;
+              border: none;
+              padding: 5px 10px;
+              cursor: pointer;
+              border-radius: 5px;
+              transition: background-color 0.3s;
+          }
+          .product-details .quantity button:hover {
+              background-color: #ccc;
+          }
+          .product-details .add-to-cart {
+              background-color: #8ec643;
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              cursor: pointer;
+              border-radius: 5px;
+              transition: background-color 0.3s;
+          }
+          .product-details .add-to-cart:hover {
+              background-color: #a3dd58;
+          }
+          .product-details .wishlist {
+              background-color: white;
+              color: #8ec643;
+              padding: 10px;
+              border: 1px solid #8ec643;
+              cursor: pointer;
+              margin-left: 10px;
+              border-radius: 5px;
+              transition: background-color 0.3s, color 0.3s;
+          }
+          .product-details .wishlist:hover {
+              background-color: #8ec643;
+              color: white;
+          }
+          .recommendations {
+              margin-top: 40px;
+          }
+          .recommendations h2 {
+              font-size: 24px;
+              margin-bottom: 20px;
+              color: #333;
+          }
+          .recommendations .slider {
+              display: flex;
+              overflow-x: auto;
+          }
+          .recommendations .slider .item {
+              min-width: 200px;
+              margin-right: 20px;
+              background-color: #fff;
+              padding: 10px;
+              border-radius: 10px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              text-align: center;
+          }
+          .recommendations .slider .item img {
+              width: 100%;
+              border-radius: 5px;
+              margin-bottom: 10px;
+          }
+          .recommendations .slider .item h3 {
+              font-size: 18px;
+              margin-bottom: 10px;
+              color: #333;
+          }
+          .recommendations .slider .item .price {
+              font-size: 16px;
+              color: #8ec643;
+          }
+    </style>
+   </head>
+   <body>
+    <div class="container">
+     <nav aria-label="breadcrumb animated fadeIn">
+        <ol class="breadcrumb text-uppercase">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item text-body active" aria-current="page">Property List</li>
+        </ol>
+        </nav>
+     <div class="product">
+      <div class="product-images">
+       <img alt="Image of a car battery" height="600" src="" width="500"/>
+      </div>
+      <div class="product-details">
+       <h1 id="name">
+        Car Battery
+       </h1>
+       <p>
+        Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut...
+       </p>
+       <div class="price">
+        <del>
+         $629.99
+        </del>
+        $495.00
+       </div>
+       <div class="rating">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star-half-alt">
+        </i>
+       </div>
+       
+       <div class="quantity">
+        <label for="quantity">
+         Quantity:
+        </label>
+        <button>
+         -
+        </button>
+        <input id="quantity" type="text" value="1"/>
+        <button>
+         +
+        </button>
+       </div>
+       <button class="add-to-cart">
+        ADD TO CART
+       </button>
+       <button class="wishlist">
+        <i class="fas fa-heart">
+        </i>
+       </button>
+      </div>
+     </div>
+     <div class="recommendations">
+      <h2>
+       Recommended Batteries
+      </h2>
+      <div class="slider">
+       <div class="item">
+        <img alt="Recommended battery 1" height="200" src="https://storage.googleapis.com/a1aa/image/vhYgaxvKm15AOBYzFTWtuLK1MB4Gcy7z60bDv6MFSxDkcI8E.jpg" width="200"/>
+        <h3>
+         Battery 1
+        </h3>
+        <div class="price">
+         $299.99
+        </div>
+       </div>
+       <div class="item">
+        <img alt="Recommended battery 2" height="200" src="https://storage.googleapis.com/a1aa/image/Q4QfH7xxnNTTCigg491W3PUwANYefpURJNzguSEhvlVdkDhnA.jpg" width="200"/>
+        <h3>
+         Battery 2
+        </h3>
+        <div class="price">
+         $349.99
+        </div>
+       </div>
+       <div class="item">
+        <img alt="Recommended battery 3" height="200" src="https://storage.googleapis.com/a1aa/image/fj5v9fasVCof8IvLQ4TvWZ3rLfkwwu6StDVBLpIXwCiyIHCPB.jpg" width="200"/>
+        <h3>
+         Battery 3
+        </h3>
+        <div class="price">
+         $399.99
+        </div>
+       </div>
+       <div class="item">
+        <img alt="Recommended battery 4" height="200" src="https://storage.googleapis.com/a1aa/image/zI9GRvP8lzZcCZYv1FyYdnLfDDfLgV1Mi3eSKex1xUv3IHCPB.jpg" width="200"/>
+        <h3>
+         Battery 4
+        </h3>
+        <div class="price">
+         $449.99
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Get In Touch</h5>
+              <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+              <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+              <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Quick Links</h5>
+              <a class="btn btn-link text-white-50" href="">About Us</a>
+              <a class="btn btn-link text-white-50" href="">Contact Us</a>
+              <a class="btn btn-link text-white-50" href="">Our Services</a>
+              <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+              <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Photo Gallery</h5>
+              <div class="row g-2 pt-2">
+                <div class="col-4">
+                  <img class="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="" />
+                </div>
+                <div class="col-4">
+                  <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="" />
+                </div>
+                <div class="col-4">
+                  <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="" />
+                </div>
+                <div class="col-4">
+                  <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="" />
+                </div>
+                <div class="col-4">
+                  <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="" />
+                </div>
+                <div class="col-4">
+                  <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Newsletter</h5>
+              <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+              <div class="position-relative mx-auto" style="max-width: 400px">
+                <input
+                  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                  type="text"
+                  placeholder="Your email"
+                />
+                <button
+                  type="button"
+                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                >
+                  SignUp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                  <a href="">Home</a>
+                  <a href="">Cookies</a>
+                  <a href="">Help</a>
+                  <a href="">FQAs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
