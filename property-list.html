@@ -308,6 +308,24 @@
             }
           });
 
+          $(document).ready(function () {
+            // Fungsi untuk mengambil query parameter dari URL
+            function getQueryParam(param) {
+              const urlParams = new URLSearchParams(window.location.search);
+              return urlParams.get(param);
+            }
+
+            // Ambil model dari query parameter
+            const selectedModel = getQueryParam('model');
+
+            // Jika ada model yang dipilih, lakukan pencarian
+            if (selectedModel) {
+              searchByModel(selectedModel);
+            } else {
+              $('#property-container').append('<p>Model belum dipilih atau tidak ditemukan</p>');
+            }
+          });
+
           // Fungsi untuk mengambil data dari API berdasarkan model yang dipilih
           function searchByModel(selectedModel) {
             const searchUrl = `https://ams.akikita.web.id/api/filter/model/${encodeURIComponent(
