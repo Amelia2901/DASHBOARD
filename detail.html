@@ -463,30 +463,10 @@
     <script src="js/main.js"></script>
 
     <script>
-      $(document).ready(function () {
-        // Function to get parameters from the URL
-        function getUrlParameter(name) {
-          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-          const regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-          const results = regex.exec(location.search);
-          return results === null
-            ? ""
-            : decodeURIComponent(results[1].replace(/\+/g, " "));
-        }
-
-        // Get batteryId and model from the URL
-        const batteryId = getUrlParameter("batteryId");
-        const selectedModel = getUrlParameter("model");
-
-        // Check if batteryId exists
-        if (!batteryId) {
-          alert("ID baterai tidak ditemukan.");
-          return;
-        }
-
-        // 1. Call API to get battery details
+      // Function to update battery details, moved outside of $(document).ready
+      function updateBatteryDetails(batteryId) {
         $.ajax({
-          url: `https://ams.akikita.web.id/api/filter/battery/${batteryId}`, // API URL for battery details
+          url: `https://ams.akikita.web.id/api/filter/battery/${batteryId}`,
           method: "GET",
           dataType: "json",
           success: function (response) {
@@ -496,7 +476,7 @@
               response.data &&
               response.data.length > 0
             ) {
-              const batteryData = response.data[0]; // Get the first battery data
+              const batteryData = response.data[0];
 
               // Update battery name
               $("#name").text(batteryData.name || "Nama tidak tersedia");
@@ -546,22 +526,44 @@
             alert("Gagal memuat data produk. Silakan coba lagi nanti.");
           },
         });
+      }
 
-        // 2. Call API to get battery recommendations based on the selected model
+      $(document).ready(function () {
+        // Function to get parameters from the URL
+        function getUrlParameter(name) {
+          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+          const regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+          const results = regex.exec(location.search);
+          return results === null
+            ? ""
+            : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        // Get batteryId and model from the URL
+        const batteryId = getUrlParameter("batteryId");
+        const selectedModel = getUrlParameter("model");
+
+        // Initial load with batteryId from URL
+        if (batteryId) {
+          updateBatteryDetails(batteryId);
+        } else {
+          alert("ID baterai tidak ditemukan.");
+        }
+
+        // Call API to get battery recommendations based on the selected model
         if (selectedModel) {
           $.ajax({
             url: `https://ams.akikita.web.id/api/filter/model/${encodeURIComponent(
               selectedModel
-            )}`, // API URL for model-based recommendations
+            )}`,
             method: "GET",
             success: function (response) {
-              $(".recommendations .slider").empty(); // Clear container before adding new data
+              $(".recommendations .slider").empty();
 
               if (response.status === "success" && response.data.length > 0) {
-                const modelData = response.data[0]; // Get the model data
-                const batteries = modelData.batteries || []; // Get the list of batteries
+                const modelData = response.data[0];
+                const batteries = modelData.batteries || [];
 
-                // Loop through the batteries array and add each battery to recommendations
                 batteries.forEach(function (battery) {
                   const recommendationHtml = `
                   <div class="item">
@@ -573,7 +575,13 @@
                       }"
                       width="200"
                     />
-                    <h3>${battery.name}</h3>
+                    <h3>
+                      <a href="#" class="battery-link" data-battery-id="${
+                        battery.id
+                      }">
+                        ${battery.name}
+                      </a>
+                    </h3>
                     <div class="price">Rp ${battery.price_retail.toLocaleString(
                       "id-ID"
                     )}</div>
@@ -591,6 +599,13 @@
             },
           });
         }
+      });
+
+      // Event listener for .battery-link clicks to update battery details
+      $(document).on("click", ".battery-link", function (e) {
+        e.preventDefault();
+        const batteryId = $(this).data("battery-id");
+        updateBatteryDetails(batteryId);
       });
     </script>
   </body>
