@@ -40,7 +40,7 @@
 
     <style>
       body {
-        font-family: "Arial", sans-serif;
+        font-family: 'Arial', sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f9f9f9;
@@ -143,17 +143,30 @@
       .product-details .quantity button:hover {
         background-color: #ccc;
       }
-      .product-details .add .product-details .add-to-cart {
-        background-color: #8ec643;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s;
+      .add-to-cart {
+        background-color: #8ec643; /* Warna latar belakang hijau cerah */
+        color: white; /* Warna teks putih */
+        border: none; /* Tanpa border */
+        border-radius: 5px; /* Sudut membulat */
+        padding: 10px 20px; /* Padding atas-bawah dan kiri-kanan */
+        font-size: 16px; /* Ukuran font */
+        font-weight: bold; /* Teks tebal */
+        cursor: pointer; /* Kursor berubah menjadi pointer saat hover */
+        transition: background-color 0.3s, transform 0.2s; /* Transisi untuk efek hover */
       }
-      .product-details .add-to-cart:hover {
-        background-color: #a3dd58;
+
+      .add-to-cart:hover {
+        background-color: #7abf3a; /* Warna latar belakang saat hover (sedikit lebih gelap) */
+        transform: scale(1.05); /* Efek zoom saat hover */
+      }
+
+      .add-to-cart:active {
+        transform: scale(0.95); /* Efek zoom saat tombol ditekan */
+      }
+
+      .add-to-cart:focus {
+        outline: none; /* Menghilangkan outline saat fokus */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Menambahkan bayangan saat fokus */
       }
       .product-details .wishlist {
         background-color: white;
@@ -214,11 +227,7 @@
         id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
       >
-        <div
-          class="spinner-border text-primary"
-          style="width: 3rem; height: 3rem"
-          role="status"
-        >
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
           <span class="sr-only">Loading...</span>
         </div>
       </div>
@@ -227,10 +236,7 @@
       <!-- Navbar Start -->
       <div class="container-fluid nav-bar bg-transparent">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-          <a
-            href="index.html"
-            class="navbar-brand d-flex align-items-center text-center"
-          >
+          <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
             <div class="icon p-2 me-2">
               <img
                 class="img-fluid"
@@ -273,20 +279,12 @@
           <ol class="breadcrumb text-uppercase">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Pages</a></li>
-            <li class="breadcrumb-item text-body active" aria-current="page">
-              Property List
-            </li>
+            <li class="breadcrumb-item text-body active" aria-current="page">Property List</li>
           </ol>
         </nav>
         <div class="product">
           <div class="product-images">
-            <img
-              id="batteryImage"
-              alt="Image of a car battery"
-              height="600"
-              src=""
-              width="500"
-            />
+            <img id="batteryImage" alt="Image of a car battery" height="600" src="" width="500" />
           </div>
           <div class="product-details">
             <h1 id="name"></h1>
@@ -318,125 +316,79 @@
       >
         <div class="container py-5">
           <div class="row g-5">
+            <!-- Akikita.id Section -->
             <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Get In Touch</h5>
-              <p class="mb-2">
-                <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York,
-                USA
+              <h5 class="text-white mb-4">Akikita.id</h5>
+              <p class="text-white mb-3">
+                Akikita.id adalah layanan antar pasang aki untuk kendaraan di wilayah Bandung.
+                Teknisi terlatih kami siap melayani Anda.
               </p>
-              <p class="mb-2">
-                <i class="fa fa-phone-alt me-3"></i>+012 345 67890
-              </p>
-              <p class="mb-2">
-                <i class="fa fa-envelope me-3"></i>info@example.com
-              </p>
-              <div class="d-flex pt-2">
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-youtube"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-              </div>
+              <div class="d-flex pt-2"></div>
             </div>
+
+            <!-- Quick Links Section -->
             <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Quick Links</h5>
+              <h5 class="text-white mb-4">Navigasi</h5>
               <a class="btn btn-link text-white-50" href="">About Us</a>
               <a class="btn btn-link text-white-50" href="">Contact Us</a>
               <a class="btn btn-link text-white-50" href="">Our Services</a>
               <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-              <a class="btn btn-link text-white-50" href=""
-                >Terms & Condition</a
-              >
+              <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
             </div>
+
+            <!-- Office Location Section -->
             <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Photo Gallery</h5>
-              <div class="row g-2 pt-2">
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-2.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-4.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-5.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    class="img-fluid rounded bg-light p-1"
-                    src="img/property-6.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
+              <h5 class="text-white mb-4">Kantor Utama</h5>
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>
+                Jalan Raya Daan Mogot KM. 18, Green Sedayu Bizpark DM5 Nomor 58, Provinsi DKI
+                Jakarta
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>
+                +62-8222-8800-175
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i>
+                akikita.id@gmail.com
+              </p>
             </div>
+
+            <!-- Social Media Section -->
             <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Newsletter</h5>
-              <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-              <div class="position-relative mx-auto" style="max-width: 400px">
-                <input
-                  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-                  type="text"
-                  placeholder="Your email"
-                />
-                <button
-                  type="button"
-                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-                >
-                  SignUp
-                </button>
+              <h5 class="text-white mb-4">Sosial Media</h5>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social mx-1" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social mx-1" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social mx-1" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social mx-1" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Copyright Section -->
         <div class="container">
           <div class="copyright">
             <div class="row">
               <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All
-                Right Reserved. Designed By
-                <a class="border-bottom" href="https://htmlcodex.com"
-                  >HTML Codex</a
-                >
+                &copy; <a class="border-bottom" href="#">Akikita.id</a>, All Right Reserved.
+                Designed By <a class="border-bottom" href="">Footprint Solution 2024</a>
               </div>
               <div class="col-md-6 text-center text-md-end">
                 <div class="footer-menu">
                   <a href="">Home</a>
                   <a href="">Cookies</a>
                   <a href="">Help</a>
-                  <a href="">FQAs</a>
+                  <a href="">FAQs</a>
                 </div>
               </div>
             </div>
@@ -463,29 +415,47 @@
     <script src="js/main.js"></script>
 
     <script>
-      // Function to update battery details, moved outside of $(document).ready
-      function updateBatteryDetails(batteryId) {
+      $(document).ready(function () {
+        // Function to get parameters from the URL
+        function getUrlParameter(name) {
+          name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+          const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+          const results = regex.exec(location.search);
+          return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Get batteryId and model from the URL
+        const batteryId = getUrlParameter('batteryId');
+        const selectedModel = getUrlParameter('model');
+
+        // Check if batteryId exists
+        if (!batteryId) {
+          alert('ID baterai tidak ditemukan.');
+          return;
+        }
+
+        // 1. Call API to get battery details
         $.ajax({
-          url: `https://ams.akikita.web.id/api/filter/battery/${batteryId}`,
-          method: "GET",
-          dataType: "json",
+          url: `https://ams.akikita.web.id/api/filter/battery/${batteryId}`, // API URL for battery details
+          method: 'GET',
+          dataType: 'json',
           success: function (response) {
             if (
               response &&
-              response.status === "success" &&
+              response.status === 'success' &&
               response.data &&
               response.data.length > 0
             ) {
-              const batteryData = response.data[0];
+              const batteryData = response.data[0]; // Get the first battery data
 
               // Update battery name
-              $("#name").text(batteryData.name || "Nama tidak tersedia");
+              $('#name').text(batteryData.name || 'Nama tidak tersedia');
 
               // Update battery image
               const imageUrl = batteryData.image
                 ? `https://ams.akikita.web.id/storage/image/battery/${batteryData.image}`
-                : "default-image-url.jpg";
-              $("#batteryImage").attr("src", imageUrl);
+                : 'default-image-url.jpg';
+              $('#batteryImage').attr('src', imageUrl);
 
               // Display battery dimensions
               const dimensionText =
@@ -493,119 +463,73 @@
                 batteryData.dimension_width &&
                 batteryData.dimension_height
                   ? `Panjang: ${batteryData.dimension_length} cm, Lebar: ${batteryData.dimension_width} cm, Tinggi: ${batteryData.dimension_height} cm`
-                  : "Dimensi tidak tersedia";
-              $("#description").text(dimensionText);
+                  : 'Dimensi tidak tersedia';
+              $('#description').text(dimensionText);
 
               // Format price to Rupiah
               const priceFormatted = batteryData.price_retail
-                ? batteryData.price_retail.toLocaleString("id-ID", {
-                    style: "currency",
-                    currency: "IDR",
+                ? batteryData.price_retail.toLocaleString('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR',
                   })
-                : "Harga tidak tersedia";
+                : 'Harga tidak tersedia';
 
               // Update current and old prices
-              $("#currentPrice").text(priceFormatted);
-              $("#oldPrice").text(
+              $('#currentPrice').text(priceFormatted);
+              $('#oldPrice').text(
                 batteryData.old_price
-                  ? `Harga lama: ${batteryData.old_price.toLocaleString(
-                      "id-ID",
-                      {
-                        style: "currency",
-                        currency: "IDR",
-                      }
-                    )}`
-                  : ""
+                  ? `Harga lama: ${batteryData.old_price.toLocaleString('id-ID', {
+                      style: 'currency',
+                      currency: 'IDR',
+                    })}`
+                  : '',
               );
             } else {
-              alert("Data produk tidak ditemukan.");
+              alert('Data produk tidak ditemukan.');
             }
           },
           error: function (error) {
-            console.error("Error fetching product data", error);
-            alert("Gagal memuat data produk. Silakan coba lagi nanti.");
+            console.error('Error fetching product data', error);
+            alert('Gagal memuat data produk. Silakan coba lagi nanti.');
           },
         });
-      }
 
-      $(document).ready(function () {
-        // Function to get parameters from the URL
-        function getUrlParameter(name) {
-          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-          const regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-          const results = regex.exec(location.search);
-          return results === null
-            ? ""
-            : decodeURIComponent(results[1].replace(/\+/g, " "));
-        }
-
-        // Get batteryId and model from the URL
-        const batteryId = getUrlParameter("batteryId");
-        const selectedModel = getUrlParameter("model");
-
-        // Initial load with batteryId from URL
-        if (batteryId) {
-          updateBatteryDetails(batteryId);
-        } else {
-          alert("ID baterai tidak ditemukan.");
-        }
-
-        // Call API to get battery recommendations based on the selected model
+        // 2. Call API to get battery recommendations based on the selected model
         if (selectedModel) {
           $.ajax({
-            url: `https://ams.akikita.web.id/api/filter/model/${encodeURIComponent(
-              selectedModel
-            )}`,
-            method: "GET",
+            url: `https://ams.akikita.web.id/api/filter/model/${encodeURIComponent(selectedModel)}`, // API URL for model-based recommendations
+            method: 'GET',
             success: function (response) {
-              $(".recommendations .slider").empty();
+              $('.recommendations .slider').empty(); // Clear container before adding new data
 
-              if (response.status === "success" && response.data.length > 0) {
-                const modelData = response.data[0];
-                const batteries = modelData.batteries || [];
+              if (response.status === 'success' && response.data.length > 0) {
+                const modelData = response.data[0]; // Get the model data
+                const batteries = modelData.batteries || []; // Get the list of batteries
 
+                // Loop through the batteries array and add each battery to recommendations
                 batteries.forEach(function (battery) {
                   const recommendationHtml = `
                   <div class="item">
                     <img
                       alt="Recommended battery ${battery.name}"
                       height="200"
-                      src="https://ams.akikita.web.id/storage/image/battery/${
-                        battery.image
-                      }"
+                      src="https://ams.akikita.web.id/storage/image/battery/${battery.image}"
                       width="200"
                     />
-                    <h3>
-                      <a href="#" class="battery-link" data-battery-id="${
-                        battery.id
-                      }">
-                        ${battery.name}
-                      </a>
-                    </h3>
-                    <div class="price">Rp ${battery.price_retail.toLocaleString(
-                      "id-ID"
-                    )}</div>
+                    <h3>${battery.name}</h3>
+                    <div class="price">Rp ${battery.price_retail.toLocaleString('id-ID')}</div>
                   </div>`;
-                  $(".recommendations .slider").append(recommendationHtml);
+                  $('.recommendations .slider').append(recommendationHtml);
                 });
               } else {
-                $(".recommendations .slider").append(
-                  "<p>Rekomendasi tidak ditemukan</p>"
-                );
+                $('.recommendations .slider').append('<p>Rekomendasi tidak ditemukan</p>');
               }
             },
             error: function () {
-              alert("Terjadi kesalahan saat mengambil data rekomendasi");
+              alert('Terjadi kesalahan saat mengambil data rekomendasi');
             },
           });
         }
-      });
-
-      // Event listener for .battery-link clicks to update battery details
-      $(document).on("click", ".battery-link", function (e) {
-        e.preventDefault();
-        const batteryId = $(this).data("battery-id");
-        updateBatteryDetails(batteryId);
       });
     </script>
   </body>
