@@ -1,220 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>AMS - STORE</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>AMS - STORE</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+    rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-  <body>
-    <div class="container-xxl bg-white p-0">
-      <!-- Spinner Start -->
-      <div
-        id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-      >
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container-xxl bg-white p-0">
+    <!-- Spinner Start -->
+    <div id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+        <span class="sr-only">Loading...</span>
       </div>
-      <!-- Spinner End -->
+    </div>
+    <!-- Spinner End -->
 
-      <!-- Navbar Start -->
-      <div class="container-fluid nav-bar bg-transparent">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-          <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-            <div class="icon p-2 me-2">
-              <img
-                class="img-fluid"
-                src="img/logo1.jpg"
-                alt="Icon"
-                style="width: 35px; height: 35px"
-              />
-            </div>
-            <h3 class="m-0 text-primary">Akita.id</h3>
-          </a>
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto">
-              <a href="index.html" class="nav-item nav-link active">
-                <i class="fa fa-home" aria-hidden="true"></i>
-                <!-- Icon Store -->
-              </a>
-              <a href="cart.html" class="nav-item nav-link">
-                <i class="fas fa-shopping-cart"></i>
-                <!-- Icon Cart -->
-              </a>
-              <a href="wishlist.html" class="nav-item nav-link">
-                <i class="fas fa-heart"></i>
-                <!-- Icon Wishlist -->
-              </a>
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar bg-transparent">
+      <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+        <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+          <div class="icon p-2 me-2">
+            <img class="img-fluid" src="img/logo1.jpg" alt="Icon" style="width: 35px; height: 35px" />
+          </div>
+          <h3 class="m-0 text-primary">Akita.id</h3>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto">
+            <a href="index.html" class="nav-item nav-link active">
+              <i class="fa fa-home" aria-hidden="true"></i>
+              <!-- Icon Store -->
+            </a>
+            <!-- <a href="cart.html" class="nav-item nav-link">
+                <i class="fas fa-shopping-cart"></i> -->
+            <!-- Icon Cart -->
+            <!-- </a> -->
+            <!-- <a href="wishlist.html" class="nav-item nav-link">
+                <i class="fas fa-heart"></i> -->
+            <!-- Icon Wishlist -->
+            <!-- </a>
               <a href="about.html" class="nav-item nav-link">
-                <i class="fas fa-user"></i>
-                <!-- Icon User -->
-              </a>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <!-- Navbar End -->
-
-      <!-- Header Start -->
-      <div class="container-fluid header bg-white p-0">
-        <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-          <div class="col-md-6 p-5 mt-lg-5">
-            <h1 class="display-5 animated fadeIn mb-4">Rekomendasi Battery</h1>
-            <nav aria-label="breadcrumb animated fadeIn">
-              <ol class="breadcrumb text-uppercase">
-                <li class="breadcrumb-item"><a href="Index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item text-body active" aria-current="page">
-                  Rekomendasi Battery
-                </li>
-              </ol>
-            </nav>
-          </div>
-          <div class="col-md-6 animated fadeIn">
-            <img class="img-fluid" src="img/header (1).png" alt="" />
+                <i class="fas fa-user"></i> -->
+            <!-- Icon User -->
+            <!-- </a> -->
           </div>
         </div>
+      </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid header bg-white p-0">
+      <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+        <div class="col-md-6 p-5 mt-lg-5">
+          <h1 class="display-5 animated fadeIn mb-4">Rekomendasi Battery</h1>
+          <nav aria-label="breadcrumb animated fadeIn">
+            <ol class="breadcrumb text-uppercase">
+              <li class="breadcrumb-item"><a href="Index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Pages</a></li>
+              <li class="breadcrumb-item text-body active" aria-current="page">
+                Rekomendasi Battery
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-md-6 animated fadeIn">
+          <img class="img-fluid" src="img/header (1).png" alt="" />
+        </div>
       </div>
-      <!-- Header End -->
+    </div>
+    <!-- Header End -->
 
-      <!-- Search Start -->
-      <div
-        class="container-fluid bg-primary mb-5 wow fadeIn"
-        data-wow-delay="0.1s"
-        style="padding: 35px"
-      >
-        <div class="container">
-          <div class="row g-2">
-            <div class="col-md-10">
-              <div class="row g-2">
-                <!-- Brand Select -->
-                <div class="col-md-2">
-                  <select id="brandSelect" class="form-select border-0 py-3">
-                    <option selected>Pilih Brand</option>
-                  </select>
-                </div>
+    <!-- Search Start -->
+    <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px">
+      <div class="container">
+        <div class="row g-2">
+          <div class="col-md-10">
+            <div class="row g-2">
+              <!-- Brand Select -->
+              <div class="col-md-2">
+                <select id="brandSelect" class="form-select border-0 py-3">
+                  <option selected>Pilih Brand</option>
+                </select>
+              </div>
 
-                <!-- Model Select -->
-                <div class="col-md-3">
-                  <select id="modelSelect" class="form-select border-0 py-3" disabled>
-                    <option selected>Pilih Model</option>
-                  </select>
-                </div>
+              <!-- Model Select -->
+              <div class="col-md-3">
+                <select id="modelSelect" class="form-select border-0 py-3" disabled>
+                  <option selected>Pilih Model</option>
+                </select>
+              </div>
 
-                <!-- Fuel Select -->
-                <div class="col-md-2">
-                  <select id="fuelSelect" class="form-select border-0 py-3" disabled>
-                    <option selected>Pilih Fuel</option>
-                  </select>
-                </div>
+              <!-- Fuel Select -->
+              <div class="col-md-2">
+                <select id="fuelSelect" class="form-select border-0 py-3" disabled>
+                  <option selected>Pilih Fuel</option>
+                </select>
+              </div>
 
-                <!-- Transmission Select -->
-                <div class="col-md-3">
-                  <select id="transmissionSelect" class="form-select border-0 py-3" disabled>
-                    <option selected>Pilih Type Transmission</option>
-                  </select>
-                </div>
+              <!-- Transmission Select -->
+              <div class="col-md-3">
+                <select id="transmissionSelect" class="form-select border-0 py-3" disabled>
+                  <option selected>Pilih Type Transmission</option>
+                </select>
+              </div>
 
-                <!-- Year Select -->
-                <div class="col-md-2">
-                  <select id="yearSelect" class="form-select border-0 py-3" disabled>
-                    <option selected>Pilih Tahun</option>
-                  </select>
-                </div>
+              <!-- Year Select -->
+              <div class="col-md-2">
+                <select id="yearSelect" class="form-select border-0 py-3" disabled>
+                  <option selected>Pilih Tahun</option>
+                </select>
               </div>
             </div>
+          </div>
 
-            <!-- Search Button -->
-            <div class="col-md-2">
-              <button class="btn btn-dark border-0 w-100 py-3" id="searchButton">Search</button>
-            </div>
+          <!-- Search Button -->
+          <div class="col-md-2">
+            <button class="btn btn-dark border-0 w-100 py-3" id="searchButton">Search</button>
           </div>
         </div>
       </div>
-      <!-- Search End -->
+    </div>
+    <!-- Search End -->
 
-      <!-- Search JS -->
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script>
-        $(document).ready(function () {
-          // Fungsi untuk menampilkan data baterai saat halaman dimuat
-          function loadBatteryData() {
-            const batteryUrl = `https://ams.akikita.web.id/api/filter/battery`;
+    <!-- Search JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Fungsi untuk menampilkan data baterai saat halaman dimuat
+        function loadBatteryData() {
+          const batteryUrl = `https://ams.akikita.web.id/api/filter/battery`;
 
-            // Ambil data dari API menggunakan AJAX
-            $.ajax({
-              url: batteryUrl,
-              method: 'GET',
-              success: function (response) {
-                // Kosongkan kontainer sebelum menampilkan data baru
-                $('#property-container').empty();
+          // Ambil data dari API menggunakan AJAX
+          $.ajax({
+            url: batteryUrl,
+            method: 'GET',
+            success: function (response) {
+              // Kosongkan kontainer sebelum menampilkan data baru
+              $('#property-container').empty();
 
-                // Periksa apakah data ditemukan
-                if (response.status === 'success' && response.data.length > 0) {
-                  // Iterasi setiap data baterai yang ditemukan
-                  response.data.forEach(function (battery) {
-                    const batteryHtml = `
+              // Periksa apakah data ditemukan
+              if (response.status === 'success' && response.data.length > 0) {
+                // Iterasi setiap data baterai yang ditemukan
+                response.data.forEach(function (battery) {
+                  const batteryHtml = `
                       <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="property-item rounded overflow-hidden">
                           <div class="position-relative overflow-hidden">
-                            <a href=""><img class="img-fluid" src="https://ams.akikita.web.id/storage/image/battery/${
-                              battery.image
-                            }"></a>
-                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">${
-                              battery.name_alternate
-                            }</div>
+                            <a href=""><img class="img-fluid" src="https://ams.akikita.web.id/storage/image/battery/${battery.image
+                    }"></a>
+                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">${battery.name_alternate
+                    }</div>
                           </div>
                           <div class="p-4 pb-0">
                             <h5 class="text-primary mb-3">Rp ${battery.price_retail.toLocaleString()}</h5>
-                            <a class="d-block h5 mb-2 battery-link" href="#" data-battery-id="${
-                              battery.id
-                            }">${battery.name}</a>
-                            <p><i class="fas fa-car-battery text-primary me-2"></i>Size: ${
-                              battery.size_category
-                            } - ${battery.name_alternate}</p>
+                            <a class="d-block h5 mb-2 battery-link" href="#" data-battery-id="${battery.id
+                    }">${battery.name}</a>
+                            <p><i class="fas fa-car-battery text-primary me-2"></i>Size: ${battery.size_category
+                    } - ${battery.name_alternate}</p>
                             <p>CCA: ${battery.standard_cca} | Capacity: ${battery.capacity}Ah</p>
                                                 <p class="btn btn-rectangle" style="margin-left: -11px; color: #8ec643">
                       <i class="fas fa-shopping-basket"></i> Beli Sekarang
@@ -222,248 +195,35 @@
                           </div>
                         </div>
                       </div>`;
-                    // Tambahkan elemen baterai ke kontainer
-                    $('#property-container').append(batteryHtml);
-                  });
-                } else {
-                  $('#property-container').append('<p>Data tidak ditemukan</p>');
-                }
-              },
-              error: function () {
-                alert('Terjadi kesalahan saat mengambil data baterai');
-              },
-            });
-          }
-
-          // Panggil fungsi untuk mengambil dan menampilkan data baterai saat halaman dimuat
-          loadBatteryData();
-
-          // Fungsi untuk mengambil query parameter dari URL
-          function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-          }
-
-          // Ambil model dari query parameter
-          const selectedModel = getQueryParam('model');
-
-          // Jika ada model yang dipilih, lakukan pencarian, jika tidak tampilkan data baterai default
-          if (selectedModel) {
-            searchByModel(selectedModel);
-          }
-
-          // Fungsi untuk mengambil data dari API berdasarkan model yang dipilih
-          function searchByModel(selectedModel) {
-            const searchUrl = `https://ams.akikita.web.id/api/filter/model/${encodeURIComponent(
-              selectedModel,
-            )}`;
-
-            // Ambil data dari API menggunakan AJAX
-            $.ajax({
-              url: searchUrl,
-              method: 'GET',
-              success: function (response) {
-                $('#property-container').empty();
-
-                if (response.status === 'success' && response.data.length > 0) {
-                  response.data.forEach(function (item) {
-                    // Render baterai utama
-                    if (item.batteries && item.batteries.length > 0) {
-                      item.batteries.forEach(function (battery) {
-                        const batteryHtml = `
-                          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="property-item rounded overflow-hidden">
-                              <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="https://ams.akikita.web.id/storage/image/battery/${
-                                  battery.image
-                                }"></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">${
-                                  item.brand
-                                }</div>
-                              </div>
-                              <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">Rp ${battery.price_retail.toLocaleString()}</h5>
-                                <a class="d-block h5 mb-2 battery-link" href="#" data-battery-id="${
-                                  battery.id
-                                }">${battery.name}</a>
-                                <p><i class="fas fa-car-battery text-primary me-2"></i>Size: ${
-                                  item.battery_size_category
-                                } - ${battery.name_alternate}</p>
-                                <p>CCA: ${battery.standard_cca} | Capacity: ${
-                          battery.capacity
-                        }Ah</p>
-                        <p class="btn btn-rectangle" style="margin-left: -11px; color: #8ec643">
-                      <i class="fas fa-shopping-basket"></i> Beli Sekarang
-                    </p>
-                              </div>
-                            </div>
-                          </div>`;
-                        $('#property-container').append(batteryHtml);
-                      });
-                    }
-                  });
-                } else {
-                  $('#property-container').append('<p>Data tidak ditemukan</p>');
-                }
-              },
-              error: function () {
-                alert('Terjadi kesalahan saat mengambil data model');
-              },
-            });
-          }
-
-          // Event listener untuk tombol pencarian
-          $('#searchButton').click(function () {
-            const selectedModel = $('#modelSelect').val();
-            if (selectedModel) {
-              searchByModel(selectedModel);
-            } else {
-              alert('Silakan pilih model terlebih dahulu');
-            }
+                  // Tambahkan elemen baterai ke kontainer
+                  $('#property-container').append(batteryHtml);
+                });
+              } else {
+                $('#property-container').append('<p>Data tidak ditemukan</p>');
+              }
+            },
+            error: function () {
+              alert('Terjadi kesalahan saat mengambil data baterai');
+            },
           });
-        });
-        // Mengambil data brand saat halaman dimuat
-        $.ajax({
-          url: 'https://ams.akikita.web.id/api/filter/brand',
-          method: 'GET',
-          dataType: 'json',
-          success: function (response) {
-            const brandSelect = $('#brandSelect');
-            // brandSelect.append(`<option value=""></option>`);
+        }
 
-            if (response.status === 'success' && response.data.length > 0) {
-              response.data.forEach(function (brandName) {
-                brandSelect.append(`<option value="${brandName}">${brandName}</option>`);
-              });
-            }
-          },
-          error: function () {
-            alert('Gagal mengambil data brand');
-          },
-        });
+        // Panggil fungsi untuk mengambil dan menampilkan data baterai saat halaman dimuat
+        loadBatteryData();
 
-        // Mengambil data model setelah memilih brand
-        $('#brandSelect').change(function () {
-          const selectedBrand = $(this).val();
-          const modelSelect = $('#modelSelect');
-          const fuelSelect = $('#fuelSelect');
-          const transmissionSelect = $('#transmissionSelect');
-          const yearSelect = $('#yearSelect');
+        // Fungsi untuk mengambil query parameter dari URL
+        function getQueryParam(param) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(param);
+        }
 
-          if (selectedBrand) {
-            modelSelect.prop('disabled', false).html('<option selected>Loading...</option>');
-            fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
-            transmissionSelect
-              .prop('disabled', true)
-              .html('<option selected>Pilih Type Transmission</option>');
-            yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
+        // Ambil model dari query parameter
+        const selectedModel = getQueryParam('model');
 
-            $.ajax({
-              url: `https://ams.akikita.web.id/api/filter/brand/${selectedBrand}`,
-              method: 'GET',
-              dataType: 'json',
-              success: function (response) {
-                modelSelect.empty().append(`<option value="">Pilih Model</option>`);
-                if (response.status === 'success' && response.data.length > 0) {
-                  response.data.forEach(function (modelName) {
-                    modelSelect.append(`<option value="${modelName}">${modelName}</option>`);
-                  });
-                } else {
-                  modelSelect.append(`<option value="">Model tidak ditemukan</option>`);
-                }
-              },
-              error: function () {
-                alert('Gagal mengambil data model');
-                modelSelect.prop('disabled', true).html('<option selected>Pilih Model</option>');
-                fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
-                transmissionSelect
-                  .prop('disabled', true)
-                  .html('<option selected>Pilih Type Transmission</option>');
-                yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
-              },
-            });
-          } else {
-            modelSelect.prop('disabled', true).html('<option selected>Pilih Model</option>');
-            fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
-            transmissionSelect
-              .prop('disabled', true)
-              .html('<option selected>Pilih Type Transmission</option>');
-            yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
-          }
-        });
-
-        // Mengaktifkan fuel select setelah memilih model
-        $('#modelSelect').change(function () {
-          const selectedModel = $(this).val();
-          const fuelSelect = $('#fuelSelect');
-
-          if (selectedModel) {
-            // Aktifkan dropdown fuel dan isi dengan opsi
-            fuelSelect.prop('disabled', false);
-            fuelSelect.empty(); // Hapus opsi yang ada sebelumnya
-            fuelSelect.append('<option value="">Pilih Fuel</option>');
-            fuelSelect.append('<option value="none">None</option>');
-            fuelSelect.append('<option value="bensin">Bensin</option>');
-            fuelSelect.append('<option value="diesel">Diesel</option>');
-          } else {
-            // Nonaktifkan dropdown fuel jika tidak ada model yang dipilih
-            fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
-          }
-        });
-
-        // Mengaktifkan transmission select setelah memilih fuel
-        $('#fuelSelect').change(function () {
-          const selectedFuel = $(this).val();
-          const transmissionSelect = $('#transmissionSelect');
-
-          if (selectedFuel) {
-            // Aktifkan dropdown transmission dan isi dengan opsi
-            transmissionSelect.prop('disabled', false);
-            transmissionSelect.empty(); // Hapus opsi yang ada sebelumnya
-            transmissionSelect.append('<option value="">Pilih Type Transmission</option>');
-            transmissionSelect.append('<option value="none">None</option>');
-            transmissionSelect.append('<option value="matic">Matic</option>');
-          } else {
-            // Nonaktifkan dropdown transmission jika tidak ada fuel yang dipilih
-            transmissionSelect
-              .prop('disabled', true)
-              .html('<option selected>Pilih Type Transmission</option>');
-          }
-        });
-
-        // Mengaktifkan year select setelah memilih transmission
-        $('#transmissionSelect').change(function () {
-          const selectedTransmission = $(this).val();
-          const yearSelect = $('#yearSelect');
-          if (selectedTransmission) {
-            yearSelect.prop('disabled', false);
-            const currentYear = new Date().getFullYear();
-            yearSelect.empty().append(`<option value="">Pilih Tahun</option>`);
-            for (let year = 1945; year <= currentYear; year++) {
-              yearSelect.append(`<option value="${year}">${year}</option>`);
-            }
-          } else {
-            yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
-          }
-        });
-
-        $(document).ready(function () {
-          // Fungsi untuk mengambil query parameter dari URL
-          function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-          }
-
-          // Ambil model dari query parameter
-          const selectedModel = getQueryParam('model');
-
-          // Jika ada model yang dipilih, lakukan pencarian
-          if (selectedModel) {
-            searchByModel(selectedModel);
-          } else {
-            $('#property-container').append('<p>Model belum dipilih atau tidak ditemukan</p>');
-          }
-        });
+        // Jika ada model yang dipilih, lakukan pencarian, jika tidak tampilkan data baterai default
+        if (selectedModel) {
+          searchByModel(selectedModel);
+        }
 
         // Fungsi untuk mengambil data dari API berdasarkan model yang dipilih
         function searchByModel(selectedModel) {
@@ -476,75 +236,29 @@
             url: searchUrl,
             method: 'GET',
             success: function (response) {
-              if (response.status === 'success') {
-                // Kosongkan kontainer sebelum menampilkan data baru
-                $('#property-container').empty();
+              $('#property-container').empty();
 
-                // Periksa apakah data ditemukan
-                if (response.data && response.data.length > 0) {
-                  // Iterasi setiap data model yang ditemukan
-                  response.data.forEach(function (item) {
-                    // Render baterai utama
-                    if (item.batteries && item.batteries.length > 0) {
-                      item.batteries.forEach(function (battery) {
-                        const batteryHtml = `
+              if (response.status === 'success' && response.data.length > 0) {
+                response.data.forEach(function (item) {
+                  // Render baterai utama
+                  if (item.batteries && item.batteries.length > 0) {
+                    item.batteries.forEach(function (battery) {
+                      const batteryHtml = `
                           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="property-item rounded overflow-hidden">
                               <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="https://ams.akikita.web.id/storage/image/battery/${
-                                  battery.image
-                                }"></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">${
-                                  item.brand
-                                }</div>
-
+                                <a href=""><img class="img-fluid" src="https://ams.akikita.web.id/storage/image/battery/${battery.image
+                        }"></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">${item.brand
+                        }</div>
                               </div>
                               <div class="p-4 pb-0">
                                 <h5 class="text-primary mb-3">Rp ${battery.price_retail.toLocaleString()}</h5>
-                                <a class="d-block h5 mb-2 battery-link" href="#" data-battery-id="${
-                                  battery.id
-                                }">${battery.name}</a>
-                                <p><i class="fas fa-car-battery text-primary me-2"></i>Size: ${
-                                  item.battery_size_category
-                                } - ${battery.name_alternate}</p>
-                                <p>
-                                CCA: ${battery.standard_cca} | Capacity: ${battery.capacity}Ah
-                                </p>
-<p class="btn btn-rectangle" style="margin-left: -11px; color: #8ec643">
-                      <i class="fas fa-shopping-basket"></i> Beli Sekarang
-                    </p>
-                      
-                              </div>
-                            </div>
-                          </div>`;
-                        // Tambahkan elemen baterai utama ke kontainer
-                        $('#property-container').append(batteryHtml);
-                      });
-                    }
-
-                    // Render alternate batteries (baterai alternatif)
-                    if (item.alternate_batteries && item.alternate_batteries.length > 0) {
-                      item.alternate_batteries.forEach(function (altBattery) {
-                        const altBatteryHtml = `
-                          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="property-item rounded overflow-hidden">
-                              <div class="position-relative overflow-hidden">
-                                <a href=""><img class="img-fluid" src="https://ams.akikita.web.id/storage/image/battery/${
-                                  altBattery.image
-                                }"></a>
-                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">${
-                                  item.brand
-                                }</div>
-
-                              </div>
-                              <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">Rp ${altBattery.price_retail.toLocaleString()}</h5>
-                                <a class="d-block h5 mb-2" href="#">${altBattery.name}</a>
-                                <p><i class="fas fa-car-battery text-primary me-2"></i>Alt Size: ${
-                                  item.alternate_battery_size_category
-                                } - ${altBattery.name_alternate}</p>
-                                <p>CCA: ${altBattery.standard_cca} | Capacity: ${
-                          altBattery.capacity
+                                <a class="d-block h5 mb-2 battery-link" href="#" data-battery-id="${battery.id
+                        }">${battery.name}</a>
+                                <p><i class="fas fa-car-battery text-primary me-2"></i>Size: ${item.battery_size_category
+                        } - ${battery.name_alternate}</p>
+                                <p>CCA: ${battery.standard_cca} | Capacity: ${battery.capacity
                         }Ah</p>
                         <p class="btn btn-rectangle" style="margin-left: -11px; color: #8ec643">
                       <i class="fas fa-shopping-basket"></i> Beli Sekarang
@@ -552,20 +266,16 @@
                               </div>
                             </div>
                           </div>`;
-                        // Tambahkan elemen baterai alternatif ke kontainer
-                        $('#property-container').append(altBatteryHtml);
-                      });
-                    }
-                  });
-                } else {
-                  $('#property-container').append('<p>Data tidak ditemukan</p>');
-                }
+                      $('#property-container').append(batteryHtml);
+                    });
+                  }
+                });
               } else {
-                alert('Data tidak ditemukan');
+                $('#property-container').append('<p>Data tidak ditemukan</p>');
               }
             },
             error: function () {
-              alert('Terjadi kesalahan saat mengambil data');
+              alert('Terjadi kesalahan saat mengambil data model');
             },
           });
         }
@@ -576,153 +286,391 @@
           if (selectedModel) {
             searchByModel(selectedModel);
           } else {
-            alert('');
+            alert('Silakan pilih model terlebih dahulu');
           }
         });
-      </script>
+      });
+      // Mengambil data brand saat halaman dimuat
+      $.ajax({
+        url: 'https://ams.akikita.web.id/api/filter/brand',
+        method: 'GET',
+        dataType: 'json',
+        success: function (response) {
+          const brandSelect = $('#brandSelect');
+          // brandSelect.append(`<option value=""></option>`);
 
-      <!-- Perpindahan ke halaman detail -->
-      <script>
-        $(document).on('click', '.battery-link', function (e) {
-          e.preventDefault(); // Mencegah aksi default link
-          const batteryId = $(this).data('battery-id');
-          window.location.href = `detail.html?batteryId=${batteryId}`;
+          if (response.status === 'success' && response.data.length > 0) {
+            response.data.forEach(function (brandName) {
+              brandSelect.append(`<option value="${brandName}">${brandName}</option>`);
+            });
+          }
+        },
+        error: function () {
+          alert('Gagal mengambil data brand');
+        },
+      });
+
+      // Mengambil data model setelah memilih brand
+      $('#brandSelect').change(function () {
+        const selectedBrand = $(this).val();
+        const modelSelect = $('#modelSelect');
+        const fuelSelect = $('#fuelSelect');
+        const transmissionSelect = $('#transmissionSelect');
+        const yearSelect = $('#yearSelect');
+
+        if (selectedBrand) {
+          modelSelect.prop('disabled', false).html('<option selected>Loading...</option>');
+          fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
+          transmissionSelect
+            .prop('disabled', true)
+            .html('<option selected>Pilih Type Transmission</option>');
+          yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
+
+          $.ajax({
+            url: `https://ams.akikita.web.id/api/filter/brand/${selectedBrand}`,
+            method: 'GET',
+            dataType: 'json',
+            success: function (response) {
+              modelSelect.empty().append(`<option value="">Pilih Model</option>`);
+              if (response.status === 'success' && response.data.length > 0) {
+                response.data.forEach(function (modelName) {
+                  modelSelect.append(`<option value="${modelName}">${modelName}</option>`);
+                });
+              } else {
+                modelSelect.append(`<option value="">Model tidak ditemukan</option>`);
+              }
+            },
+            error: function () {
+              alert('Gagal mengambil data model');
+              modelSelect.prop('disabled', true).html('<option selected>Pilih Model</option>');
+              fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
+              transmissionSelect
+                .prop('disabled', true)
+                .html('<option selected>Pilih Type Transmission</option>');
+              yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
+            },
+          });
+        } else {
+          modelSelect.prop('disabled', true).html('<option selected>Pilih Model</option>');
+          fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
+          transmissionSelect
+            .prop('disabled', true)
+            .html('<option selected>Pilih Type Transmission</option>');
+          yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
+        }
+      });
+
+      // Mengaktifkan fuel select setelah memilih model
+      $('#modelSelect').change(function () {
+        const selectedModel = $(this).val();
+        const fuelSelect = $('#fuelSelect');
+
+        if (selectedModel) {
+          // Aktifkan dropdown fuel dan isi dengan opsi
+          fuelSelect.prop('disabled', false);
+          fuelSelect.empty(); // Hapus opsi yang ada sebelumnya
+          fuelSelect.append('<option value="">Pilih Fuel</option>');
+          fuelSelect.append('<option value="none">None</option>');
+          fuelSelect.append('<option value="bensin">Bensin</option>');
+          fuelSelect.append('<option value="diesel">Diesel</option>');
+        } else {
+          // Nonaktifkan dropdown fuel jika tidak ada model yang dipilih
+          fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
+        }
+      });
+
+      // Mengaktifkan transmission select setelah memilih fuel
+      $('#fuelSelect').change(function () {
+        const selectedFuel = $(this).val();
+        const transmissionSelect = $('#transmissionSelect');
+
+        if (selectedFuel) {
+          // Aktifkan dropdown transmission dan isi dengan opsi
+          transmissionSelect.prop('disabled', false);
+          transmissionSelect.empty(); // Hapus opsi yang ada sebelumnya
+          transmissionSelect.append('<option value="">Pilih Type Transmission</option>');
+          transmissionSelect.append('<option value="none">None</option>');
+          transmissionSelect.append('<option value="matic">Matic</option>');
+        } else {
+          // Nonaktifkan dropdown transmission jika tidak ada fuel yang dipilih
+          transmissionSelect
+            .prop('disabled', true)
+            .html('<option selected>Pilih Type Transmission</option>');
+        }
+      });
+
+      // Mengaktifkan year select setelah memilih transmission
+      $('#transmissionSelect').change(function () {
+        const selectedTransmission = $(this).val();
+        const yearSelect = $('#yearSelect');
+        if (selectedTransmission) {
+          yearSelect.prop('disabled', false);
+          const currentYear = new Date().getFullYear();
+          yearSelect.empty().append(`<option value="">Pilih Tahun</option>`);
+          for (let year = 1945; year <= currentYear; year++) {
+            yearSelect.append(`<option value="${year}">${year}</option>`);
+          }
+        } else {
+          yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
+        }
+      });
+
+      $(document).ready(function () {
+        // Fungsi untuk mengambil query parameter dari URL
+        function getQueryParam(param) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(param);
+        }
+
+        // Ambil model dari query parameter
+        const selectedModel = getQueryParam('model');
+
+        // Jika ada model yang dipilih, lakukan pencarian
+        if (selectedModel) {
+          searchByModel(selectedModel);
+        } else {
+          $('#property-container').append('<p>Model belum dipilih atau tidak ditemukan</p>');
+        }
+      });
+
+      // Fungsi untuk mengambil data dari API berdasarkan model yang dipilih
+      function searchByModel(selectedModel) {
+        const searchUrl = `https://ams.akikita.web.id/api/filter/model/${encodeURIComponent(
+          selectedModel,
+        )}`;
+
+        // Ambil data dari API menggunakan AJAX
+        $.ajax({
+          url: searchUrl,
+          method: 'GET',
+          success: function (response) {
+            if (response.status === 'success') {
+              // Kosongkan kontainer sebelum menampilkan data baru
+              $('#property-container').empty();
+
+              // Periksa apakah data ditemukan
+              if (response.data && response.data.length > 0) {
+                // Iterasi setiap data model yang ditemukan
+                response.data.forEach(function (item) {
+                  // Render baterai utama
+                  if (item.batteries && item.batteries.length > 0) {
+                    item.batteries.forEach(function (battery) {
+                      const batteryHtml = `
+                          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="property-item rounded overflow-hidden">
+                              <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="https://ams.akikita.web.id/storage/image/battery/${battery.image
+                        }"></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">${item.brand
+                        }</div>
+
+                              </div>
+                              <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">Rp ${battery.price_retail.toLocaleString()}</h5>
+                                <a class="d-block h5 mb-2 battery-link" href="#" data-battery-id="${battery.id
+                        }">${battery.name}</a>
+                                <p><i class="fas fa-car-battery text-primary me-2"></i>Size: ${item.battery_size_category
+                        } - ${battery.name_alternate}</p>
+                                <p>
+                                CCA: ${battery.standard_cca} | Capacity: ${battery.capacity}Ah
+                                </p>
+<p class="btn btn-rectangle" style="margin-left: -11px; color: #8ec643">
+                      <i class="fas fa-shopping-basket"></i> Beli Sekarang
+                    </p>
+                      
+                              </div>
+                            </div>
+                          </div>`;
+                      // Tambahkan elemen baterai utama ke kontainer
+                      $('#property-container').append(batteryHtml);
+                    });
+                  }
+
+                  // Render alternate batteries (baterai alternatif)
+                  if (item.alternate_batteries && item.alternate_batteries.length > 0) {
+                    item.alternate_batteries.forEach(function (altBattery) {
+                      const altBatteryHtml = `
+                          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="property-item rounded overflow-hidden">
+                              <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="https://ams.akikita.web.id/storage/image/battery/${altBattery.image
+                        }"></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">${item.brand
+                        }</div>
+
+                              </div>
+                              <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">Rp ${altBattery.price_retail.toLocaleString()}</h5>
+                                <a class="d-block h5 mb-2" href="#">${altBattery.name}</a>
+                                <p><i class="fas fa-car-battery text-primary me-2"></i>Alt Size: ${item.alternate_battery_size_category
+                        } - ${altBattery.name_alternate}</p>
+                                <p>CCA: ${altBattery.standard_cca} | Capacity: ${altBattery.capacity
+                        }Ah</p>
+                        <p class="btn btn-rectangle" style="margin-left: -11px; color: #8ec643">
+                      <i class="fas fa-shopping-basket"></i> Beli Sekarang
+                    </p>
+                              </div>
+                            </div>
+                          </div>`;
+                      // Tambahkan elemen baterai alternatif ke kontainer
+                      $('#property-container').append(altBatteryHtml);
+                    });
+                  }
+                });
+              } else {
+                $('#property-container').append('<p>Data tidak ditemukan</p>');
+              }
+            } else {
+              alert('Data tidak ditemukan');
+            }
+          },
+          error: function () {
+            alert('Terjadi kesalahan saat mengambil data');
+          },
         });
-      </script>
+      }
 
-      <!-- Property List Start -->
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div class="row g-0 gx-5 align-items-end">
-            <div class="col-lg-8">
-              <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
-                <h1 class="mb-3">Rekomendasi Battery</h1>
-                <p>
-                  Dapatkan rekomendasi aki kendaraan terbaik yang siap memberikan performa optimal
-                  untuk perjalananmu. Pilih aki yang sesuai dengan spesifikasi kendaraanmu, hanya di
-                  AKIKITA.ID!
-                </p>
-              </div>
+      // Event listener untuk tombol pencarian
+      $('#searchButton').click(function () {
+        const selectedModel = $('#modelSelect').val();
+        if (selectedModel) {
+          searchByModel(selectedModel);
+        } else {
+          alert('');
+        }
+      });
+    </script>
+
+    <!-- Perpindahan ke halaman detail -->
+    <script>
+      $(document).on('click', '.battery-link', function (e) {
+        e.preventDefault(); // Mencegah aksi default link
+        const batteryId = $(this).data('battery-id');
+        window.location.href = `detail.html?batteryId=${batteryId}`;
+      });
+    </script>
+
+    <!-- Property List Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-0 gx-5 align-items-end">
+          <div class="col-lg-8">
+            <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
+              <h1 class="mb-3">Rekomendasi Battery</h1>
+              <p>
+                Dapatkan rekomendasi aki kendaraan terbaik yang siap memberikan performa optimal
+                untuk perjalananmu. Pilih aki yang sesuai dengan spesifikasi kendaraanmu, hanya di
+                AKIKITA.ID!
+              </p>
             </div>
           </div>
-          <div class="tab-content">
-            <div id="tab-1" class="tab-pane fade show p-0 active">
-              <div class="row g-4">
-                <div id="property-container" class="row">
-                  <!-- Hasil pencarian akan ditambahkan di sini -->
-                </div>
+        </div>
+        <div class="tab-content">
+          <div id="tab-1" class="tab-pane fade show p-0 active">
+            <div class="row g-4">
+              <div id="property-container" class="row">
+                <!-- Hasil pencarian akan ditambahkan di sini -->
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Property List End -->
-
-      <!-- Footer Start -->
-      <div
-        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
-        data-wow-delay="0.1s"
-      >
-        <div class="container py-5">
-          <div class="row g-5">
-            <!-- Akikita.id Section -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Akikita.id</h5>
-              <p class="text-white mb-3">
-                Akikita.id adalah layanan antar pasang aki untuk kendaraan di wilayah Bandung.
-                Teknisi terlatih kami siap melayani Anda.
-              </p>
-              <div class="d-flex pt-2"></div>
-            </div>
-
-            <!-- Quick Links Section -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Navigasi</h5>
-              <a class="btn btn-link text-white-50" href="">About Us</a>
-              <a class="btn btn-link text-white-50" href="">Contact Us</a>
-              <a class="btn btn-link text-white-50" href="">Our Services</a>
-              <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-              <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
-            </div>
-
-            <!-- Office Location Section -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Kantor Utama</h5>
-              <p class="mb-2">
-                <i class="fa fa-map-marker-alt me-3"></i>
-                Jalan Raya Daan Mogot KM. 18, Green Sedayu Bizpark DM5 Nomor 58, Provinsi DKI
-                Jakarta
-              </p>
-              <p class="mb-2">
-                <i class="fa fa-phone-alt me-3"></i>
-                +62-8222-8800-175
-              </p>
-              <p class="mb-2">
-                <i class="fa fa-envelope me-3"></i>
-                akikita.id@gmail.com
-              </p>
-            </div>
-
-            <!-- Social Media Section -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="text-white mb-4">Sosial Media</h5>
-              <div class="d-flex pt-2">
-                <a class="btn btn-outline-light btn-social mx-1" href=""
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social mx-1" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social mx-1" href=""
-                  ><i class="fab fa-youtube"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social mx-1" href=""
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Copyright Section -->
-        <div class="container">
-          <div class="copyright">
-            <div class="row">
-              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="#">Akikita.id</a>, All Right Reserved.
-                Designed By <a class="border-bottom" href="">Footprint Solution 2024</a>
-              </div>
-              <div class="col-md-6 text-center text-md-end">
-                <div class="footer-menu">
-                  <a href="">Home</a>
-                  <a href="">Cookies</a>
-                  <a href="">Help</a>
-                  <a href="">FAQs</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Footer End -->
-
-      <!-- JS MENAMPILKAN SEMUA BATERAI -->
-
-      <!-- Back to Top -->
-      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-        ><i class="bi bi-arrow-up"></i
-      ></a>
     </div>
+    <!-- Property List End -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container py-5">
+        <div class="row g-5">
+          <!-- Akikita.id Section -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Akikita.id</h5>
+            <p class="text-white mb-3">
+              Akikita.id adalah layanan antar pasang aki untuk kendaraan di wilayah Bandung.
+              Teknisi terlatih kami siap melayani Anda.
+            </p>
+            <div class="d-flex pt-2"></div>
+          </div>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-  </body>
+          <!-- Quick Links Section -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Navigasi</h5>
+            <a class="btn btn-link text-white-50" href="">About Us</a>
+            <a class="btn btn-link text-white-50" href="">Contact Us</a>
+            <a class="btn btn-link text-white-50" href="">Our Services</a>
+            <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+            <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+          </div>
+
+          <!-- Office Location Section -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Kantor Utama</h5>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>
+              Jalan Raya Daan Mogot KM. 18, Green Sedayu Bizpark DM5 Nomor 58, Provinsi DKI
+              Jakarta
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>
+              +62-8222-8800-175
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>
+              akikita.id@gmail.com
+            </p>
+          </div>
+
+          <!-- Social Media Section -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Sosial Media</h5>
+            <div class="d-flex pt-2">
+              <a class="btn btn-outline-light btn-social mx-1" href=""><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light btn-social mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light btn-social mx-1" href=""><i class="fab fa-youtube"></i></a>
+              <a class="btn btn-outline-light btn-social mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a class="border-bottom" href="#">Akikita.id</a>, All Right Reserved.
+              Designed By <a class="border-bottom" href="">Footprint Solution 2024</a>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <div class="footer-menu">
+                <!-- <a href="">Home</a>
+                <a href="">Cookies</a>
+                <a href="">Help</a>
+                <a href="">FAQs</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- JS MENAMPILKAN SEMUA BATERAI -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+  </div>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>
