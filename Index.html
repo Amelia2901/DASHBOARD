@@ -1,732 +1,1093 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AMS - STORE</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
-<head>
-  <meta charset="utf-8" />
-  <title>AMS - STORE</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta content="" name="keywords" />
-  <meta content="" name="description" />
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
 
-  <!-- Favicon -->
-  <link href="img/favicon.ico" rel="icon" />
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Web Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-  <!-- Icon Font Stylesheet -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-  <!-- Libraries Stylesheet -->
-  <link href="lib/animate/animate.min.css" rel="stylesheet" />
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Customized Bootstrap Stylesheet -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .text-judul {
+        color: #393341;
+        font-family: helvetica;
+        font-weight: 900;
+        font-size: 4.1em;
+        line-height: 0.9;
+      }
+      .text-judul-ijo{
+        font-family: helvetica;
+        font-weight: 900;
+        line-height: 0.9;
+        color:#87CE34;
+        font-size:0.86em;
+        font-style:italic;
+        text-shadow:-2px 2px 3px #135A1F;
+      }
 
-  <!-- Template Stylesheet -->
-  <link href="css/style.css" rel="stylesheet" />
-</head>
+      .elementor-icon i,
+      .elementor-icon svg {
+        width: 1em;
+        height: 1em;
+        position: relative;
+        display: block;
+      }
+      .icon-atas {
+        color: black !important;
+        font-size: 35px;
+        width: 1em !important;
+        height: 1em !important;
+      }
+      .sub-judul{
+        color: #3a3a3c;
+        font-family: "Helvetica", Sans-serif;
+        font-weight: 500;
+        font-size: 32px;
+      }
+      .kontak-sekarang{
+        font-size: 23px !important;
+      }
+      .btn-whatsapp{
+        background-color: #87ce34 !important;
+      }
+      .container-filter{
+        background-image: linear-gradient(180deg, #000 0%, #1c1229 100%) !important;
+      }
+      .button-search{
+        background-color: #87ce34 !important;
+        font-size: 12px !important;
+        font-family: "Helvetica", Sans-serif;
+        font-weight: 600;
+        background-color: var(--e-global-color-primary);
+        /* padding: 0.8em 0.4em; */
+        width: 180px !important;
+        height: 40px;
+        color: #FFFFFF;
 
-<body>
-  <div class="container-xxl bg-white p-0">
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
-    </div>
-    <!-- Spinner End -->
+      }
+    </style>
+  </head>
 
-    <!-- Navbar Start -->
-    <div class="container-fluid nav-bar bg-transparent">
-      <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-        <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-          <div class="icon p-2 me-2">
-            <img class="img-fluid" src="img/logo1.jpg" alt="Icon" style="width: 35px; height: 35px" />
-          </div>
-          <h3 class="m-0 text-primary">Akita.id</h3>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto">
-            <a href="index.html" class="nav-item nav-link active">
-              <i class="fa fa-home" aria-hidden="true"></i>
-              <!-- Icon Store -->
-            </a>
-            <!-- <a href="cart.html" class="nav-item nav-link">
-                <i class="fas fa-shopping-cart"></i> -->
-            <!-- Icon Cart -->
-            <!-- </a> -->
-            <!-- <a href="wishlist.html" class="nav-item nav-link">
-                <i class="fas fa-heart"></i> -->
-            <!-- Icon Wishlist -->
-            <!-- </a> -->
-            <!-- <a href="about.html" class="nav-item nav-link">
-                <i class="fas fa-user"></i> -->
-            <!-- Icon User -->
-            <!-- </a> -->
-          </div>
+  <body>
+    <div class="container-xxl bg-white p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
         </div>
-      </nav>
-    </div>
-    <!-- Navbar End -->
+      </div>
+      <!-- Spinner End -->
 
-    <!-- Header Start -->
-    <div class="container-fluid header bg-white p-0">
-      <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-        <div class="col-md-6 p-5 mt-lg-5">
-          <h1 class="display-5 animated fadeIn mb-4">
-            Layanan Antar <span class="text-primary">Pasang Aki Terbaik</span> Terpercaya Dan
-            Gesit
-          </h1>
-          <p class="animated fadeIn mb-4 pb-2">Khusus Wilayah Bandung dan Sekitarnya.</p>
-          <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">
-            <i class="fa-brands fa-whatsapp"></i> Kontak Sekarang
+      <!-- Navbar Start -->
+      <div class="container-fluid nav-bar bg-transparent">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+          <a
+            href="index.html"
+            class="navbar-brand d-flex align-items-center text-center"
+          >
+            <div class="">
+              <img
+                class="img-fluid"
+                src="img/logo-aki.png"
+                alt="Icon"
+                style="width: 241px"
+              />
+            </div>
+            <!-- <h3 class="m-0 text-primary">Akita.id</h3> -->
           </a>
-        </div>
-        <div class="col-md-6 animated fadeIn">
-          <div class="owl-carousel header-carousel">
-            <div class="owl-carousel-item">
-              <img class="img-fluid" src="img/Slide1 (1).png" alt="" />
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a
+                href="https://www.instagram.com/akikita.id"
+                class="nav-item nav-link active"
+              >
+                <i class="icon-atas fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://akikita.id/redirect_to_whatsapp/"
+                class="nav-item nav-link active"
+              >
+                <i class="icon-atas fab fa-whatsapp" aria-hidden="true"></i>
+              </a>
+
+              <!-- <a href="cart.html" class="nav-item nav-link">
+                <i class="fas fa-shopping-cart"></i> -->
+              <!-- Icon Cart -->
+              <!-- </a> -->
+              <!-- <a href="wishlist.html" class="nav-item nav-link">
+                <i class="fas fa-heart"></i> -->
+              <!-- Icon Wishlist -->
+              <!-- </a> -->
+              <!-- <a href="about.html" class="nav-item nav-link">
+                <i class="fas fa-user"></i> -->
+              <!-- Icon User -->
+              <!-- </a> -->
             </div>
-            <div class="owl-carousel-item">
-              <img class="img-fluid" src="img/Slide2 (1).png" alt="" />
+          </div>
+        </nav>
+      </div>
+      <!-- Navbar End -->
+
+      <!-- Header Start -->
+      <div class="container-fluid header bg-white p-0">
+        <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+          <div class="col-md-6 p-5 mt-lg-5">
+            <h1 class="display-5 animated fadeIn mb-4">
+              <h2 class="text-judul">
+                LAYANAN <br> ANTAR <br>  PASANG AKI
+                <span class="text-judul-ijo">GESIT</span>
+              </h2>
+              <p class="sub-judul">Khusus Wilayah Bandung</p>
+
+              <a href="" class="btn-whatsapp btn btn-primary py-3 px-5 me-3 animated fadeIn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                <i class=" kontak-sekarang fa-brands fa-whatsapp"></i>
+                <span class="kontak-sekarang">Kontak Sekarang</span>
+              </a>
+                        </div>
+          <div class="col-md-6 animated fadeIn">
+            <div class="owl-carousel header-carousel">
+              <div class="owl-carousel-item">
+                <img class="img-fluid" src="img/cover-atas.png" alt="" />
+              </div>
+              <div class="owl-carousel-item">
+                <img class="img-fluid" src="img/Slide2 (1).png" alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Header End -->
+      <!-- Header End -->
 
-    <!-- Search Start -->
+      <!-- Search Start -->
 
-    <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px">
-      <div class="container">
-        <div class="row g-2">
-          <div class="col-md-10">
-            <div class="row g-2">
-              <!-- Brand Select -->
-              <div class="col-md-2">
-                <select id="brandSelect" class="form-select border-0 py-3">
-                  <option selected>Pilih Brand</option>
-                </select>
-              </div>
+      <div
+        class="container-filter container-fluid bg-primary mb-5 wow fadeIn"
+        data-wow-delay="0.1s"
+        style="padding: 35px"
+      >
+        <div class="container">
+          <div class="row g-2">
+            <div class="col-md-10">
+              <div class="row g-2">
+                <!-- Brand Select -->
+                <div class="col-md-2">
+                  <select id="brandSelect" class="form-select border-0 py-3">
+                    <option selected>Pilih Brand</option>
+                  </select>
+                </div>
 
-              <!-- Model Select -->
-              <div class="col-md-3">
-                <select id="modelSelect" class="form-select border-0 py-3" disabled>
-                  <option selected>Pilih Model</option>
-                </select>
-              </div>
+                <!-- Model Select -->
+                <div class="col-md-3">
+                  <select
+                    id="modelSelect"
+                    class="form-select border-0 py-3"
+                    disabled
+                  >
+                    <option selected>Pilih Model</option>
+                  </select>
+                </div>
 
-              <!-- Fuel Select -->
-              <div class="col-md-2">
-                <select id="fuelSelect" class="form-select border-0 py-3" disabled>
-                  <option selected>Pilih Fuel</option>
-                </select>
-              </div>
+                <!-- Fuel Select -->
+                <div class="col-md-2">
+                  <select
+                    id="fuelSelect"
+                    class="form-select border-0 py-3"
+                    disabled
+                  >
+                    <option selected>Pilih Fuel</option>
+                  </select>
+                </div>
 
-              <!-- Transmission Select -->
-              <div class="col-md-3">
-                <select id="transmissionSelect" class="form-select border-0 py-3" disabled>
-                  <option selected>Pilih Type Transmission</option>
-                </select>
-              </div>
+                <!-- Transmission Select -->
+                <div class="col-md-3">
+                  <select
+                    id="transmissionSelect"
+                    class="form-select border-0 py-3"
+                    disabled
+                  >
+                    <option selected>Pilih Type Transmission</option>
+                  </select>
+                </div>
 
-              <!-- Year Select -->
-              <div class="col-md-2">
-                <select id="yearSelect" class="form-select border-0 py-3" disabled>
-                  <option selected>Pilih Tahun</option>
-                </select>
+                <!-- Year Select -->
+                <div class="col-md-2">
+                  <select
+                    id="yearSelect"
+                    class="form-select border-0 py-3"
+                    disabled
+                  >
+                    <option selected>Pilih Tahun</option>
+                  </select>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Search Button -->
-          <div class="col-md-2">
-            <button class="btn btn-dark border-0 w-100 py-3" id="searchButton">Search</button>
+            <!-- Search Button -->
+            <div class="col-md-2">
+              <button
+                class=" button-search btn  border-0 w-100 py-3"
+                id="searchButton"
+              >
+                CARI
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Search End -->
+      <!-- Search End -->
 
-    <!-- Search js  -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        // Mengambil data brand saat halaman dimuat
-        $.ajax({
-          url: 'https://ams.akikita.web.id/api/filter/brand',
-          method: 'GET',
-          dataType: 'json',
-          success: function(response) {
-            const brandSelect = $('#brandSelect');
-            // brandSelect.append(`<option value=""></option>`);
+      <!-- Search js  -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          // Mengambil data brand saat halaman dimuat
+          $.ajax({
+            url: "https://ams.akikita.web.id/api/filter/brand",
+            method: "GET",
+            dataType: "json",
+            success: function (response) {
+              const brandSelect = $("#brandSelect");
+              // brandSelect.append(`<option value=""></option>`);
 
-            if (response.status === 'success' && response.data.length > 0) {
-              response.data.forEach(function(brandName) {
-                brandSelect.append(`<option value="${brandName}">${brandName}</option>`);
+              if (response.status === "success" && response.data.length > 0) {
+                response.data.forEach(function (brandName) {
+                  brandSelect.append(
+                    `<option value="${brandName}">${brandName}</option>`
+                  );
+                });
+              }
+            },
+            error: function () {
+              alert("Gagal mengambil data brand");
+            },
+          });
+
+          // Mengambil data model setelah memilih brand
+          $("#brandSelect").change(function () {
+            const selectedBrand = $(this).val();
+            const modelSelect = $("#modelSelect");
+            const fuelSelect = $("#fuelSelect");
+            const transmissionSelect = $("#transmissionSelect");
+            const yearSelect = $("#yearSelect");
+
+            if (selectedBrand) {
+              modelSelect
+                .prop("disabled", false)
+                .html("<option selected>Loading...</option>");
+              fuelSelect
+                .prop("disabled", true)
+                .html("<option selected>Pilih Fuel</option>");
+              transmissionSelect
+                .prop("disabled", true)
+                .html("<option selected>Pilih Type Transmission</option>");
+              yearSelect
+                .prop("disabled", true)
+                .html("<option selected>Pilih Tahun</option>");
+
+              $.ajax({
+                url: `https://ams.akikita.web.id/api/filter/brand/${selectedBrand}`,
+                method: "GET",
+                dataType: "json",
+                success: function (response) {
+                  modelSelect
+                    .empty()
+                    .append(`<option value="">Pilih Model</option>`);
+                  if (
+                    response.status === "success" &&
+                    response.data.length > 0
+                  ) {
+                    response.data.forEach(function (modelName) {
+                      modelSelect.append(
+                        `<option value="${modelName}">${modelName}</option>`
+                      );
+                    });
+                  } else {
+                    modelSelect.append(
+                      `<option value="">Model tidak ditemukan</option>`
+                    );
+                  }
+                },
+                error: function () {
+                  alert("Gagal mengambil data model");
+                  modelSelect
+                    .prop("disabled", true)
+                    .html("<option selected>Pilih Model</option>");
+                  fuelSelect
+                    .prop("disabled", true)
+                    .html("<option selected>Pilih Fuel</option>");
+                  transmissionSelect
+                    .prop("disabled", true)
+                    .html("<option selected>Pilih Type Transmission</option>");
+                  yearSelect
+                    .prop("disabled", true)
+                    .html("<option selected>Pilih Tahun</option>");
+                },
               });
+            } else {
+              modelSelect
+                .prop("disabled", true)
+                .html("<option selected>Pilih Model</option>");
+              fuelSelect
+                .prop("disabled", true)
+                .html("<option selected>Pilih Fuel</option>");
+              transmissionSelect
+                .prop("disabled", true)
+                .html("<option selected>Pilih Type Transmission</option>");
+              yearSelect
+                .prop("disabled", true)
+                .html("<option selected>Pilih Tahun</option>");
             }
-          },
-          error: function() {
-            alert('Gagal mengambil data brand');
-          },
-        });
+          });
 
-        // Mengambil data model setelah memilih brand
-        $('#brandSelect').change(function() {
-          const selectedBrand = $(this).val();
-          const modelSelect = $('#modelSelect');
-          const fuelSelect = $('#fuelSelect');
-          const transmissionSelect = $('#transmissionSelect');
-          const yearSelect = $('#yearSelect');
+          // Mengaktifkan fuel select setelah memilih model
+          $("#modelSelect").change(function () {
+            const selectedModel = $(this).val();
+            const fuelSelect = $("#fuelSelect");
 
-          if (selectedBrand) {
-            modelSelect.prop('disabled', false).html('<option selected>Loading...</option>');
-            fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
-            transmissionSelect
-              .prop('disabled', true)
-              .html('<option selected>Pilih Type Transmission</option>');
-            yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
-
-            $.ajax({
-              url: `https://ams.akikita.web.id/api/filter/brand/${selectedBrand}`,
-              method: 'GET',
-              dataType: 'json',
-              success: function(response) {
-                modelSelect.empty().append(`<option value="">Pilih Model</option>`);
-                if (response.status === 'success' && response.data.length > 0) {
-                  response.data.forEach(function(modelName) {
-                    modelSelect.append(`<option value="${modelName}">${modelName}</option>`);
-                  });
-                } else {
-                  modelSelect.append(`<option value="">Model tidak ditemukan</option>`);
-                }
-              },
-              error: function() {
-                alert('Gagal mengambil data model');
-                modelSelect.prop('disabled', true).html('<option selected>Pilih Model</option>');
-                fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
-                transmissionSelect
-                  .prop('disabled', true)
-                  .html('<option selected>Pilih Type Transmission</option>');
-                yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
-              },
-            });
-          } else {
-            modelSelect.prop('disabled', true).html('<option selected>Pilih Model</option>');
-            fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
-            transmissionSelect
-              .prop('disabled', true)
-              .html('<option selected>Pilih Type Transmission</option>');
-            yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
-          }
-        });
-
-        // Mengaktifkan fuel select setelah memilih model
-        $('#modelSelect').change(function() {
-          const selectedModel = $(this).val();
-          const fuelSelect = $('#fuelSelect');
-
-          if (selectedModel) {
-            // Aktifkan dropdown fuel dan isi dengan opsi
-            fuelSelect.prop('disabled', false);
-            fuelSelect.empty(); // Hapus opsi yang ada sebelumnya
-            fuelSelect.append('<option value="">Pilih Fuel</option>');
-            fuelSelect.append('<option value="none">None</option>');
-            fuelSelect.append('<option value="bensin">Bensin</option>');
-            fuelSelect.append('<option value="diesel">Diesel</option>');
-          } else {
-            // Nonaktifkan dropdown fuel jika tidak ada model yang dipilih
-            fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
-          }
-        });
-
-        // Mengaktifkan transmission select setelah memilih fuel
-        $('#fuelSelect').change(function() {
-          const selectedFuel = $(this).val();
-          const transmissionSelect = $('#transmissionSelect');
-
-          if (selectedFuel) {
-            // Aktifkan dropdown transmission dan isi dengan opsi
-            transmissionSelect.prop('disabled', false);
-            transmissionSelect.empty(); // Hapus opsi yang ada sebelumnya
-            transmissionSelect.append('<option value="">Pilih Type Transmission</option>');
-            transmissionSelect.append('<option value="none">None</option>');
-            transmissionSelect.append('<option value="matic">Matic</option>');
-          } else {
-            // Nonaktifkan dropdown transmission jika tidak ada fuel yang dipilih
-            transmissionSelect
-              .prop('disabled', true)
-              .html('<option selected>Pilih Type Transmission</option>');
-          }
-        });
-
-        // Mengaktifkan year select setelah memilih transmission
-        $('#transmissionSelect').change(function() {
-          const selectedTransmission = $(this).val();
-          const yearSelect = $('#yearSelect');
-          if (selectedTransmission) {
-            yearSelect.prop('disabled', false);
-            const currentYear = new Date().getFullYear();
-            yearSelect.empty().append(`<option value="">Pilih Tahun</option>`);
-            for (let year = 1945; year <= currentYear; year++) {
-              yearSelect.append(`<option value="${year}">${year}</option>`);
+            if (selectedModel) {
+              // Aktifkan dropdown fuel dan isi dengan opsi
+              fuelSelect.prop("disabled", false);
+              fuelSelect.empty(); // Hapus opsi yang ada sebelumnya
+              fuelSelect.append('<option value="">Pilih Fuel</option>');
+              fuelSelect.append('<option value="none">None</option>');
+              fuelSelect.append('<option value="bensin">Bensin</option>');
+              fuelSelect.append('<option value="diesel">Diesel</option>');
+            } else {
+              // Nonaktifkan dropdown fuel jika tidak ada model yang dipilih
+              fuelSelect
+                .prop("disabled", true)
+                .html("<option selected>Pilih Fuel</option>");
             }
-          } else {
-            yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
-          }
+          });
+
+          // Mengaktifkan transmission select setelah memilih fuel
+          $("#fuelSelect").change(function () {
+            const selectedFuel = $(this).val();
+            const transmissionSelect = $("#transmissionSelect");
+
+            if (selectedFuel) {
+              // Aktifkan dropdown transmission dan isi dengan opsi
+              transmissionSelect.prop("disabled", false);
+              transmissionSelect.empty(); // Hapus opsi yang ada sebelumnya
+              transmissionSelect.append(
+                '<option value="">Pilih Type Transmission</option>'
+              );
+              transmissionSelect.append('<option value="none">None</option>');
+              transmissionSelect.append('<option value="matic">Matic</option>');
+            } else {
+              // Nonaktifkan dropdown transmission jika tidak ada fuel yang dipilih
+              transmissionSelect
+                .prop("disabled", true)
+                .html("<option selected>Pilih Type Transmission</option>");
+            }
+          });
+
+          // Mengaktifkan year select setelah memilih transmission
+          $("#transmissionSelect").change(function () {
+            const selectedTransmission = $(this).val();
+            const yearSelect = $("#yearSelect");
+            if (selectedTransmission) {
+              yearSelect.prop("disabled", false);
+              const currentYear = new Date().getFullYear();
+              yearSelect
+                .empty()
+                .append(`<option value="">Pilih Tahun</option>`);
+              for (let year = 1945; year <= currentYear; year++) {
+                yearSelect.append(`<option value="${year}">${year}</option>`);
+              }
+            } else {
+              yearSelect
+                .prop("disabled", true)
+                .html("<option selected>Pilih Tahun</option>");
+            }
+          });
+          $("#searchButton").click(function () {
+            // Ambil nilai model yang dipilih (misal dari input atau dropdown)
+            const selectedModel = $("#modelSelect").val();
+
+            // Periksa apakah model sudah dipilih
+            if (selectedModel) {
+              // Pindah ke halaman property-list.html dengan query parameter
+              window.location.href = `property-list.html?model=${encodeURIComponent(
+                selectedModel
+              )}`;
+            } else {
+              alert("Model belum dipilih");
+            }
+          });
         });
-        $('#searchButton').click(function() {
-          // Ambil nilai model yang dipilih (misal dari input atau dropdown)
-          const selectedModel = $('#modelSelect').val();
+      </script>
 
-          // Periksa apakah model sudah dipilih
-          if (selectedModel) {
-            // Pindah ke halaman property-list.html dengan query parameter
-            window.location.href = `property-list.html?model=${encodeURIComponent(
-              selectedModel,
-            )}`;
-          } else {
-            alert('Model belum dipilih');
-          }
-        });
-      });
-    </script>
-
-    <!-- Category Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
-          <h1 class="mb-3">Pasang Akimu Dengan Akikita</h1>
-          <p>Tahapan Pemesanan AKi di Akikita.id</p>
-        </div>
-        <div class="row g-4 justify-content-center">
-          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-            <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-              <div class="rounded p-5">
-                <div class="icon mb-4">
-                  <img class="img-fluid icon-size" src="img/STEP 1.png" alt="Icon" />
-                </div>
-                <h6>Step 1</h6>
-                <span>Kunjungi Web Pilih Aki Kendaraanmu</span>
-              </div>
-            </a>
+      <!-- Category Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h1 class="mb-3">Pasang Akimu Dengan Akikita</h1>
+            <p>Tahapan Pemesanan AKi di Akikita.id</p>
           </div>
-          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-            <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-              <div class="rounded p-5">
-                <div class="icon mb-3">
-                  <img class="img-fluid icon-size" src="img/STEP 2.png" alt="Icon" />
+          <div class="row g-4 justify-content-center">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-5">
+                  <div class="icon mb-4">
+                    <img
+                      class="img-fluid icon-size"
+                      src="img/STEP 1.png"
+                      alt="Icon"
+                    />
+                  </div>
+                  <h6>Step 1</h6>
+                  <span>Kunjungi Web Pilih Aki Kendaraanmu</span>
                 </div>
-                <h6>Step 2</h6>
-                <span>Tentukan Waktu & Lokasi Pemasangan </span>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-            <a class="cat-item d-block bg-light text-center rounded p-3" href="">
-              <div class="rounded p-5">
-                <div class="icon mb-3">
-                  <img class="img-fluid icon-size" src="img/STEP 3.png" alt="Icon" />
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-5">
+                  <div class="icon mb-3">
+                    <img
+                      class="img-fluid icon-size"
+                      src="img/STEP 2.png"
+                      alt="Icon"
+                    />
+                  </div>
+                  <h6>Step 2</h6>
+                  <span>Tentukan Waktu & Lokasi Pemasangan </span>
                 </div>
-                <h6>Step 3</h6>
-                <span>Teknisi Akikita Datang Pasang Aki </span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Category End -->
-
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-            <div class="about-img position-relative overflow-hidden p-5 pe-0">
-              <img class="img-fluid w-100" src="img/tokopedia.png" />
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-5">
+                  <div class="icon mb-3">
+                    <img
+                      class="img-fluid icon-size"
+                      src="img/STEP 3.png"
+                      alt="Icon"
+                    />
+                  </div>
+                  <h6>Step 3</h6>
+                  <span>Teknisi Akikita Datang Pasang Aki </span>
+                </div>
+              </a>
             </div>
           </div>
-          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-            <h1 class="mb-4">Belanja Lebih Mudah!</h1>
-            <p class="mb-4">
-              Kamu bisa mendapatkan produk terbaik dari AKIKITA.ID langsung di Tokopedia. Cek
-              koleksi lengkap kami dan nikmati penawaran spesial yang tidak boleh kamu lewatkan!
-            </p>
-            <p><i class="fa fa-check text-primary me-3"></i>Layanan Pelanggan Responsif</p>
-            <p><i class="fa fa-check text-primary me-3"></i>Kemudahan Pembayaran</p>
-            <p><i class="fa fa-check text-primary me-3"></i>Promo dan Diskon Spesial</p>
-            <a class="btn btn-primary py-3 px-5 mt-3" href="https://www.tokopedia.com/akikitaid">Kunjungi Sekarang
-              >></a>
+        </div>
+      </div>
+      <!-- Category End -->
+
+      <!-- About Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+              <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                <img class="img-fluid w-100" src="img/tokopedia.png" />
+              </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <h1 class="mb-4">Belanja Lebih Mudah!</h1>
+              <p class="mb-4">
+                Kamu bisa mendapatkan produk terbaik dari AKIKITA.ID langsung di
+                Tokopedia. Cek koleksi lengkap kami dan nikmati penawaran
+                spesial yang tidak boleh kamu lewatkan!
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>Layanan Pelanggan
+                Responsif
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>Kemudahan
+                Pembayaran
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>Promo dan Diskon
+                Spesial
+              </p>
+              <a
+                class="btn btn-primary py-3 px-5 mt-3"
+                href="https://www.tokopedia.com/akikitaid"
+                >Kunjungi Sekarang >></a
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- About End -->
+      <!-- About End -->
 
-    <!-- Property List Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-0 gx-5 align-items-end">
-          <div class="col-lg-6">
-            <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
-              <h1 class="mb-3">Rekomendasi Battery</h1>
-              <p>
-                Dapatkan rekomendasi aki kendaraan terbaik yang siap memberikan performa optimal
-                untuk perjalananmu. Pilih aki yang sesuai dengan spesifikasi kendaraanmu, hanya di
-                AKIKITA.ID!
+      <!-- Property List Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-0 gx-5 align-items-end">
+            <div class="col-lg-6">
+              <div
+                class="text-start mx-auto mb-5 wow slideInLeft"
+                data-wow-delay="0.1s"
+              >
+                <h1 class="mb-3">Rekomendasi Battery</h1>
+                <p>
+                  Dapatkan rekomendasi aki kendaraan terbaik yang siap
+                  memberikan performa optimal untuk perjalananmu. Pilih aki yang
+                  sesuai dengan spesifikasi kendaraanmu, hanya di AKIKITA.ID!
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-lg-6 text-start text-lg-end wow slideInRight"
+              data-wow-delay="0.1s"
+            >
+              <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+                <li class="nav-item me-2">
+                  <a
+                    class="btn btn-outline-primary"
+                    data-bs-toggle="pill"
+                    href=""
+                    >Views All Product >></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div id="tab-1" class="tab-pane fade show p-0 active">
+              <div class="row g-4">
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.1s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img class="img-fluid" src="img/1.png" alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Akikita
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">Rp 895.000</h5>
+                      <a class="d-block h5 mb-2" href="">AMARON GO 46B24R</a>
+                      <p>
+                        <i class="fas fa-car-battery text-primary me-2"></i>
+                        Size: B20R - NS40
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <p class="p-2 pb-0" style="margin-left: 17px">
+                        CCA : 350 | Capacity : 45Ah
+                      </p>
+                    </div>
+                    <p
+                      class="btn btn-rectangle"
+                      style="margin-left: 15px; color: #8ec643"
+                    >
+                      <i class="fas fa-shopping-basket"></i> Beli Sekarang
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.1s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img class="img-fluid" src="img/20br.png" alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Akikita
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">Rp 865.000</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >AMARON Hi-Life FLO 42B20R</a
+                      >
+                      <p>
+                        <i class="fas fa-car-battery text-primary me-2"></i>
+                        Size: B20R - NS40
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <p class="p-2 pb-0" style="margin-left: 17px">
+                        CCA : 340 | Capacity : 35Ah
+                      </p>
+                    </div>
+                    <p
+                      class="btn btn-rectangle"
+                      style="margin-left: 15px; color: #8ec643"
+                    >
+                      <i class="fas fa-shopping-basket"></i> Beli Sekarang
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.1s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img class="img-fluid" src="img/38b.png" alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Akikita
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">Rp 745.000</h5>
+                      <a class="d-block h5 mb-2" href="">AMARON GO 38B20R</a>
+                      <p>
+                        <i class="fas fa-car-battery text-primary me-2"></i>
+                        Size: B20R - NS40
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <p class="p-2 pb-0" style="margin-left: 17px">
+                        CCA : 320 | Capacity : 35Ah
+                      </p>
+                    </div>
+                    <p
+                      class="btn btn-rectangle"
+                      style="margin-left: 15px; color: #8ec643"
+                    >
+                      <i class="fas fa-shopping-basket"></i> Beli Sekarang
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.1s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img class="img-fluid" src="img/400r.png" alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Akikita
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">Rp 670.000</h5>
+                      <a class="d-block h5 mb-2" href="">AMARON FRESH FR400R</a>
+                      <p>
+                        <i class="fas fa-car-battery text-primary me-2"></i>
+                        Size: B20R - NS40
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <p class="p-2 pb-0" style="margin-left: 17px">
+                        CCA : 280 | Capacity : 35Ah
+                      </p>
+                    </div>
+                    <p
+                      class="btn btn-rectangle"
+                      style="margin-left: 15px; color: #8ec643"
+                    >
+                      <i class="fas fa-shopping-basket"></i> Beli Sekarang
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.1s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img class="img-fluid" src="img/55r.png" alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Akikita
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">Rp 1.035.000</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >AMARON HI LIFE FLO 55B24R</a
+                      >
+                      <p>
+                        <i class="fas fa-car-battery text-primary me-2"></i>
+                        Size: B20R - NS40
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <p class="p-2 pb-0" style="margin-left: 17px">
+                        CCA : 355 | Capacity : 45Ah
+                      </p>
+                    </div>
+                    <p
+                      class="btn btn-rectangle"
+                      style="margin-left: 15px; color: #8ec643"
+                    >
+                      <i class="fas fa-shopping-basket"></i> Beli Sekarang
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.1s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img class="img-fluid" src="img/4b.png" alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Akikita
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">Rp 895.000</h5>
+                      <a class="d-block h5 mb-2" href="">AMARON GO 46B24R</a>
+                      <p>
+                        <i class="fas fa-car-battery text-primary me-2"></i>
+                        Size: B20R - NS40
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <p class="p-2 pb-0" style="margin-left: 17px">
+                        CCA : 350 | Capacity : 45Ah
+                      </p>
+                    </div>
+                    <p
+                      class="btn btn-rectangle"
+                      style="margin-left: 15px; color: #8ec643"
+                    >
+                      <i class="fas fa-shopping-basket"></i> Beli Sekarang
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Property List End -->
+
+      <!-- Call to Action Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="bg-light rounded p-3">
+            <div
+              class="bg-white rounded p-4"
+              style="border: 1px dashed rgba(0, 185, 142, 0.3)"
+            >
+              <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                  <img
+                    class="img-fluid rounded w-100"
+                    src="img/cs.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                  <div class="mb-4">
+                    <h1 class="mb-3">Hubungi Layanan Pelanggan Kami</h1>
+                    <p>
+                      Butuh informasi lebih lanjut? Layanan pelanggan kami siap
+                      memberikan solusi terbaik untuk Anda.
+                    </p>
+                    <p>
+                      Klik tombol di bawah ini untuk langsung terhubung dan
+                      mendapatkan bantuan cepat dan responsif!
+                    </p>
+                  </div>
+                  <a href="" class="btn btn-primary py-3 px-4 me-2"
+                    ><i class="fa fa-phone-alt me-2"></i>Hubungi Cs</a
+                  >
+                  <a href="" class="btn btn-dark py-3 px-4"
+                    ><i class="fa fa-store-alt me-2"></i>Kunjungi Toko</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Call to Action End -->
+
+      <!-- Team Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h1 class="mb-3">Mengapa Akikita.id?</h1>
+            <p>
+              Nikmati layanan pengiriman cepat ke seluruh Indonesia. Aki yang
+              Anda pesan akan sampai dengan aman dan tepat waktu, siap dipasang
+              di kendaraan Anda.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/tahap 1.png" alt="" />
+                  <div
+                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
+                    style="width: 300px; margin-left: 75px"
+                  >
+                    <h3 class="btn btn-rectangle" href="">Teknisi Terlatih</h3>
+                  </div>
+                </div>
+                <div class="text-center p-3 mt-2">
+                  <small
+                    >Tim mekanik kami telah melalui pelatihan teknisi dan siap
+                    melayani Anda.</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/tahap 2.png" alt="" />
+                  <div
+                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
+                    style="width: 300px; margin-left: 80px"
+                  >
+                    <h3 class="btn btn-rectangle" href="">Produk Original</h3>
+                  </div>
+                </div>
+                <div class="text-center p-3 mt-2">
+                  <small
+                    >Produk kami sesuai dengan spesifikasi dan standar kualitas
+                    internasional.</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/tahap 3.png" alt="" />
+                  <div
+                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
+                    style="width: 300px; margin-left: 85px"
+                  >
+                    <h3 class="btn btn-rectangle" href="">Garansi Resmi</h3>
+                  </div>
+                </div>
+                <div class="text-center p-3 mt-2">
+                  <small
+                    >Semua produk kami dilengkapi jaminan resmi dari produsen
+                    Aki resmi.
+                  </small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/tahap 4.png" alt="" />
+                  <div
+                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
+                    style="width: 300px; margin-left: 65px"
+                  >
+                    <h3 class="btn btn-rectangle" href="">
+                      Gratis Antar Pasang
+                    </h3>
+                  </div>
+                </div>
+                <div class="text-center p-3 mt-2">
+                  <small
+                    >Khusus untuk wilayah Kota & Kab Bandung, akikita.id memberi
+                    layanan antar pasang aki GRATIS</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Team End -->
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5">
+          <div class="row g-5">
+            <!-- Akikita.id Section -->
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Akikita.id</h5>
+              <p class="text-white mb-3">
+                Akikita.id adalah layanan antar pasang aki untuk kendaraan di
+                wilayah Bandung. Teknisi terlatih kami siap melayani Anda.
+              </p>
+              <div class="d-flex pt-2"></div>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Navigasi</h5>
+              <a class="btn btn-link text-white-50" href="">About Us</a>
+              <a class="btn btn-link text-white-50" href="">Contact Us</a>
+              <a class="btn btn-link text-white-50" href="">Our Services</a>
+              <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+              <a class="btn btn-link text-white-50" href=""
+                >Terms & Condition</a
+              >
+            </div>
+
+            <!-- Office Location Section -->
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Kantor Utama</h5>
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>
+                Jalan Raya Daan Mogot KM. 18, Green Sedayu Bizpark DM5 Nomor 58,
+                Provinsi DKI Jakarta
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>
+                +62-8222-8800-175
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i>
+                akikita.id@gmail.com
               </p>
             </div>
-          </div>
-          <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
-            <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
-              <li class="nav-item me-2">
-                <a class="btn btn-outline-primary" data-bs-toggle="pill" href="">Views All Product >></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="tab-content">
-          <div id="tab-1" class="tab-pane fade show p-0 active">
-            <div class="row g-4">
-              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="property-item rounded overflow-hidden">
-                  <div class="position-relative overflow-hidden">
-                    <a href=""><img class="img-fluid" src="img/1.png" alt="" /></a>
-                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                      Akikita
-                    </div>
-                  </div>
-                  <div class="p-4 pb-0">
-                    <h5 class="text-primary mb-3">Rp 895.000</h5>
-                    <a class="d-block h5 mb-2" href="">AMARON GO 46B24R</a>
-                    <p><i class="fas fa-car-battery text-primary me-2"></i> Size: B20R - NS40</p>
-                  </div>
-                  <div class="d-flex border-top">
-                    <p class="p-2 pb-0" style="margin-left: 17px">CCA : 350 | Capacity : 45Ah</p>
-                  </div>
-                  <p class="btn btn-rectangle" style="margin-left: 15px; color: #8ec643">
-                    <i class="fas fa-shopping-basket"></i> Beli Sekarang
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="property-item rounded overflow-hidden">
-                  <div class="position-relative overflow-hidden">
-                    <a href=""><img class="img-fluid" src="img/20br.png" alt="" /></a>
-                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                      Akikita
-                    </div>
-                  </div>
-                  <div class="p-4 pb-0">
-                    <h5 class="text-primary mb-3">Rp 865.000</h5>
-                    <a class="d-block h5 mb-2" href="">AMARON Hi-Life FLO 42B20R</a>
-                    <p><i class="fas fa-car-battery text-primary me-2"></i> Size: B20R - NS40</p>
-                  </div>
-                  <div class="d-flex border-top">
-                    <p class="p-2 pb-0" style="margin-left: 17px">CCA : 340 | Capacity : 35Ah</p>
-                  </div>
-                  <p class="btn btn-rectangle" style="margin-left: 15px; color: #8ec643">
-                    <i class="fas fa-shopping-basket"></i> Beli Sekarang
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="property-item rounded overflow-hidden">
-                  <div class="position-relative overflow-hidden">
-                    <a href=""><img class="img-fluid" src="img/38b.png" alt="" /></a>
-                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                      Akikita
-                    </div>
-                  </div>
-                  <div class="p-4 pb-0">
-                    <h5 class="text-primary mb-3">Rp 745.000</h5>
-                    <a class="d-block h5 mb-2" href="">AMARON GO 38B20R</a>
-                    <p><i class="fas fa-car-battery text-primary me-2"></i> Size: B20R - NS40</p>
-                  </div>
-                  <div class="d-flex border-top">
-                    <p class="p-2 pb-0" style="margin-left: 17px">CCA : 320 | Capacity : 35Ah</p>
-                  </div>
-                  <p class="btn btn-rectangle" style="margin-left: 15px; color: #8ec643">
-                    <i class="fas fa-shopping-basket"></i> Beli Sekarang
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="property-item rounded overflow-hidden">
-                  <div class="position-relative overflow-hidden">
-                    <a href=""><img class="img-fluid" src="img/400r.png" alt="" /></a>
-                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                      Akikita
-                    </div>
-                  </div>
-                  <div class="p-4 pb-0">
-                    <h5 class="text-primary mb-3">Rp 670.000</h5>
-                    <a class="d-block h5 mb-2" href="">AMARON FRESH FR400R</a>
-                    <p><i class="fas fa-car-battery text-primary me-2"></i> Size: B20R - NS40</p>
-                  </div>
-                  <div class="d-flex border-top">
-                    <p class="p-2 pb-0" style="margin-left: 17px">CCA : 280 | Capacity : 35Ah</p>
-                  </div>
-                  <p class="btn btn-rectangle" style="margin-left: 15px; color: #8ec643">
-                    <i class="fas fa-shopping-basket"></i> Beli Sekarang
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="property-item rounded overflow-hidden">
-                  <div class="position-relative overflow-hidden">
-                    <a href=""><img class="img-fluid" src="img/55r.png" alt="" /></a>
-                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                      Akikita
-                    </div>
-                  </div>
-                  <div class="p-4 pb-0">
-                    <h5 class="text-primary mb-3">Rp 1.035.000</h5>
-                    <a class="d-block h5 mb-2" href="">AMARON HI LIFE FLO 55B24R</a>
-                    <p><i class="fas fa-car-battery text-primary me-2"></i> Size: B20R - NS40</p>
-                  </div>
-                  <div class="d-flex border-top">
-                    <p class="p-2 pb-0" style="margin-left: 17px">CCA : 355 | Capacity : 45Ah</p>
-                  </div>
-                  <p class="btn btn-rectangle" style="margin-left: 15px; color: #8ec643">
-                    <i class="fas fa-shopping-basket"></i> Beli Sekarang
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="property-item rounded overflow-hidden">
-                  <div class="position-relative overflow-hidden">
-                    <a href=""><img class="img-fluid" src="img/4b.png" alt="" /></a>
-                    <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                      Akikita
-                    </div>
-                  </div>
-                  <div class="p-4 pb-0">
-                    <h5 class="text-primary mb-3">Rp 895.000</h5>
-                    <a class="d-block h5 mb-2" href="">AMARON GO 46B24R</a>
-                    <p><i class="fas fa-car-battery text-primary me-2"></i> Size: B20R - NS40</p>
-                  </div>
-                  <div class="d-flex border-top">
-                    <p class="p-2 pb-0" style="margin-left: 17px">CCA : 350 | Capacity : 45Ah</p>
-                  </div>
-                  <p class="btn btn-rectangle" style="margin-left: 15px; color: #8ec643">
-                    <i class="fas fa-shopping-basket"></i> Beli Sekarang
-                  </p>
-                </div>
+
+            <!-- Social Media Section -->
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Sosial Media</h5>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social mx-1" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social mx-1" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social mx-1" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social mx-1" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Property List End -->
 
-    <!-- Call to Action Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="bg-light rounded p-3">
-          <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, 0.3)">
-            <div class="row g-5 align-items-center">
-              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                <img class="img-fluid rounded w-100" src="img/cs.png" alt="" />
+        <!-- Copyright Section -->
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">Akikita.id</a>, All
+                Right Reserved. Designed By
+                <a class="border-bottom" href="">Footprint Solution 2024</a>
               </div>
-              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <div class="mb-4">
-                  <h1 class="mb-3">Hubungi Layanan Pelanggan Kami</h1>
-                  <p>
-                    Butuh informasi lebih lanjut? Layanan pelanggan kami siap memberikan solusi
-                    terbaik untuk Anda.
-                  </p>
-                  <p>
-                    Klik tombol di bawah ini untuk langsung terhubung dan mendapatkan bantuan
-                    cepat dan responsif!
-                  </p>
-                </div>
-                <a href="" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Hubungi Cs</a>
-                <a href="" class="btn btn-dark py-3 px-4"><i class="fa fa-store-alt me-2"></i>Kunjungi Toko</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Call to Action End -->
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
-          <h1 class="mb-3">Mengapa Akikita.id?</h1>
-          <p>
-            Nikmati layanan pengiriman cepat ke seluruh Indonesia. Aki yang Anda pesan akan sampai
-            dengan aman dan tepat waktu, siap dipasang di kendaraan Anda.
-          </p>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item rounded overflow-hidden">
-              <div class="position-relative">
-                <img class="img-fluid" src="img/tahap 1.png" alt="" />
-                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center" style="width: 300px; margin-left: 75px">
-                  <h3 class="btn btn-rectangle" href="">Teknisi Terlatih</h3>
-                </div>
-              </div>
-              <div class="text-center p-3 mt-2">
-                <small>Tim mekanik kami telah melalui pelatihan teknisi dan siap melayani Anda.</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item rounded overflow-hidden">
-              <div class="position-relative">
-                <img class="img-fluid" src="img/tahap 2.png" alt="" />
-                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center" style="width: 300px; margin-left: 80px">
-                  <h3 class="btn btn-rectangle" href="">Produk Original</h3>
-                </div>
-              </div>
-              <div class="text-center p-3 mt-2">
-                <small>Produk kami sesuai dengan spesifikasi dan standar kualitas
-                  internasional.</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item rounded overflow-hidden">
-              <div class="position-relative">
-                <img class="img-fluid" src="img/tahap 3.png" alt="" />
-                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center" style="width: 300px; margin-left: 85px">
-                  <h3 class="btn btn-rectangle" href="">Garansi Resmi</h3>
-                </div>
-              </div>
-              <div class="text-center p-3 mt-2">
-                <small>Semua produk kami dilengkapi jaminan resmi dari produsen Aki resmi.
-                </small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item rounded overflow-hidden">
-              <div class="position-relative">
-                <img class="img-fluid" src="img/tahap 4.png" alt="" />
-                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center" style="width: 300px; margin-left: 65px">
-                  <h3 class="btn btn-rectangle" href="">Gratis Antar Pasang</h3>
-                </div>
-              </div>
-              <div class="text-center p-3 mt-2">
-                <small>Khusus untuk wilayah Kota & Kab Bandung, akikita.id memberi layanan antar
-                  pasang aki GRATIS</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Team End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-      <div class="container py-5">
-        <div class="row g-5">
-          <!-- Akikita.id Section -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="text-white mb-4">Akikita.id</h5>
-            <p class="text-white mb-3">
-              Akikita.id adalah layanan antar pasang aki untuk kendaraan di wilayah Bandung.
-              Teknisi terlatih kami siap melayani Anda.
-            </p>
-            <div class="d-flex pt-2"></div>
-          </div>
-
-          <!-- Quick Links Section -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="text-white mb-4">Navigasi</h5>
-            <a class="btn btn-link text-white-50" href="">About Us</a>
-            <a class="btn btn-link text-white-50" href="">Contact Us</a>
-            <a class="btn btn-link text-white-50" href="">Our Services</a>
-            <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-            <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
-          </div>
-
-          <!-- Office Location Section -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="text-white mb-4">Kantor Utama</h5>
-            <p class="mb-2">
-              <i class="fa fa-map-marker-alt me-3"></i>
-              Jalan Raya Daan Mogot KM. 18, Green Sedayu Bizpark DM5 Nomor 58, Provinsi DKI
-              Jakarta
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-phone-alt me-3"></i>
-              +62-8222-8800-175
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-envelope me-3"></i>
-              akikita.id@gmail.com
-            </p>
-          </div>
-
-          <!-- Social Media Section -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="text-white mb-4">Sosial Media</h5>
-            <div class="d-flex pt-2">
-              <a class="btn btn-outline-light btn-social mx-1" href=""><i class="fab fa-twitter"></i></a>
-              <a class="btn btn-outline-light btn-social mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-              <a class="btn btn-outline-light btn-social mx-1" href=""><i class="fab fa-youtube"></i></a>
-              <a class="btn btn-outline-light btn-social mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Copyright Section -->
-      <div class="container">
-        <div class="copyright">
-          <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy; <a class="border-bottom" href="#">Akikita.id</a>, All Right Reserved.
-              Designed By <a class="border-bottom" href="">Footprint Solution 2024</a>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-              <div class="footer-menu">
-                <!-- <a href="">Home</a>
+              <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                  <!-- <a href="">Home</a>
                 <a href="">Cookies</a>
                 <a href="">Help</a>
                 <a href="">FAQs</a> -->
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- Footer End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
     </div>
-    <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-  </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-  <!-- JavaScript Libraries -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-  <!-- Template Javascript -->
-  <script src="js/main.js"></script>
-</body>
-
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
