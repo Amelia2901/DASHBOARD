@@ -443,6 +443,15 @@
   margin-top: -58px;
 }
 
+.produk-katalog {
+  background-color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  margin-top: -58px;
+  height: 330px;
+}
+
 .populer {
   background-color: #a15dff;
   color: white;
@@ -487,6 +496,34 @@
   padding: 10px;
   text-align: center;
 }
+
+.detail-katalog {
+  background-color: black;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.detail-katalog h2 {
+  margin-top: -15px;
+  font-size: 13px;
+  color: white;
+  font-weight: normal;
+}
+
+.detail-katalog .btn {
+  background-color: #99cc33;
+  color: #ffffff;
+  padding: 5px 33px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
 .product-details h2 {
   margin: 10px 0;
   font-size: 15px;
@@ -539,11 +576,48 @@
   color: #3a3a3c;
 }
 
+.specs-katalog {
+  width: 95%;
+  border-collapse: collapse;
+}
+.specs-katalog th,
+.specs-katalog td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid white;
+}
+.specs-katalog th {
+  background-color: #444444;
+}
+.specs-katalog .detail1 td {
+  background-color: #8686863b;
+  text-align: left;
+  font-size: 11px;
+  color: white;
+  border-radius: 5px 5px 0px 0px;
+  border: none;
+}
+.specs-katalog .detail2 td {
+  background-color: #cecece42;
+  text-align: left;
+  font-size: 12px;
+  color: white;
+  border-radius: 0px 0px 5px 5px;
+  border: none;
+}
+
 .produkcontainer {
   display: flex;
   gap: 10px;
   width: 1000px;
   margin-left: -2px;
+}
+
+.produkcontainerkatalog {
+  display: flex;
+  gap: 10px;
+  width: 1200px;
+  margin-left: 30px;
 }
 
 /* .produkcontainer1 {
@@ -557,6 +631,12 @@
   display: flex;
   padding: 120px 20px 30px 20px;
   background: #000000;
+}
+
+.katalogkontainer {
+  display: flex;
+  padding: 120px 20px 30px 20px;
+  background: white;
 }
 
 .kontendetail {
