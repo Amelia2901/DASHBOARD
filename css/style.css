@@ -562,7 +562,7 @@
 .kontendetail {
   display: flex;
   padding: 120px 20px 30px 20px;
-  background: white;
+  background-color: white;
 }
 
 .juduldetail {
@@ -625,54 +625,79 @@
     white,
     rgb(87, 86, 86)
   ); /* Gradasi horizontal */
+  box-shadow: 2px 2px 2px rgba(61, 61, 61, 0.8);
 }
 
-.fotoproduk {
+.fotoaki {
   float: left;
   padding: 20px;
 }
 
-.fotoproduk img {
+.fotoaki img {
   height: auto;
   border-radius: 15px;
   margin-top: -100px;
 }
 
-.product-details {
+.product-aki {
   float: left;
   width: 60%;
   padding: 20px;
   text-align: left;
 }
-.product-title {
+.judul-aki {
   font-size: 30px;
   font-weight: bold;
   font-family: 'Helvetica', Sans-serif;
   margin-top: -90px;
 }
-.product-price {
+.harga-aki {
   font-size: 20px;
   color: #333;
   margin: 10px 0;
 }
-.order-now {
-  margin: 20px 0;
+.order-wa {
+  margin: 7px 0;
+  margin-top: -10px;
 }
-.order-now button {
-  background-color: #25d366;
+
+.order-tokped {
+  margin: 7px 0;
+}
+
+.order-wa button {
+  background-color: #87ce34;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-right: 10px;
+  padding: 10px 170px;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 2px 1px 1px rgba(129, 129, 129, 0.8);
 }
-.order-now button.discount {
-  background-color: #ff0000;
+
+.order-tokped button img {
+  height: 20px;
 }
-.order-now button i {
-  margin-right: 5px;
+
+.order-wa button:hover {
+  background-color: #1da851;
 }
+
+.order-tokped button {
+  background-color: #f2f2f2;
+  color: black;
+  border: none;
+  padding: 10px 170px;
+  font-size: 13px;
+  border-radius: 5px;
+  box-shadow: 2px 1px 1px rgba(129, 129, 129, 0.8);
+}
+
+.order-tokped button:hover {
+  background-color: grey;
+  color: white;
+}
+
 .garislurus {
   color: black;
   width: 370px;
@@ -686,20 +711,23 @@
 
 .specifications {
   margin-top: -80px;
-  margin-left: -300px;
+  margin-left: -320px;
+  padding: 10px 45px 10px 45px;
 }
 .specifications table {
   width: 100%;
   border-collapse: collapse;
+  border: 3px solid #d4d4d4;
 }
 .specifications td {
-  border: 1px solid #ddd;
+  /* border-style: none; */
   padding: 8px;
   text-align: left;
+  font-size: 11px;
+  height: 10px;
+  color: black;
 }
-.specifications th {
-  background-color: #f2f2f2;
-}
+
 @media (max-width: 768px) {
   .product-image,
   .product-details {
@@ -707,3 +735,19 @@
     width: 100%;
   }
 }
+
+.specifications .tabel-1 td {
+  background: #f0f0f0;
+  color: black;
+  line-height: 1;
+}
+
+.specifications .penjelasan td {
+  font-weight: bold;
+}
+/* .specifications .spek-judul t {
+  color: #3a3a3c;
+  font-weight: 400;
+  font-family: 'Helvetica', Sans-serif;
+  margin-left: 100px;
+} */
