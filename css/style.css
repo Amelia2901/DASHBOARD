@@ -613,6 +613,18 @@
   margin-left: -2px;
 }
 
+.stepbeli {
+  display: flex;
+  gap: 10px;
+  width: 1000px;
+  margin-left: -2px;
+}
+
+.stepbeli img {
+  height: 370px;
+  margin-top: -45px;
+}
+
 .produkcontainerkatalog {
   display: flex;
   gap: 10px;
