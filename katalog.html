@@ -386,19 +386,125 @@
     </script>
 
     <!-- Catalog container -->
+    <div class="kontendetail d-none" id="container-catalog-detail">
+      <div class="fotoaki">
+        <img
+          id="battery-image"
+          alt=""
+          onerror="this.onerror=null;this.src='img/noimage.jpg';"
+          src="img/noimage.jpg"
+          height="350"
+          width="350"
+        />
+      </div>
+
+      <div class="product-aki">
+        <div class="judul-aki"><span id="battery-name"></span></div>
+
+        <div class="harga-aki">
+          Harga
+          <br />
+          <h4>Rp <span id="battery-price">0</span></h4>
+          <hr class="garislurus" />
+          <p style="margin-top: -12px; font-size: 15px">Pesan Sekarang Di</p>
+        </div>
+
+        <div class="order-wa">
+          <button>
+            <i
+              style="margin-left: -220px !important"
+              class="fab fa-whatsapp"
+            ></i>
+            Whatsapp
+          </button>
+        </div>
+
+        <div class="order-tokped">
+          <button>
+            <img style="margin-left: -220px" src="img/tokped-logo.png" alt="" />
+            Tokopedia
+          </button>
+        </div>
+      </div>
+
+      <!-- Specifications Table -->
+      <div class="specifications">
+        <table>
+          <tr class="tabel-1">
+            <td>Garansi</td>
+            <td><span id="battery-warranty">0</span> Bulan</td>
+          </tr>
+          <tr>
+            <td>Standard CCA</td>
+            <td><span id="battery-cca"></span> A</td>
+          </tr>
+          <tr class="tabel-1">
+            <td>Kapasitas</td>
+            <td><span id="battery-capacity"></span> Ah</td>
+          </tr>
+          <tr>
+            <td>Voltase</td>
+            <td>12 DCV</td>
+          </tr>
+          <tr class="tabel-1">
+            <td>Dimensi</td>
+            <td>
+              <span id="battery-length"></span> X
+              <span id="battery-width"></span> X
+              <span id="battery-height"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>Nama Lain</td>
+            <td><span id="battery-alt-name"></span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- Closing div for .kontendetail -->
+
     <div class="container p-2" id="container-catalog">
       <div class="row row-cols-6" id="container-row-catalog"></div>
     </div>
 
     <script type="module">
-      import { fetchCatalogs } from "./service/catalogService.js";
+      import {
+        fetchCatalogs,
+        fetchCatalogDetails,
+      } from "./service/catalogService.js";
 
       $(function () {
+        const openDetailCatalog = async (batteryId) => {
+          try {
+            const details = await fetchCatalogDetails(batteryId);
+            console.log(details);
+
+            // Replace the catalog detail value.
+            $("#battery-image").attr(
+              "src",
+              "https://ams.akikita.web.id/storage/image/battery/compressed/" +
+                details.image
+            );
+            $("#battery-name").text(details.name);
+            $("#battery-price").text(details.price_retail);
+            $("#battery-warranty").text(details.warranty);
+            $("#battery-cca").text(details.standard_cca);
+            $("#battery-capacity").text(details.capacity);
+            $("#battery-length").text(details.dimension_length);
+            $("#battery-width").text(details.dimension_width);
+            $("#battery-height").text(details.dimension_height);
+            $("#battery-alt-name").text(details.name_alternate);
+
+            // Show the catalog detail container.
+            $("#container-catalog-detail").removeClass("d-none");
+          } catch (error) {
+            console.error("Error loading catalog details:", error);
+          }
+        };
+
         const loadCatalogs = async () => {
           try {
             const catalogs = await fetchCatalogs();
-            console.table(catalogs);
-
             catalogs.forEach((catalog) => {
               const catalogCard = `
                 <div class="product-card m-2 p-2 card col">
@@ -416,17 +522,21 @@
                     <h2>${catalog.name}</h2>
                     <table class="specs-katalog" align="center">
                       <tr class="detail1">
-                        <td>Ketegangan: ${catalog.standard_cca}V</td>
+                        <td>Ketegangan: 12V</td>
                       </tr>
                       <tr class="detail2">
                         <td>Kapasitas: ${catalog.capacity}Ah</td>
                       </tr>
                     </table>
-                    <a class="btn" href="#">Lihat Detail Produk</a>
+                    <button class="btn btn-detail" data-id="${catalog.id}">Lihat Detail Produk</button>
                   </div>
                 </div>
               `;
               $("#container-row-catalog").append(catalogCard);
+
+              $(".btn-detail").on("click", function () {
+                openDetailCatalog($(this).data("id"));
+              });
             });
           } catch (error) {
             console.error("Error loading catalogs:", error);
