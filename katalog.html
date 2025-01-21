@@ -386,50 +386,57 @@
     </script>
 
     <!-- Catalog container -->
-    <div class="kontendetail d-none" id="container-catalog-detail">
-      <div class="fotoaki">
-        <img
-          id="battery-image"
-          alt=""
-          onerror="this.onerror=null;this.src='img/noimage.jpg';"
-          src="img/noimage.jpg"
-          height="350"
-          width="350"
-        />
-      </div>
-
-      <div class="product-aki">
-        <div class="judul-aki"><span id="battery-name"></span></div>
-
-        <div class="harga-aki">
-          Harga
-          <br />
-          <h4>Rp <span id="battery-price">0</span></h4>
-          <hr class="garislurus" />
-          <p style="margin-top: -12px; font-size: 15px">Pesan Sekarang Di</p>
+    <div
+      class="kontendetail w-full d-none d-flex justify-content-around gap-5"
+      id="container-catalog-detail"
+      style="
+        background-image: url('img/detail-bg.jpeg');
+        background-size: contain;
+      "
+    >
+      <div class="d-flex justify-content-between p-2">
+        <div class="fotoaki">
+          <img
+            id="battery-image"
+            alt=""
+            onerror="this.onerror=null;this.src='img/noimage.jpg';"
+            src="img/noimage.jpg"
+            height="350"
+            width="350"
+          />
         </div>
 
-        <div class="order-wa">
-          <button>
-            <i
-              style="margin-left: -220px !important"
-              class="fab fa-whatsapp"
-            ></i>
-            Whatsapp
-          </button>
-        </div>
+        <div class="product-aki">
+          <div class="judul-aki"><span id="battery-name"></span></div>
 
-        <div class="order-tokped">
-          <button>
-            <img style="margin-left: -220px" src="img/tokped-logo.png" alt="" />
-            Tokopedia
-          </button>
+          <div class="harga-aki">
+            Harga
+            <br />
+            <h4>Rp <span id="battery-price">0</span></h4>
+            <hr />
+            <h4>Pesan Sekarang Di</h4>
+          </div>
+
+          <div class="order-wa pt-2">
+            <button class="fs-5">
+              <i class="fab fa-whatsapp ml-5"></i>
+              Whatsapp
+            </button>
+          </div>
+
+          <div class="order-tokped pt-1">
+            <button class="fs-5">
+              <img class="ml-5" src="img/tokped-logo.png" alt="" />
+              Tokopedia
+            </button>
+          </div>
         </div>
       </div>
 
       <!-- Specifications Table -->
-      <div class="specifications">
-        <table>
+      <div class="specifications p-3 pb-5">
+        <span class="fs-4 fw-bold">Spesifikasi Produk</span>
+        <table class="h-100 mb-2">
           <tr class="tabel-1">
             <td>Garansi</td>
             <td><span id="battery-warranty">0</span> Bulan</td>
@@ -482,7 +489,7 @@
             // Replace the catalog detail value.
             $("#battery-image").attr(
               "src",
-              "https://ams.akikita.web.id/storage/image/battery/compressed/" +
+              "https://ams.akikita.web.id/storage/image/battery/" +
                 details.image
             );
             $("#battery-name").text(details.name);
