@@ -54,10 +54,17 @@
   </head>
 
   <body>
+    <!-- Navbar -->
     <div class="container-xxl bg-white p-0">
       <!-- Navbar Start -->
-      <nav style="height: 70px" class="navbar navbar-expand-lg bg-white navbar-light py-0 px-10">
-        <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+      <nav
+        style="height: 70px"
+        class="navbar navbar-expand-lg bg-white navbar-light py-0 px-10"
+      >
+        <a
+          href="index.html"
+          class="navbar-brand d-flex align-items-center text-center"
+        >
           <div>
             <img
               class="img-fluid"
@@ -77,10 +84,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
-            <a href="https://www.instagram.com/akikita.id" class="nav-item nav-link active">
+            <a
+              href="https://www.instagram.com/akikita.id"
+              class="nav-item nav-link active"
+            >
               <i class="icon-atas fab fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://akikita.id/redirect_to_whatsapp/" class="nav-item nav-link active">
+            <a
+              href="https://akikita.id/redirect_to_whatsapp/"
+              class="nav-item nav-link active"
+            >
               <i class="icon-atas fab fa-whatsapp" aria-hidden="true"></i>
             </a>
           </div>
@@ -90,6 +103,7 @@
     <!-- Navbar End -->
     <div class="gradient-bar"></div>
 
+    <!-- Banner -->
     <div class="container-fluid header bg-white p-0">
       <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
         <div class="col-md-1 mt-lg-1">
@@ -98,7 +112,10 @@
             style="margin-top: -126px; margin-left: 85px; padding: 12px 20px"
             class="btn btn-primary position-absolute"
           >
-            <i style="margin-left: -10px; font-size: 20px; width: 30px" class="fab fa-whatsapp"></i>
+            <i
+              style="margin-left: -10px; font-size: 20px; width: 30px"
+              class="fab fa-whatsapp"
+            ></i>
             Kontak Sekarang
           </button>
         </div>
@@ -106,8 +123,8 @@
     </div>
 
     <div class="gradient-bar"></div>
-    <!-- Search Start -->
 
+    <!-- Search Start -->
     <div
       class="container-filter container-fluid wow fadeIn"
       data-wow-delay="0.1s"
@@ -130,28 +147,44 @@
 
               <!-- Model Select -->
               <div class="col-md-3">
-                <select id="modelSelect" class="form-select border-0 py-3" disabled>
+                <select
+                  id="modelSelect"
+                  class="form-select border-0 py-3"
+                  disabled
+                >
                   <option selected>Pilih Model</option>
                 </select>
               </div>
 
               <!-- Fuel Select -->
               <div class="col-md-2">
-                <select id="fuelSelect" class="form-select border-0 py-3" disabled>
+                <select
+                  id="fuelSelect"
+                  class="form-select border-0 py-3"
+                  disabled
+                >
                   <option selected>Pilih Fuel</option>
                 </select>
               </div>
 
               <!-- Transmission Select -->
               <div class="col-md-3">
-                <select id="transmissionSelect" class="form-select border-0 py-3" disabled>
+                <select
+                  id="transmissionSelect"
+                  class="form-select border-0 py-3"
+                  disabled
+                >
                   <option selected>Pilih Type Transmission</option>
                 </select>
               </div>
 
               <!-- Year Select -->
               <div class="col-md-2">
-                <select id="yearSelect" class="form-select border-0 py-3" disabled>
+                <select
+                  id="yearSelect"
+                  class="form-select border-0 py-3"
+                  disabled
+                >
                   <option selected>Pilih Tahun</option>
                 </select>
               </div>
@@ -181,82 +214,108 @@
       $(document).ready(function () {
         // Mengambil data brand saat halaman dimuat
         $.ajax({
-          url: 'https://ams.akikita.web.id/api/filter/brand',
-          method: 'GET',
-          dataType: 'json',
+          url: "https://ams.akikita.web.id/api/filter/brand",
+          method: "GET",
+          dataType: "json",
           success: function (response) {
-            const brandSelect = $('#brandSelect');
+            const brandSelect = $("#brandSelect");
             // brandSelect.append(`<option value=""></option>`);
 
-            if (response.status === 'success' && response.data.length > 0) {
+            if (response.status === "success" && response.data.length > 0) {
               response.data.forEach(function (brandName) {
-                brandSelect.append(`<option value="${brandName}">${brandName}</option>`);
+                brandSelect.append(
+                  `<option value="${brandName}">${brandName}</option>`
+                );
               });
             }
           },
           error: function () {
-            alert('Gagal mengambil data brand');
+            alert("Gagal mengambil data brand");
           },
         });
 
         // Mengambil data model setelah memilih brand
-        $('#brandSelect').change(function () {
+        $("#brandSelect").change(function () {
           const selectedBrand = $(this).val();
-          const modelSelect = $('#modelSelect');
-          const fuelSelect = $('#fuelSelect');
-          const transmissionSelect = $('#transmissionSelect');
-          const yearSelect = $('#yearSelect');
+          const modelSelect = $("#modelSelect");
+          const fuelSelect = $("#fuelSelect");
+          const transmissionSelect = $("#transmissionSelect");
+          const yearSelect = $("#yearSelect");
 
           if (selectedBrand) {
-            modelSelect.prop('disabled', false).html('<option selected>Loading...</option>');
-            fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
+            modelSelect
+              .prop("disabled", false)
+              .html("<option selected>Loading...</option>");
+            fuelSelect
+              .prop("disabled", true)
+              .html("<option selected>Pilih Fuel</option>");
             transmissionSelect
-              .prop('disabled', true)
-              .html('<option selected>Pilih Type Transmission</option>');
-            yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
+              .prop("disabled", true)
+              .html("<option selected>Pilih Type Transmission</option>");
+            yearSelect
+              .prop("disabled", true)
+              .html("<option selected>Pilih Tahun</option>");
 
             $.ajax({
               url: `https://ams.akikita.web.id/api/filter/brand/${selectedBrand}`,
-              method: 'GET',
-              dataType: 'json',
+              method: "GET",
+              dataType: "json",
               success: function (response) {
-                modelSelect.empty().append(`<option value="">Pilih Model</option>`);
-                if (response.status === 'success' && response.data.length > 0) {
+                modelSelect
+                  .empty()
+                  .append(`<option value="">Pilih Model</option>`);
+                if (response.status === "success" && response.data.length > 0) {
                   response.data.forEach(function (modelName) {
-                    modelSelect.append(`<option value="${modelName}">${modelName}</option>`);
+                    modelSelect.append(
+                      `<option value="${modelName}">${modelName}</option>`
+                    );
                   });
                 } else {
-                  modelSelect.append(`<option value="">Model tidak ditemukan</option>`);
+                  modelSelect.append(
+                    `<option value="">Model tidak ditemukan</option>`
+                  );
                 }
               },
               error: function () {
-                alert('Gagal mengambil data model');
-                modelSelect.prop('disabled', true).html('<option selected>Pilih Model</option>');
-                fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
+                alert("Gagal mengambil data model");
+                modelSelect
+                  .prop("disabled", true)
+                  .html("<option selected>Pilih Model</option>");
+                fuelSelect
+                  .prop("disabled", true)
+                  .html("<option selected>Pilih Fuel</option>");
                 transmissionSelect
-                  .prop('disabled', true)
-                  .html('<option selected>Pilih Type Transmission</option>');
-                yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
+                  .prop("disabled", true)
+                  .html("<option selected>Pilih Type Transmission</option>");
+                yearSelect
+                  .prop("disabled", true)
+                  .html("<option selected>Pilih Tahun</option>");
               },
             });
           } else {
-            modelSelect.prop('disabled', true).html('<option selected>Pilih Model</option>');
-            fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
+            modelSelect
+              .prop("disabled", true)
+              .html("<option selected>Pilih Model</option>");
+            fuelSelect
+              .prop("disabled", true)
+              .html("<option selected>Pilih Fuel</option>");
             transmissionSelect
-              .prop('disabled', true)
-              .html('<option selected>Pilih Type Transmission</option>');
-            yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
+              .prop("disabled", true)
+              .html("<option selected>Pilih Type Transmission</option>");
+            yearSelect
+              .prop("disabled", true)
+              .html("<option selected>Pilih Tahun</option>");
           }
         });
 
         // Mengaktifkan fuel select setelah memilih model
-        $('#modelSelect').change(function () {
+        $("#modelSelect").change(function () {
           const selectedModel = $(this).val();
-          const fuelSelect = $('#fuelSelect');
+          const fuelSelect = $("#fuelSelect");
 
           if (selectedModel) {
             // Aktifkan dropdown fuel dan isi dengan opsi
-            fuelSelect.prop('disabled', false);
+            fuelSelect.prop("disabled", false);
             fuelSelect.empty(); // Hapus opsi yang ada sebelumnya
             fuelSelect.append('<option value="">Pilih Fuel</option>');
             fuelSelect.append('<option value="none">None</option>');
@@ -264,352 +323,141 @@
             fuelSelect.append('<option value="diesel">Diesel</option>');
           } else {
             // Nonaktifkan dropdown fuel jika tidak ada model yang dipilih
-            fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
+            fuelSelect
+              .prop("disabled", true)
+              .html("<option selected>Pilih Fuel</option>");
           }
         });
 
         // Mengaktifkan transmission select setelah memilih fuel
-        $('#fuelSelect').change(function () {
+        $("#fuelSelect").change(function () {
           const selectedFuel = $(this).val();
-          const transmissionSelect = $('#transmissionSelect');
+          const transmissionSelect = $("#transmissionSelect");
 
           if (selectedFuel) {
             // Aktifkan dropdown transmission dan isi dengan opsi
-            transmissionSelect.prop('disabled', false);
+            transmissionSelect.prop("disabled", false);
             transmissionSelect.empty(); // Hapus opsi yang ada sebelumnya
-            transmissionSelect.append('<option value="">Pilih Type Transmission</option>');
+            transmissionSelect.append(
+              '<option value="">Pilih Type Transmission</option>'
+            );
             transmissionSelect.append('<option value="none">None</option>');
             transmissionSelect.append('<option value="matic">Matic</option>');
           } else {
             // Nonaktifkan dropdown transmission jika tidak ada fuel yang dipilih
             transmissionSelect
-              .prop('disabled', true)
-              .html('<option selected>Pilih Type Transmission</option>');
+              .prop("disabled", true)
+              .html("<option selected>Pilih Type Transmission</option>");
           }
         });
 
         // Mengaktifkan year select setelah memilih transmission
-        $('#transmissionSelect').change(function () {
+        $("#transmissionSelect").change(function () {
           const selectedTransmission = $(this).val();
-          const yearSelect = $('#yearSelect');
+          const yearSelect = $("#yearSelect");
           if (selectedTransmission) {
-            yearSelect.prop('disabled', false);
+            yearSelect.prop("disabled", false);
             const currentYear = new Date().getFullYear();
             yearSelect.empty().append(`<option value="">Pilih Tahun</option>`);
             for (let year = 1945; year <= currentYear; year++) {
               yearSelect.append(`<option value="${year}">${year}</option>`);
             }
           } else {
-            yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
+            yearSelect
+              .prop("disabled", true)
+              .html("<option selected>Pilih Tahun</option>");
           }
         });
-        $('#searchButton').click(function () {
+        $("#searchButton").click(function () {
           // Ambil nilai model yang dipilih (misal dari input atau dropdown)
-          const selectedModel = $('#modelSelect').val();
+          const selectedModel = $("#modelSelect").val();
 
           // Periksa apakah model sudah dipilih
           if (selectedModel) {
             // Pindah ke halaman property-list.html dengan query parameter
-            window.location.href = `property-list.html?model=${encodeURIComponent(selectedModel)}`;
+            window.location.href = `property-list.html?model=${encodeURIComponent(
+              selectedModel
+            )}`;
           } else {
-            alert('Model belum dipilih');
+            alert("Model belum dipilih");
           }
         });
       });
     </script>
 
-    <div class="katalogkontainer">
-      <div class="produkcontainerkatalog">
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="katalogkontainer">
-      <div class="produkcontainerkatalog">
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-        <div class="produk-katalog">
-          <div class="product-image">
-            <img
-              alt="Green car battery with AMARON branding"
-              height="300"
-              src="img/1.png"
-              width="300"
-            />
-          </div>
-          <div class="detail-katalog">
-            <h2>AMARON Hi-Life 55B24R</h2>
-            <table class="specs-katalog" align="center">
-              <tr class="detail1">
-                <td>Ketegangan: 12V</td>
-              </tr>
-              <tr class="detail2">
-                <td>Kapasitas: 9Ah</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Lihat Detail Produk</a>
-          </div>
-        </div>
-      </div>
+    <!-- Catalog container -->
+    <div class="container p-2" id="container-catalog">
+      <div class="row row-cols-6" id="container-row-catalog"></div>
     </div>
 
+    <script type="module">
+      import { fetchCatalogs } from "./service/catalogService.js";
+
+      $(function () {
+        const loadCatalogs = async () => {
+          try {
+            const catalogs = await fetchCatalogs();
+            console.table(catalogs);
+
+            catalogs.forEach((catalog) => {
+              const catalogCard = `
+                <div class="product-card m-2 p-2 card col">
+                  <div class="product-image">
+                    <img
+                      alt="${catalog.name} Battery Picture"
+                      src="https://ams.akikita.web.id/storage/image/battery/compressed/${catalog.image}"
+                      onerror="this.onerror=null;this.src='img/noimage.jpg';"
+                      height="300"
+                      width="300"
+                    />
+                  </div>
+
+                  <div class="detail-katalog">
+                    <h2>${catalog.name}</h2>
+                    <table class="specs-katalog" align="center">
+                      <tr class="detail1">
+                        <td>Ketegangan: ${catalog.standard_cca}V</td>
+                      </tr>
+                      <tr class="detail2">
+                        <td>Kapasitas: ${catalog.capacity}Ah</td>
+                      </tr>
+                    </table>
+                    <a class="btn" href="#">Lihat Detail Produk</a>
+                  </div>
+                </div>
+              `;
+              $("#container-row-catalog").append(catalogCard);
+            });
+          } catch (error) {
+            console.error("Error loading catalogs:", error);
+          }
+        };
+
+        loadCatalogs();
+      });
+    </script>
+
+    <!-- Footer -->
     <div class="footer">
       <div class="container">
         <div class="column">
           <img src="img/logo-kecil.png" alt="Akikita.id logo" />
           <p>
-            <strong>Akikita.id</strong> adalah layanan antar pasang aki untuk kendaraan di wilayah
-            Bandung. Teknisi terlatih kami siap melayani Anda.
+            <strong>Akikita.id</strong> adalah layanan antar pasang aki untuk
+            kendaraan di wilayah Bandung. Teknisi terlatih kami siap melayani
+            Anda.
           </p>
           <h3>Kantor Utama</h3>
           <p class="contact-info">
-            <i class="fas fa-map-marker-alt"></i> Jalan Raya Daan Mogot KM. 18, Green Sedayu Bizpark
-            DM5 Nomor 58, Provinsi DKI Jakarta
+            <i class="fas fa-map-marker-alt"></i> Jalan Raya Daan Mogot KM. 18,
+            Green Sedayu Bizpark DM5 Nomor 58, Provinsi DKI Jakarta
           </p>
-          <p class="contact-info"><i class="fas fa-phone"></i> +62-8222-8800-175</p>
-          <p class="contact-info"><i class="fas fa-envelope"></i> akikita.id@gmail.com</p>
+          <p class="contact-info">
+            <i class="fas fa-phone"></i> +62-8222-8800-175
+          </p>
+          <p class="contact-info">
+            <i class="fas fa-envelope"></i> akikita.id@gmail.com
+          </p>
         </div>
         <div style="margin-left: 100px" class="column">
           <h3>Navigasi</h3>
