@@ -486,7 +486,9 @@
                 details.image
             );
             $("#battery-name").text(details.name);
-            $("#battery-price").text(details.price_retail);
+            $("#battery-price").text(
+              parseFloat(details.price_retail).toLocaleString()
+            );
             $("#battery-warranty").text(details.warranty);
             $("#battery-cca").text(details.standard_cca);
             $("#battery-capacity").text(details.capacity);
@@ -533,10 +535,10 @@
                 </div>
               `;
               $("#container-row-catalog").append(catalogCard);
+            });
 
-              $(".btn-detail").on("click", function () {
-                openDetailCatalog($(this).data("id"));
-              });
+            $(".btn-detail").on("click", function () {
+              openDetailCatalog($(this).data("id"));
             });
           } catch (error) {
             console.error("Error loading catalogs:", error);
@@ -544,6 +546,10 @@
         };
 
         loadCatalogs();
+
+        $(".order-wa button").on("click", function () {
+          window.open("https://api.whatsapp.com/send?phone=6282228800175");
+        });
       });
     </script>
 
