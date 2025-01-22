@@ -77,100 +77,101 @@
       </div>
       <!-- Navbar End -->
       <div class="gradient-bar"></div>
-      <div class="kontendetail">
-        <div class="fotoaki">
-          <img
-            alt="Green AMARON Hi-Life 55B24R battery with branding and specifications"
-            height="350"
-            src="img/1.png"
-            width="350"
-          />
-        </div>
-
-        <div class="product-aki">
-          <div class="judul-aki">AMARON Hi-Life 55B24R</div>
-          <div class="harga-aki">
-            Harga
-            <br />
-            <h4>Rp 1,035,000.00</h4>
-            <hr class="garislurus" />
-            <p style="margin-top: -12px; font-size:15px;">Pesan Sekarang Di</p>
+      
+      <!-- Katalog Detail  -->
+      <div
+        class="kontendetail w-full d-none d-flex justify-content-around gap-5"
+        id="container-catalog-detail"
+        style="
+          background-image: url('img/detail-bg.jpg');
+          background-size: contain;
+        "
+      >
+        <div class="d-flex justify-content-between p-2">
+          <div class="fotoaki">
+            <img
+              id="battery-image"
+              alt=""
+              onerror="this.onerror=null;this.src='img/noimage.jpg';"
+              src="img/noimage.jpg"
+              height="350"
+              width="350"
+            />
           </div>
 
-          <div class="order-wa">
-            <button>
-              <i style="margin-left: -220px !important;" class="fab fa-whatsapp"> </i>
+          <div class="product-aki">
+            <div class="judul-aki"><span id="battery-name"></span></div>
+
+            <div class="harga-aki">
+              Harga
+              <br />
+              <h4>Rp <span id="battery-price">0</span></h4>
+              <hr />
+              <h4>Pesan Sekarang Di</h4>
+            </div>
+
+            <div class="order-wa pt-2">
+              <button class="fs-5">
+                <i class="fab fa-whatsapp ml-5"></i>
                 Whatsapp
-            </button>
-          </div>
-          <div class="order-tokped">
-            <button>
-              <img style="margin-left: -220px;" src="img/tokped-logo.png" alt=""> Tokopedia
-            </button>
+              </button>
+            </div>
+
+            <div class="order-tokped pt-1">
+              <button class="fs-5">
+                <img class="ml-5" src="img/tokped-logo.png" alt="" />
+                Tokopedia
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="specifications">
-            <table> 
-             <tr class="tabel-1">
+        <!-- Specifications Table -->
+        <div class="specifications p-3 pb-5 bg-light">
+          <span class="fs-4 fw-bold">Spesifikasi Produk</span>
+          <table class="h-100 mb-2">
+            <tr class="tabel-1">
+              <td>Garansi</td>
+              <td><span id="battery-warranty">0</span> Bulan</td>
+            </tr>
+            <tr>
+              <td>Standard CCA</td>
+              <td><span id="battery-cca"></span> A</td>
+            </tr>
+            <tr class="tabel-1">
+              <td>Kapasitas</td>
+              <td><span id="battery-capacity"></span> Ah</td>
+            </tr>
+            <tr>
+              <td>Voltase</td>
+              <td>12 DCV</td>
+            </tr>
+            <tr class="tabel-1">
+              <td>Dimensi</td>
               <td>
-               Garansi
+                <span id="battery-length"></span> X
+                <span id="battery-width"></span> X
+                <span id="battery-height"></span>
               </td>
-              <td>
-               12 Bulan
-              </td>
-             </tr>
-             <tr>
-              <td>
-               Standard CCA
-              </td>
-              <td>
-               355 A
-              </td>
-             </tr>
-             <tr class="tabel-1">
-              <td>
-               Kapasitas
-              </td>
-              <td>
-               45 Ah
-              </td>
-             </tr>
-             <tr>
-              <td>
-               Voltase
-              </td>
-              <td>
-               12 DCV
-              </td>
-             </tr>
-             <tr class="tabel-1">
-              <td>
-               Dimensi
-              </td>
-              <td>
-               238 X 129 X 227
-              </td>
-             </tr>
-             <tr>
-              <td>
-               Nama Lain
-              </td>
-              <td>
-               NS60
-              </td>
-             </tr>
-            </table>
-           </div>
-          </div>
-          <div style="clear: both;">
-          </div>
-          </div>
+            </tr>
+            <tr>
+              <td>Nama Lain</td>
+              <td><span id="battery-alt-name"></span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+        <div style="clear: both;">
+        </div>
+        </div>
        
 
       </div>
 
       <div class="gradient-bar"></div>
+
+
       <div class="gabungancontainer">
         <div class="juduldetail">
           <p>Rekomendasi Aki</p>
@@ -195,181 +196,104 @@
         </div>
 
         <div class="produkcontainer">
-          <div class="produk">
-            <div class="header">
-              TERKUAT
-              <i class="fas fa-bolt"></i>
-            </div>
-            <div class="product-image">
-              <img
-                alt="Green car battery with AMARON branding"
-                height="300"
-                src="img/2.png"
-                width="300"
-              />
-            </div>
-            <div class="product-details">
-              <h2>AMARON Hi-Life 55B24R</h2>
-              <p class="price">Rp 1,035,000.00</p>
-              <a class="btn" href="#">Lihat Produk</a>
-            </div>
-            <table class="specs">
-              <tr class="detail1">
-                <td>Maintenance-Free (Aki Kering)</td>
-              </tr>
-              <tr class="detail2">
-                <td>238 x 129 x 227</td>
-              </tr>
-              <tr class="detail1">
-                <td>12 Bulan</td>
-              </tr>
-              <tr class="detail2">
-                <td class="detail2">355 A</td>
-              </tr>
-              <tr class="detail1">
-                <td>45 Ah</td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="produk1">
-            <div class="product-image">
-              <img
-                alt="Green car battery with AMARON branding"
-                height="300"
-                src="img/1.png"
-                width="300"
-              />
-            </div>
-            <div class="product-details">
-              <h2>AMARON Hi-Life 55B24R</h2>
-              <p class="price">Rp 1,035,000.00</p>
-              <a class="btn" href="#">Lihat Produk</a>
-            </div>
-            <table class="specs">
-              <tr class="detail1">
-                <td>Maintenance-Free (Aki Kering)</td>
-              </tr>
-              <tr class="detail2">
-                <td>238 x 129 x 227</td>
-              </tr>
-              <tr class="detail1">
-                <td>12 Bulan</td>
-              </tr>
-              <tr class="detail2">
-                <td class="detail2">355 A</td>
-              </tr>
-              <tr class="detail1">
-                <td>45 Ah</td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="produk1">
-            <div class="product-image">
-              <img
-                alt="Green car battery with AMARON branding"
-                height="300"
-                src="img/1.png"
-                width="300"
-              />
-            </div>
-            <div class="product-details">
-              <h2>AMARON Hi-Life 55B24R</h2>
-              <p class="price">Rp 1,035,000.00</p>
-              <a class="btn" href="#">Lihat Produk</a>
-            </div>
-            <table class="specs">
-              <tr class="detail1">
-                <td>Maintenance-Free (Aki Kering)</td>
-              </tr>
-              <tr class="detail2">
-                <td>238 x 129 x 227</td>
-              </tr>
-              <tr class="detail1">
-                <td>12 Bulan</td>
-              </tr>
-              <tr class="detail2">
-                <td class="detail2">355 A</td>
-              </tr>
-              <tr class="detail1">
-                <td>45 Ah</td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="produk">
-            <div class="populer">
-              Populer
-              <i class="fas fa-star"></i>
-            </div>
-            <div class="product-image">
-              <img
-                alt="Green car battery with AMARON branding"
-                height="300"
-                src="img/2.png"
-                width="300"
-              />
-            </div>
-            <div class="product-details">
-              <h2>AMARON Hi-Life 55B24R</h2>
-              <p class="price">Rp 1,035,000.00</p>
-              <a class="btn" href="#">Lihat Produk</a>
-            </div>
-            <table class="specs">
-              <tr class="detail1">
-                <td>Maintenance-Free (Aki Kering)</td>
-              </tr>
-              <tr class="detail2">
-                <td>238 x 129 x 227</td>
-              </tr>
-              <tr class="detail1">
-                <td>12 Bulan</td>
-              </tr>
-              <tr class="detail2">
-                <td class="detail2">355 A</td>
-              </tr>
-              <tr class="detail1">
-                <td>45 Ah</td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="produk1">
-            <div class="product-image">
-              <img
-                alt="Green car battery with AMARON branding"
-                height="300"
-                src="img/1.png"
-                width="300"
-              />
-            </div>
-            <div class="product-details">
-              <h2>AMARON Hi-Life 55B24R</h2>
-              <p class="price">Rp 1,035,000.00</p>
-              <a class="btn" href="#">Lihat Produk</a>
-            </div>
-            <table class="specs">
-              <tr class="detail1">
-                <td>Maintenance-Free (Aki Kering)</td>
-              </tr>
-              <tr class="detail2">
-                <td>238 x 129 x 227</td>
-              </tr>
-              <tr class="detail1">
-                <td>12 Bulan</td>
-              </tr>
-              <tr class="detail2">
-                <td class="detail2">355 A</td>
-              </tr>
-              <tr class="detail1">
-                <td>45 Ah</td>
-              </tr>
-            </table>
-          </div>
         </div>
       </div>
       <div class="gradient-bar"></div>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script type="module">
+        import {
+          fetchCatalogsByVehicleModel,
+          fetchCatalogDetails,
+        } from "./service/catalogService.js";
+
+        $(function() {
+          const openDetailCatalog = async (batteryId) => {
+            try {
+              const details = await fetchCatalogDetails(batteryId);
+              console.log(details);
+
+              // Replace the catalog detail value.
+              $("#battery-image").attr(
+                "src",
+                "https://ams.akikita.web.id/storage/image/battery/" +
+                  details.image
+              );
+              $("#battery-name").text(details.name);
+              $("#battery-price").text(
+                parseFloat(details.price_retail).toLocaleString()
+              );
+              $("#battery-warranty").text(details.warranty);
+              $("#battery-cca").text(details.standard_cca);
+              $("#battery-capacity").text(details.capacity);
+              $("#battery-length").text(details.dimension_length);
+              $("#battery-width").text(details.dimension_width);
+              $("#battery-height").text(details.dimension_height);
+              $("#battery-alt-name").text(details.name_alternate);
+
+              // Show the catalog detail container.
+              $("#container-catalog-detail").removeClass("d-none");
+            } catch (error) {
+              console.error("Error loading catalog details:", error);
+            }
+          };
+          
+          const loadCatalogs = async () => {
+            try {
+              const model = 'Toyota Avanza';
+              const catalogs = await fetchCatalogsByVehicleModel(model);
+              console.log(catalogs);
+              catalogs.forEach((catalog) => {
+                const catalogCard = `
+                    <div class="produk">
+                      <div class="product-image">
+                        <img
+                          alt="Green car battery with AMARON branding"
+                          height="300"
+                          src="img/2.png"
+                          width="300"
+                        />
+                      </div>
+
+                      <div class="product-details">
+                        <h2>${catalog.name}</h2>
+                        <p class="price">Rp ${parseFloat(catalog.price_retail).toLocaleString()}</p>
+                        <button class="btn btn-detail" data-id="${catalog.id}">Lihat Produk</button>
+                      </div>
+
+                      <table class="specs">
+                        <tr class="detail1">
+                          <td>Maintenance-Free (Aki Kering)</td>
+                        </tr>
+                        <tr class="detail2">
+                          <td>${catalog.dimension_length} x ${catalog.dimension_width} x ${catalog.dimension_height}</td>
+                        </tr>
+                        <tr class="detail1">
+                          <td>${catalog.warranty} Bulan</td>
+                        </tr>
+                        <tr class="detail2">
+                          <td class="detail2">${catalog.standard_cca} A</td>
+                        </tr>
+                        <tr class="detail1">
+                          <td>${catalog.capacity} Ah</td>
+                        </tr>
+                      </table>
+                    </div>
+                `;
+                $(".produkcontainer").append(catalogCard);
+              });
+
+              $(".btn-detail").on("click", function () {
+                openDetailCatalog($(this).data("id"));
+              });
+            } catch (error) {
+              console.error("Error loading catalogs:", error);
+            }
+          };
+
+          loadCatalogs();
+        });
+      </script>
 
       <div class="footer">
         <div class="container">
