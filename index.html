@@ -439,148 +439,64 @@
       <h1>Cari Aki UPS?</h1>
       <p><a href="katalog.html">Klik disini</a> untuk katalog Aki UPS Lengkap</p>
       </div>
-    
-          <div class="katalogkontainer-dashboard">
-            <div class="produkcontainerkatalog">
-              <div class="produk-katalog">
-                <div class="product-image">
-                  <img
-                    alt="Green car battery with AMARON branding"
-                    height="300"
-                    src="img/1.png"
-                    width="300"
-                  />
-                </div>
-                <div class="detail-katalog">
-                  <h2>AMARON Hi-Life 55B24R</h2>
-                  <table class="specs-katalog" align="center">
-                    <tr class="detail1">
-                      <td>Ketegangan: 12V</td>
-                    </tr>
-                    <tr class="detail2">
-                      <td>Kapasitas: 9Ah</td>
-                    </tr>
-                  </table>
-                  <a class="btn" href="detail_barang.html">Lihat Detail Produk</a>
-                </div>
-              </div>
-      
-              <div class="produk-katalog">
-                <div class="product-image">
-                  <img
-                    alt="Green car battery with AMARON branding"
-                    height="300"
-                    src="img/1.png"
-                    width="300"
-                  />
-                </div>
-                <div class="detail-katalog">
-                  <h2>AMARON Hi-Life 55B24R</h2>
-                  <table class="specs-katalog" align="center">
-                    <tr class="detail1">
-                      <td>Ketegangan: 12V</td>
-                    </tr>
-                    <tr class="detail2">
-                      <td>Kapasitas: 9Ah</td>
-                    </tr>
-                  </table>
-                  <a class="btn" href="detail_barang.html">Lihat Detail Produk</a>
-                </div>
-              </div>
-              <div class="produk-katalog">
-                <div class="product-image">
-                  <img
-                    alt="Green car battery with AMARON branding"
-                    height="300"
-                    src="img/1.png"
-                    width="300"
-                  />
-                </div>
-                <div class="detail-katalog">
-                  <h2>AMARON Hi-Life 55B24R</h2>
-                  <table class="specs-katalog" align="center">
-                    <tr class="detail1">
-                      <td>Ketegangan: 12V</td>
-                    </tr>
-                    <tr class="detail2">
-                      <td>Kapasitas: 9Ah</td>
-                    </tr>
-                  </table>
-                  <a class="btn" href="detail_barang.html">Lihat Detail Produk</a>
-                </div>
-              </div>
-      
-              <div class="produk-katalog">
-                <div class="product-image">
-                  <img
-                    alt="Green car battery with AMARON branding"
-                    height="300"
-                    src="img/1.png"
-                    width="300"
-                  />
-                </div>
-                <div class="detail-katalog">
-                  <h2>AMARON Hi-Life 55B24R</h2>
-                  <table class="specs-katalog" align="center">
-                    <tr class="detail1">
-                      <td>Ketegangan: 12V</td>
-                    </tr>
-                    <tr class="detail2">
-                      <td>Kapasitas: 9Ah</td>
-                    </tr>
-                  </table>
-                  <a class="btn" href="detail_barang.html">Lihat Detail Produk</a>
-                </div>
-              </div>
-              <div class="produk-katalog">
-                <div class="product-image">
-                  <img
-                    alt="Green car battery with AMARON branding"
-                    height="300"
-                    src="img/1.png"
-                    width="300"
-                  />
-                </div>
-                <div class="detail-katalog">
-                  <h2>AMARON Hi-Life 55B24R</h2>
-                  <table class="specs-katalog" align="center">
-                    <tr class="detail1">
-                      <td>Ketegangan: 12V</td>
-                    </tr>
-                    <tr class="detail2">
-                      <td>Kapasitas: 9Ah</td>
-                    </tr>
-                  </table>
-                  <a class="btn" href="detail_barang.html">Lihat Detail Produk</a>
-                </div>
-              </div>
-              <div class="produk-katalog">
-                <div class="product-image">
-                  <img
-                    alt="Green car battery with AMARON branding"
-                    height="300"
-                    src="img/1.png"
-                    width="300"
-                  />
-                </div>
-                <div class="detail-katalog">
-                  <h2>AMARON Hi-Life 55B24R</h2>
-                  <table class="specs-katalog" align="center">
-                    <tr class="detail1">
-                      <td>Ketegangan: 12V</td>
-                    </tr>
-                    <tr class="detail2">
-                      <td>Kapasitas: 9Ah</td>
-                    </tr>
-                  </table>
-                  <a class="btn" href="detail_barang.html">Lihat Detail Produk</a>
-                </div>
-              </div>
-              
-            </div>
-        </div>
+      </div>
+
+      <div class="container p-2" id="container-catalog">
+        <div
+          class="row row-cols-6 justify-content-between"
+          id="container-row-catalog"
+        ></div>
       </div>
       <!-- Property List End -->
+
+      <script type="module">
+        import { fetchCatalogs } from "./service/catalogService.js";
+  
+        $(function () {
+          const loadCatalogs = async () => {
+            try {
+              const catalogs = await fetchCatalogs(6);
+              catalogs.forEach((catalog) => {
+                const catalogCard = `
+                  <div class="product-card m-2 p-2 card col bg-dark">
+                    <div class="product-image">
+                      <img
+                        alt="${catalog.name} Battery Picture"
+                        src="https://ams.akikita.web.id/storage/image/battery/compressed/${catalog.image}"
+                        onerror="this.onerror=null;this.src='img/noimage.jpg';"
+                        height="300"
+                        width="300"
+                      />
+                    </div>
+  
+                    <div class="detail-katalog rounded">
+                      <h2>${catalog.name}</h2>
+                      <table class="specs-katalog" align="center">
+                        <tr class="detail1">
+                          <td>Ketegangan: 12V</td>
+                        </tr>
+                        <tr class="detail2">
+                          <td>Kapasitas: ${catalog.capacity}Ah</td>
+                        </tr>
+                      </table>
+                      <button class="btn btn-detail" data-id="${catalog.id}">Lihat Detail Produk</button>
+                    </div>
+                  </div>
+                `;
+                $("#container-row-catalog").append(catalogCard);
+              });
+  
+              $(".btn-detail").on("click", function () {
+                openDetailCatalog($(this).data("id"));
+              });
+            } catch (error) {
+              console.error("Error loading catalogs:", error);
+            }
+          };
+  
+          loadCatalogs();
+        });
+      </script>
 
 
       <!-- Team Start -->

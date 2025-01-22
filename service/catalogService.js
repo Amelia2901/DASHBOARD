@@ -1,4 +1,4 @@
-export const fetchCatalogs = async () => {
+export const fetchCatalogs = async (limit = -1) => {
   try {
     const url = "https://ams.akikita.web.id/api/filter/battery";
 
@@ -16,6 +16,10 @@ export const fetchCatalogs = async () => {
     const data = await response.json();
     if (data.status != "success") {
       throw new Error(data.message);
+    }
+
+    if (limit != -1) {
+      return data.data.slice(0, limit);
     }
 
     return data.data;
