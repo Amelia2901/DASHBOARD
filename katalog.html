@@ -505,7 +505,10 @@
     <!-- Closing div for .kontendetail -->
 
     <div class="container p-2" id="container-catalog">
-      <div class="row row-cols-6" id="container-row-catalog"></div>
+      <div
+        class="row row-cols-6 justify-content-between"
+        id="container-row-catalog"
+      ></div>
     </div>
 
     <script type="module">
@@ -550,7 +553,7 @@
             const catalogs = await fetchCatalogs();
             catalogs.forEach((catalog) => {
               const catalogCard = `
-                <div class="product-card m-2 p-2 card col">
+                <div class="product-card m-2 p-2 card col bg-dark">
                   <div class="product-image">
                     <img
                       alt="${catalog.name} Battery Picture"
@@ -561,7 +564,7 @@
                     />
                   </div>
 
-                  <div class="detail-katalog">
+                  <div class="detail-katalog rounded">
                     <h2>${catalog.name}</h2>
                     <table class="specs-katalog" align="center">
                       <tr class="detail1">
