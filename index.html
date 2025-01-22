@@ -219,7 +219,7 @@
 
             <!-- Search Button -->
             <div class="col-md-2">
-              <button style="color: white; background-color: #87ce34;" class="btn btn-dark border-0 w-100 py-3" id="searchButton">Cari</button>            </div>
+              <button style="color: white; background-color: #87ce34;" class="btn btn-dark border-0 w-100 py-2" id="searchButton">Cari</button>            </div>
           </div>
         </div>
       </div>
@@ -229,8 +229,25 @@
 
       <!-- Search js  -->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      
       <script>
         $(document).ready(function () {
+          $("#brandSelect").select2({
+            theme: "bootstrap-5",
+          });
+          $("#modelSelect").select2({
+            theme: "bootstrap-5",
+          });
+          $("#fuelSelect").select2({
+            theme: "bootstrap-5",
+          });
+          $("#transmissionSelect").select2({
+            theme: "bootstrap-5",
+          });
+          $("#yearSelect").select2({
+            theme: "bootstrap-5",
+          });
+          
           // Mengambil data brand saat halaman dimuat
           $.ajax({
             url: 'https://ams.akikita.web.id/api/filter/brand',
@@ -401,16 +418,16 @@
 
 
             <!-- Tokped gerak  -->
-
-      <div class="iniuntukyanggerak row align-items-center px-5">
-        <img src="img/tokopediagerak.gif" alt="Tokopedia">
-      </div>
-
+            <div class="d-flex justify-content-center align-items-center">
+              <a href="https://www.tokopedia.com/akikitaid">
+                <img src="img/tokopediagerak.gif" alt="Tokopedia">
+              </a>
+            </div>                     
           <!-- tokped gerak  -->
 
 
       <!-- About Start -->
-      <div class="container-xxl py-5">
+      <!-- <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
@@ -433,11 +450,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- About End -->
 
       <!-- Property List Start -->
-      <div class="dashboard-rekomen">
+      <div class="dashboard-rekomen pt-5">
       <h1>Cari Aki UPS?</h1>
       <p><a href="katalog.html">Klik disini</a> untuk katalog Aki UPS Lengkap</p>
       </div>
@@ -481,7 +498,6 @@
                           <td>Kapasitas: ${catalog.capacity}Ah</td>
                         </tr>
                       </table>
-                      <button class="btn btn-detail" data-id="${catalog.id}">Lihat Detail Produk</button>
                     </div>
                   </div>
                 `;
@@ -643,5 +659,15 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   </body>
 </html>
