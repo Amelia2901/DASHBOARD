@@ -175,7 +175,7 @@
       <div class="gabungancontainer">
         <div class="juduldetail">
           <p>Rekomendasi Aki</p>
-          <h4>Toyota Avanza</h4>
+          <h4 id="model-name"></h4>
           <table class="halo">
             <tr class="judul1">
               <td>Teknologi Aki</td>
@@ -195,8 +195,7 @@
           </table>
         </div>
 
-        <div class="produkcontainer">
-        </div>
+        <div id="container-catalogs" class="produkcontainer"></div>
       </div>
       <div class="gradient-bar"></div>
 
@@ -240,17 +239,22 @@
           
           const loadCatalogs = async () => {
             try {
-              const model = 'Toyota Avanza';
+              const queryString = window.location.search;
+              const params = new URLSearchParams(queryString);
+              const model = params.get('model');
+
+              // Set text.
+              $("#model-name").text(model);
+
               const catalogs = await fetchCatalogsByVehicleModel(model);
-              console.log(catalogs);
               catalogs.forEach((catalog) => {
                 const catalogCard = `
-                    <div class="produk">
+                    <div class="produk position-relative" style="background-color: #ffffff;">
                       <div class="product-image">
                         <img
+                          src="https://ams.akikita.web.id/storage/image/battery/${catalog.image}"
                           alt="Green car battery with AMARON branding"
                           height="300"
-                          src="img/2.png"
                           width="300"
                         />
                       </div>
@@ -261,7 +265,7 @@
                         <button class="btn btn-detail" data-id="${catalog.id}">Lihat Produk</button>
                       </div>
 
-                      <table class="specs">
+                      <table class="specs position-absolute bottom-0">
                         <tr class="detail1">
                           <td>Maintenance-Free (Aki Kering)</td>
                         </tr>
@@ -280,7 +284,7 @@
                       </table>
                     </div>
                 `;
-                $(".produkcontainer").append(catalogCard);
+                $("#container-catalogs").append(catalogCard);
               });
 
               $(".btn-detail").on("click", function () {
