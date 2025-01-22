@@ -247,6 +247,7 @@
               $("#model-name").text(model);
 
               const catalogs = await fetchCatalogsByVehicleModel(model);
+
               catalogs.forEach((catalog) => {
                 const catalogCard = `
                     <div class="produk position-relative" style="background-color: #ffffff;">
@@ -292,6 +293,11 @@
               });
             } catch (error) {
               console.error("Error loading catalogs:", error);
+              $("#container-catalogs").append(`
+                  <div>
+                    <h3 class="text-light">Tidak ada barang</h3>
+                  </div>
+              `);
             }
           };
 

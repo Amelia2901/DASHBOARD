@@ -49,7 +49,10 @@ export const fetchCatalogsByVehicleModel = async (vehicleModel) => {
       throw new Error(data.message);
     }
 
-    return data.data[0].batteries;
+    const batteries = data.data[0].batteries;
+    const alternateBatteries = data.data[0].alternate_batteries;
+
+    return batteries.concat(alternateBatteries);
   } catch (error) {
     throw error;
   }
