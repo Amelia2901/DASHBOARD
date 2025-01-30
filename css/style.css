@@ -198,7 +198,7 @@
   }
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
   color: #dddddd;
 }
 
@@ -425,11 +425,13 @@
   text-align: center;
   padding: 10px 10px;
 }
+
 .product-image img {
   width: 100%;
   border-radius: 10px;
   height: 170px;
 }
+
 .product-details {
   background-color: #ffffff;
   color: #000000;
@@ -469,15 +471,18 @@
   font-size: 15px;
   color: #000000;
 }
+
 .product-details p {
   margin: 5px 0;
   font-size: 16px;
 }
+
 .product-details .price {
   font-size: 17px;
   font-weight: bold;
   color: #3a3a3c;
 }
+
 .product-details .btn {
   background-color: #99cc33;
   color: #ffffff;
@@ -490,25 +495,30 @@
   display: inline-block;
   font-size: 15px;
 }
+
 .specs {
   width: 100%;
   border-collapse: collapse;
 }
+
 .specs th,
 .specs td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid white;
 }
+
 .specs th {
   background-color: #444444;
 }
+
 .specs .detail1 td {
   background-color: #f0f0f0;
   text-align: center;
   font-size: 12px;
   color: #3a3a3c;
 }
+
 .specs .detail2 td {
   background-color: #dbdbdb;
   text-align: center;
@@ -520,15 +530,18 @@
   width: 95%;
   border-collapse: collapse;
 }
+
 .specs-katalog th,
 .specs-katalog td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid white;
 }
+
 .specs-katalog th {
   background-color: #444444;
 }
+
 .specs-katalog .detail1 td {
   background-color: #8686863b;
   text-align: left;
@@ -537,6 +550,7 @@
   border-radius: 5px 5px 0px 0px;
   border: none;
 }
+
 .specs-katalog .detail2 td {
   background-color: #cecece42;
   text-align: left;
@@ -620,6 +634,7 @@
   width: 200px;
   margin-left: 20px;
 }
+
 .juduldetail p {
   margin: 5px 0;
   font-size: 18px;
@@ -669,12 +684,11 @@
 .gradient-bar {
   width: 100%;
   height: 10px;
-  background: linear-gradient(
-    to right,
-    rgb(87, 86, 86),
-    white,
-    rgb(87, 86, 86)
-  ); /* Gradasi horizontal */
+  background: linear-gradient(to right,
+      rgb(87, 86, 86),
+      white,
+      rgb(87, 86, 86));
+  /* Gradasi horizontal */
   box-shadow: 2px 2px 2px rgba(61, 61, 61, 0.8);
 }
 
@@ -695,23 +709,30 @@
   padding: 20px;
   text-align: left;
 }
+
 .judul-aki {
   font-size: 30px;
   font-weight: bold;
   font-family: "Helvetica", Sans-serif;
   margin-top: -90px;
 }
+
 .harga-aki {
   font-size: 20px;
   color: #333;
   margin: 10px 0;
 }
+
 .order-wa {
   margin: 7px 0;
   margin-top: -10px;
 }
 
 .order-tokped {
+  margin: 7px 0;
+}
+
+.order-online {
   margin: 7px 0;
 }
 
@@ -748,6 +769,21 @@
   color: white;
 }
 
+.order-online button {
+  background-color: #f2f2f2;
+  color: black;
+  border: none;
+  padding: 10px 170px;
+  font-size: 13px;
+  border-radius: 5px;
+  box-shadow: 2px 1px 1px rgba(129, 129, 129, 0.8);
+}
+
+.order-online button:hover {
+  background-color: grey;
+  color: white;
+}
+
 .garislurus {
   color: black;
   width: 370px;
@@ -764,11 +800,13 @@
   margin-left: -320px;
   padding: 10px 45px 10px 45px;
 }
+
 .specifications table {
   width: 100%;
   border-collapse: collapse;
   border: 3px solid #d4d4d4;
 }
+
 .specifications td {
   /* border-style: none; */
   padding: 8px;
@@ -779,6 +817,7 @@
 }
 
 @media (max-width: 768px) {
+
   .product-image,
   .product-details {
     float: none;
@@ -795,6 +834,7 @@
 .specifications .penjelasan td {
   font-weight: bold;
 }
+
 .dashboard-rekomen h1 {
   color: #3a3a3c;
   margin-left: 1000px;
@@ -815,10 +855,12 @@
   gap: 20px;
   margin-top: 20px;
 }
+
 .alasanaki img {
   height: 425px;
   width: 540px;
 }
+
 .text-block {
   position: absolute;
   background: rgba(0, 0, 0, 0.7);
@@ -827,11 +869,13 @@
   padding: 20px;
   margin-top: -120px;
 }
+
 .text-block h1 {
   margin: 0;
   font-size: 24px;
   color: white;
 }
+
 .text-block p {
   margin: 5px 0 0;
   font-size: 16px;
@@ -848,6 +892,7 @@
   padding: 20px 0;
   border-top: 1px solid #ccc;
 }
+
 .footer .container {
   display: flex;
   flex-wrap: wrap;
@@ -857,17 +902,20 @@
   padding: 0 20px;
   margin-left: 100px;
 }
+
 .footer .column {
   flex: 1;
   min-width: 200px;
   margin: 10px 0;
 }
+
 .footer .column h3 {
   margin-bottom: 10px;
   font-size: 20px;
   color: #3a3a3c;
   margin-top: 15px;
 }
+
 .footer .column p,
 .footer .column a {
   font-size: 16px;
@@ -875,12 +923,15 @@
   text-decoration: none;
   margin: 5px 0;
 }
+
 .footer .column a:hover {
   text-decoration: underline;
 }
+
 .footer .contact-info i {
   margin-right: 10px;
 }
+
 .footer .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -893,9 +944,11 @@
   align-items: center;
   text-decoration: none;
 }
+
 .footer .whatsapp i {
   margin-right: 10px;
 }
+
 .copyright {
   text-align: center;
   margin-top: 40px;
@@ -904,10 +957,12 @@
   background-color: #dbdbdb;
   padding: 15px;
 }
+
 .footer img {
   max-width: 120px;
   margin-bottom: 10px;
 }
+
 .icon-atas {
   color: black !important;
   font-size: 25px;

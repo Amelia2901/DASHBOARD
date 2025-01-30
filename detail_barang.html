@@ -1,252 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>AMS - STORE</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>AMS - STORE</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-   
-  </head>
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
 
-  <body>
-    <div class="container-xxl bg-white p-0">
-      <!-- Navbar Start -->
-        <nav style="height: 70px;" class="navbar navbar-expand-lg bg-white navbar-light py-0 px-10">
-          <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-            <div>
-              <img class="img-fluid" src="img/logo-aki.png" alt="Icon" style="width: 120px; margin-left: 80px;" />
-            </div>
+
+</head>
+
+<body>
+  <div class="container-xxl bg-white p-0">
+    <!-- Navbar Start -->
+    <nav style="height: 70px;" class="navbar navbar-expand-lg bg-white navbar-light py-0 px-10">
+      <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+        <div>
+          <img class="img-fluid" src="img/logo-aki.png" alt="Icon" style="width: 120px; margin-left: 80px;" />
+        </div>
+      </a>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+          <a href="https://www.instagram.com/akikita.id" class="nav-item nav-link active">
+            <i class="icon-atas fab fa-instagram" aria-hidden="true"></i>
           </a>
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="navbar-toggler-icon"></span>
+          <a href="https://akikita.id/redirect_to_whatsapp/" class="nav-item nav-link active">
+            <i class="icon-atas fab fa-whatsapp" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->
+  <div class="gradient-bar"></div>
+
+  <!-- Katalog Detail  -->
+  <div class="kontendetail w-full d-none d-flex justify-content-around gap-5" id="container-catalog-detail" style="background-image: url('img/bg-aki.png'); background-size: cover; background-position: bottom;">
+    <div class="d-flex justify-content-between p-2">
+      <div class="fotoaki">
+        <img id="battery-image" alt="" onerror="this.onerror=null;this.src='img/noimage.jpg';" src="img/noimage.jpg" height="350" width="350" />
+      </div>
+
+      <div class="product-aki">
+        <div class="judul-aki"><span id="battery-name"></span></div>
+
+        <div class="harga-aki">
+          Harga
+          <br />
+          <h4>Rp <span id="battery-price">0</span></h4>
+          <hr />
+          <h4>Pesan Sekarang Di</h4>
+        </div>
+
+        <div class="order-wa pt-2">
+          <button class="fs-5">
+            <i class="fab fa-whatsapp ml-5"></i>
+            Whatsapp
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div  class="navbar-nav ms-auto">
-              <a href="https://www.instagram.com/akikita.id" class="nav-item nav-link active">
-                <i class="icon-atas fab fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="https://akikita.id/redirect_to_whatsapp/" class="nav-item nav-link active">
-                <i class="icon-atas fab fa-whatsapp" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <!-- Navbar End -->
-      <div class="gradient-bar"></div>
-      
-      <!-- Katalog Detail  -->
-      <div
-        class="kontendetail w-full d-none d-flex justify-content-around gap-5"
-        id="container-catalog-detail"
-        style="background-image: url('img/bg-aki.png'); background-size: cover; background-position: bottom;"
-      >
-        <div class="d-flex justify-content-between p-2">
-          <div class="fotoaki">
-            <img
-              id="battery-image"
-              alt=""
-              onerror="this.onerror=null;this.src='img/noimage.jpg';"
-              src="img/noimage.jpg"
-              height="350"
-              width="350"
-            />
-          </div>
-
-          <div class="product-aki">
-            <div class="judul-aki"><span id="battery-name"></span></div>
-
-            <div class="harga-aki">
-              Harga
-              <br />
-              <h4>Rp <span id="battery-price">0</span></h4>
-              <hr />
-              <h4>Pesan Sekarang Di</h4>
-            </div>
-
-            <div class="order-wa pt-2">
-              <button class="fs-5">
-                <i class="fab fa-whatsapp ml-5"></i>
-                Whatsapp
-              </button>
-            </div>
-
-            <div class="order-tokped pt-1">
-              <button class="fs-5">
-                <img class="ml-5" src="img/tokped-logo.png" alt="" />
-                Tokopedia
-              </button>
-            </div>
-          </div>
         </div>
 
-        <!-- Specifications Table -->
-        <div class="specifications p-3 pb-5 bg-light">
-          <span class="fs-4 fw-bold">Spesifikasi Produk</span>
-          <table class="h-100 mb-2">
-            <tr class="tabel-1">
-              <td>Garansi</td>
-              <td><span id="battery-warranty">0</span> Bulan</td>
-            </tr>
-            <tr>
-              <td>Standard CCA</td>
-              <td><span id="battery-cca"></span> A</td>
-            </tr>
-            <tr class="tabel-1">
-              <td>Kapasitas</td>
-              <td><span id="battery-capacity"></span> Ah</td>
-            </tr>
-            <tr>
-              <td>Voltase</td>
-              <td>12 DCV</td>
-            </tr>
-            <tr class="tabel-1">
-              <td>Dimensi</td>
-              <td>
-                <span id="battery-length"></span> X
-                <span id="battery-width"></span> X
-                <span id="battery-height"></span>
-              </td>
-            </tr>
-            <tr>
-              <td>Nama Lain</td>
-              <td><span id="battery-alt-name"></span></td>
-            </tr>
-          </table>
+        <div class="order-tokped pt-1">
+          <button class="fs-5">
+            <img class="ml-5" src="img/tokped-logo.png" alt="" />
+            Tokopedia
+          </button>
+        </div>
+
+        <div class="order-online pt-1">
+          <button data-url="" class="fs-5 order-online-link" onclick="window.open(this.getAttribute('data-url'))">
+            Order Online
+          </button>
         </div>
       </div>
+    </div>
 
-        <div style="clear: both;">
-        </div>
-        </div>
-       
+    <!-- Specifications Table -->
+    <div class="specifications p-3 pb-5 bg-light">
+      <span class="fs-4 fw-bold">Spesifikasi Produk</span>
+      <table class="h-100 mb-2">
+        <tr class="tabel-1">
+          <td>Garansi</td>
+          <td><span id="battery-warranty">0</span> Bulan</td>
+        </tr>
+        <tr>
+          <td>Standard CCA</td>
+          <td><span id="battery-cca"></span> A</td>
+        </tr>
+        <tr class="tabel-1">
+          <td>Kapasitas</td>
+          <td><span id="battery-capacity"></span> Ah</td>
+        </tr>
+        <tr>
+          <td>Voltase</td>
+          <td>12 DCV</td>
+        </tr>
+        <tr class="tabel-1">
+          <td>Dimensi</td>
+          <td>
+            <span id="battery-length"></span> X
+            <span id="battery-width"></span> X
+            <span id="battery-height"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Nama Lain</td>
+          <td><span id="battery-alt-name"></span></td>
+        </tr>
+      </table>
+    </div>
+  </div>
 
-      </div>
+  <div style="clear: both;">
+  </div>
+  </div>
 
-      <div class="gradient-bar"></div>
+
+  </div>
+
+  <div class="gradient-bar"></div>
 
 
-      <div class="gabungancontainer">
-        <div class="juduldetail">
-          <p>Rekomendasi Aki</p>
-          <h4 id="model-name"></h4>
-          <table class="halo">
-            <tr class="judul1">
-              <td>Teknologi Aki</td>
-            </tr>
-            <tr class="judul2">
-              <td>Dimensi (mm)</td>
-            </tr>
-            <tr class="judul1">
-              <td>Garansi</td>
-            </tr>
-            <tr class="judul2">
-              <td>Standar CCA</td>
-            </tr>
-            <tr class="judul1">
-              <td>Standar CCA</td>
-            </tr>
-          </table>
-        </div>
+  <div class="gabungancontainer">
+    <div class="juduldetail">
+      <p>Rekomendasi Aki</p>
+      <h4 id="model-name"></h4>
+      <table class="halo">
+        <tr class="judul1">
+          <td>Teknologi Aki</td>
+        </tr>
+        <tr class="judul2">
+          <td>Dimensi (mm)</td>
+        </tr>
+        <tr class="judul1">
+          <td>Garansi</td>
+        </tr>
+        <tr class="judul2">
+          <td>Standar CCA</td>
+        </tr>
+        <tr class="judul1">
+          <td>Standar CCA</td>
+        </tr>
+      </table>
+    </div>
 
-        <div id="container-catalogs" class="produkcontainer"></div>
-      </div>
-      <div class="gradient-bar"></div>
+    <div id="container-catalogs" class="produkcontainer"></div>
+  </div>
+  <div class="gradient-bar"></div>
 
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script type="module">
-        import {
-          fetchCatalogsByVehicleModel,
-          fetchCatalogDetails,
-        } from "./service/catalogService.js";
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="module">
+    import {
+      fetchCatalogsByVehicleModel,
+      fetchCatalogDetails,
+    } from "./service/catalogService.js";
 
-        $(function() {
-          const openDetailCatalog = async (batteryId) => {
-            try {
-              const details = await fetchCatalogDetails(batteryId);
-              console.log(details);
+    $(function() {
+      const openDetailCatalog = async (batteryId) => {
+        try {
+          const details = await fetchCatalogDetails(batteryId);
+          console.log(details);
 
-              // Replace the catalog detail value.
-              $("#battery-image").attr(
-                "src",
-                "https://ams.akikita.web.id/storage/image/battery/" +
-                  details.image
-              );
-              $("#battery-name").text(details.name);
-              $("#battery-price").text(
-                parseFloat(details.price_retail).toLocaleString()
-              );
-              $("#battery-warranty").text(details.warranty);
-              $("#battery-cca").text(details.standard_cca);
-              $("#battery-capacity").text(details.capacity);
-              $("#battery-length").text(details.dimension_length);
-              $("#battery-width").text(details.dimension_width);
-              $("#battery-height").text(details.dimension_height);
-              $("#battery-alt-name").text(details.name_alternate);
+          // Replace the catalog detail value.
+          $("#battery-image").attr(
+            "src",
+            "https://ams.akikita.web.id/storage/image/battery/" +
+            details.image
+          );
+          $("#battery-name").text(details.name);
+          $("#battery-price").text(
+            parseFloat(details.price_retail).toLocaleString()
+          );
+          $("#battery-warranty").text(details.warranty);
+          $("#battery-cca").text(details.standard_cca);
+          $("#battery-capacity").text(details.capacity);
+          $("#battery-length").text(details.dimension_length);
+          $("#battery-width").text(details.dimension_width);
+          $("#battery-height").text(details.dimension_height);
+          $("#battery-alt-name").text(details.name_alternate);
+          const woocommerceUrl = details.battery_url.find(url => url.platform === "WOOCOMMERCE");
+          if (woocommerceUrl) {
+            $(".order-online-link").attr("data-url", woocommerceUrl.url);
+          } else {
+            $(".order-online-link").addClass("d-none");
+          }
 
-              // Show the catalog detail container.
-              $("#container-catalog-detail").removeClass("d-none");
-            } catch (error) {
-              console.error("Error loading catalog details:", error);
-            }
-          };
-          
-          const loadCatalogs = async () => {
-            try {
-              const queryString = window.location.search;
-              const params = new URLSearchParams(queryString);
-              const model = params.get('model');
+          // Show the catalog detail container.
+          $("#container-catalog-detail").removeClass("d-none");
+        } catch (error) {
+          console.error("Error loading catalog details:", error);
+        }
+      };
 
-              // Set text.
-              $("#model-name").text(model);
+      const loadCatalogs = async () => {
+        try {
+          const queryString = window.location.search;
+          const params = new URLSearchParams(queryString);
+          const model = params.get('model');
 
-              const catalogs = await fetchCatalogsByVehicleModel(model);
+          // Set text.
+          $("#model-name").text(model);
 
-              catalogs.forEach((catalog) => {
-                const catalogCard = `
+          const catalogs = await fetchCatalogsByVehicleModel(model);
+
+          catalogs.forEach((catalog) => {
+            const catalogCard = `
                     <div class="produk position-relative" style="background-color: #ffffff;">
                       <div class="product-image">
                         <img
@@ -282,58 +267,59 @@
                       </table>
                     </div>
                 `;
-                $("#container-catalogs").append(catalogCard);
-              });
+            $("#container-catalogs").append(catalogCard);
+          });
 
-              $(".btn-detail").on("click", function () {
-                openDetailCatalog($(this).data("id"));
-              });
-            } catch (error) {
-              console.error("Error loading catalogs:", error);
-              $("#container-catalogs").append(`
+          $(".btn-detail").on("click", function() {
+            openDetailCatalog($(this).data("id"));
+          });
+        } catch (error) {
+          console.error("Error loading catalogs:", error);
+          $("#container-catalogs").append(`
                   <div>
                     <h3 class="text-light">Tidak ada barang</h3>
                   </div>
               `);
-            }
-          };
+        }
+      };
 
-          loadCatalogs();
-        });
-      </script>
+      loadCatalogs();
+    });
+  </script>
 
-      <div class="footer">
-        <div class="container">
-            <div class="column">
-                <img src="img/logo-kecil.png" alt="Akikita.id logo">
-                <p><strong>Akikita.id</strong> adalah layanan antar pasang aki untuk kendaraan di wilayah Bandung. Teknisi terlatih kami siap melayani Anda.</p>
-                <h3>Kantor Utama</h3>
-                <p class="contact-info"><i class="fas fa-map-marker-alt"></i> Jalan Raya Daan Mogot KM. 18, Green Sedayu Bizpark DM5 Nomor 58, Provinsi DKI Jakarta</p>
-                <p class="contact-info"><i class="fas fa-phone"></i> +62-8222-8800-175</p>
-                <p class="contact-info"><i class="fas fa-envelope"></i> akikita.id@gmail.com</p>
-              </div>
-            <div style="margin-left: 100px;" class="column">
-                <h3>Navigasi</h3>
-                <p><a href="#">Halaman Utama</a></p>
-                <p><a href="#">Syarat &amp; Ketentuan Garansi</a></p>
-                <h3>Produk</h3>
-                <p><a href="#">Aki Mobil</a></p>
-                <p><a href="#">Aki UPS</a></p>
-            </div>
-            <div class="column">
-                <h3>Ikuti Kami</h3>
-                <p><a href="#">Facebook</a></p>
-                <p><a href="#">Instagram</a></p>
-                <p><a href="#">TikTok</a></p>
-                <h3>Toko E-Commerce Lain</h3>
-                <p><a href="#">Tokopedia</a></p>
-            </div>
-        </div>
+  <div class="footer">
+    <div class="container">
+      <div class="column">
+        <img src="img/logo-kecil.png" alt="Akikita.id logo">
+        <p><strong>Akikita.id</strong> adalah layanan antar pasang aki untuk kendaraan di wilayah Bandung. Teknisi terlatih kami siap melayani Anda.</p>
+        <h3>Kantor Utama</h3>
+        <p class="contact-info"><i class="fas fa-map-marker-alt"></i> Jalan Raya Daan Mogot KM. 18, Green Sedayu Bizpark DM5 Nomor 58, Provinsi DKI Jakarta</p>
+        <p class="contact-info"><i class="fas fa-phone"></i> +62-8222-8800-175</p>
+        <p class="contact-info"><i class="fas fa-envelope"></i> akikita.id@gmail.com</p>
       </div>
-      <div class="copyright">
-        © 2024 Akikita.id
+      <div style="margin-left: 100px;" class="column">
+        <h3>Navigasi</h3>
+        <p><a href="#">Halaman Utama</a></p>
+        <p><a href="#">Syarat &amp; Ketentuan Garansi</a></p>
+        <h3>Produk</h3>
+        <p><a href="#">Aki Mobil</a></p>
+        <p><a href="#">Aki UPS</a></p>
+      </div>
+      <div class="column">
+        <h3>Ikuti Kami</h3>
+        <p><a href="#">Facebook</a></p>
+        <p><a href="#">Instagram</a></p>
+        <p><a href="#">TikTok</a></p>
+        <h3>Toko E-Commerce Lain</h3>
+        <p><a href="#">Tokopedia</a></p>
+      </div>
     </div>
-    <!-- Footer End -->
-    </div>
-  </body>
+  </div>
+  <div class="copyright">
+    © 2024 Akikita.id
+  </div>
+  <!-- Footer End -->
+  </div>
+</body>
+
 </html>
