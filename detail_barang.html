@@ -88,7 +88,7 @@
         </div>
 
         <div class="order-tokped pt-1">
-          <button class="fs-5">
+          <button class="fs-5 btn-tokopedia" data-url="" onclick="window.open(this.getAttribute('data-url'))">
             <img class="ml-5" src="img/tokped-logo.png" alt="" />
             Tokopedia
           </button>
@@ -120,7 +120,7 @@
         </tr>
         <tr>
           <td>Voltase</td>
-          <td>12 DCV</td>
+          <td>12V</td>
         </tr>
         <tr class="tabel-1">
           <td>Dimensi</td>
@@ -211,6 +211,14 @@
             $(".order-online-link").attr("data-url", woocommerceUrl.url);
           } else {
             $(".order-online-link").addClass("d-none");
+          }
+
+          const tokopediaUrl = details.battery_url.find(url => url.platform === "TOKOPEDIA");
+          if (tokopediaUrl) {
+            $(".btn-tokopedia").removeClass("d-none");
+            $(".btn-tokopedia").attr("data-url", tokopediaUrl.url);
+          } else {
+            $(".btn-tokopedia").addClass("d-none");
           }
 
           // Show the catalog detail container.
