@@ -234,6 +234,22 @@
           catalogs.forEach((catalog) => {
             const catalogCard = `
                     <div class="produk position-relative" style="background-color: #ffffff;">
+                      ${catalog.is_max_price ? 
+                        `<div class="header">
+                          TERKUAT
+                          <i class="fas fa-bolt"></i>
+                        </div>` : ""}
+
+                      ${catalog.is_min_price ? 
+                        `<div class="headerxyz">
+                          TERPOPULER
+                          <i class="fas fa-star"></i>
+                        </div>` : ""}
+
+                      ${!catalog.is_max_price && !catalog.is_min_price ? 
+                      `<div class="headerabc">HEH <i class="fas fa-star"></i>
+                        </div>` : ""}
+
                       <div class="product-image">
                         <img
                           src="https://ams.akikita.web.id/storage/image/battery/${catalog.image}"
