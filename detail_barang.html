@@ -207,6 +207,7 @@
           $("#battery-alt-name").text(details.name_alternate);
           const woocommerceUrl = details.battery_url.find(url => url.platform === "WOOCOMMERCE");
           if (woocommerceUrl) {
+            $(".order-online-link").removeClass("d-none");
             $(".order-online-link").attr("data-url", woocommerceUrl.url);
           } else {
             $(".order-online-link").addClass("d-none");
