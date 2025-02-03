@@ -259,7 +259,7 @@
 
               if (response.status === 'success' && response.data.length > 0) {
                 response.data.forEach(function (brandName) {
-                  brandSelect.append(`<option value="${brandName}">${brandName}</option>`);
+                  brandSelect.append(`<option value="${brandName.id}">${brandName.name}</option>`);
                 });
               }
             },
@@ -292,7 +292,11 @@
                   modelSelect.empty().append(`<option value="">Pilih Model</option>`);
                   if (response.status === 'success' && response.data.length > 0) {
                     response.data.forEach(function (modelName) {
-                      modelSelect.append(`<option value="${modelName}">${modelName}</option>`);
+                      const year = modelName.year?.name ?? "NONE";
+                      const fuel = modelName.fuel_vehicle?.name ?? "NONE";
+                      const transmission = modelName.transmission?.name ?? "NONE";
+
+                      modelSelect.append(`<option value="${modelName.id}" data-year="${year}" data-fuel="${fuel}" data-transmission="${transmission}">${modelName.name}</option>`);
                     });
                   } else {
                     modelSelect.append(`<option value="">Model tidak ditemukan</option>`);
@@ -319,69 +323,62 @@
           });
 
           // Mengaktifkan fuel select setelah memilih model
-          $('#modelSelect').change(function () {
+          $('#modelSelect').on('select2:select', function (e) {
             const selectedModel = $(this).val();
-            const fuelSelect = $('#fuelSelect');
 
+            const selectedData = e.params.data; // Get the selected data
+            const yearData = selectedData.element.dataset.year; // Access data-year
+            const transmissionData = selectedData.element.dataset.transmission; // Access data-transmission
+            const fuelData = selectedData.element.dataset.fuel; // Access data-fuel
+
+            const fuelSelect = $('#fuelSelect');
             if (selectedModel) {
               // Aktifkan dropdown fuel dan isi dengan opsi
               fuelSelect.prop('disabled', false);
               fuelSelect.empty(); // Hapus opsi yang ada sebelumnya
               fuelSelect.append('<option value="">Pilih Fuel</option>');
-              fuelSelect.append('<option value="none">None</option>');
-              fuelSelect.append('<option value="bensin">Bensin</option>');
-              fuelSelect.append('<option value="diesel">Diesel</option>');
+              fuelSelect.append('<option value="none">' + fuelData + '</option>');
             } else {
               // Nonaktifkan dropdown fuel jika tidak ada model yang dipilih
               fuelSelect.prop('disabled', true).html('<option selected>Pilih Fuel</option>');
             }
-          });
 
-          // Mengaktifkan transmission select setelah memilih fuel
-          $('#fuelSelect').change(function () {
-            const selectedFuel = $(this).val();
             const transmissionSelect = $('#transmissionSelect');
-
-            if (selectedFuel) {
-              // Aktifkan dropdown transmission dan isi dengan opsi
+            if (selectedModel) {
+              // Aktifkan dropdown fuel dan isi dengan opsi
               transmissionSelect.prop('disabled', false);
               transmissionSelect.empty(); // Hapus opsi yang ada sebelumnya
               transmissionSelect.append('<option value="">Pilih Type Transmission</option>');
-              transmissionSelect.append('<option value="none">None</option>');
-              transmissionSelect.append('<option value="matic">Matic</option>');
+              transmissionSelect.append('<option value="none">' + transmissionData + '</option>');
             } else {
-              // Nonaktifkan dropdown transmission jika tidak ada fuel yang dipilih
-              transmissionSelect
-                .prop('disabled', true)
-                .html('<option selected>Pilih Type Transmission</option>');
+              // Nonaktifkan dropdown fuel jika tidak ada model yang dipilih
+              transmissionSelect.prop('disabled', true).html('<option selected>Pilih Type Transmission</option>');
             }
-          });
 
-          // Mengaktifkan year select setelah memilih transmission
-          $('#transmissionSelect').change(function () {
-            const selectedTransmission = $(this).val();
             const yearSelect = $('#yearSelect');
-            if (selectedTransmission) {
+            if (selectedModel) {
+              // Aktifkan dropdown fuel dan isi dengan opsi
               yearSelect.prop('disabled', false);
-              const currentYear = new Date().getFullYear();
-              yearSelect.empty().append(`<option value="">Pilih Tahun</option>`);
-              for (let year = 1945; year <= currentYear; year++) {
-                yearSelect.append(`<option value="${year}">${year}</option>`);
-              }
+              yearSelect.empty(); // Hapus opsi yang ada sebelumnya
+              yearSelect.append('<option value="">Pilih Tahun</option>');
+              yearSelect.append('<option value="none">' + yearData + '</option>');
             } else {
+              // Nonaktifkan dropdown fuel jika tidak ada model yang dipilih
               yearSelect.prop('disabled', true).html('<option selected>Pilih Tahun</option>');
             }
           });
+
           $('#searchButton').click(function () {
             // Ambil nilai model yang dipilih (misal dari input atau dropdown)
             const selectedModel = $('#modelSelect').val();
+            const modelName = $('#modelSelect').select2('data')[0]?.text || '';
 
             // Periksa apakah model sudah dipilih
             if (selectedModel) {
               // Pindah ke halaman property-list.html dengan query parameter
               window.location.href = `detail_barang.html?model=${encodeURIComponent(
                 selectedModel,
-              )}`;
+              )}&name=${modelName}`;
             } else {
               alert('Model belum dipilih');
             }

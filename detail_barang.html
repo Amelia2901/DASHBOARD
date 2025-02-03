@@ -233,9 +233,10 @@
           const queryString = window.location.search;
           const params = new URLSearchParams(queryString);
           const model = params.get('model');
+          const name = params.get('name');
 
           // Set text.
-          $("#model-name").text(model);
+          $("#model-name").text(name);
 
           const catalogs = await fetchCatalogsByVehicleModel(model);
 
