@@ -1,0 +1,18 @@
+.text-judul {
+  color: #393341;
+  font-family: "Krub", serif;
+  font-weight: 900;
+  font-size: 4.1em;
+  line-height: 0.9;
+  font-style: normal;
+}
+.text-judul-ijo {
+  font-family: "Krub", serif;
+  font-weight: 900;
+  line-height: 0.9;
+  color: #87ce34;
+  font-size: 0.86em;
+  font-style: italic;
+  text-shadow: -2px 2px 3px #135a1f;
+  font-style: normal;
+}
