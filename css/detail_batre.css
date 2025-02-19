@@ -1,18 +1,297 @@
-.text-judul {
-  color: #393341;
-  font-family: "Krub", serif;
-  font-weight: 900;
-  font-size: 4.1em;
-  line-height: 0.9;
-  font-style: normal;
+.header-border {
+  background-color: #81d742 !important;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 6px;
 }
-.text-judul-ijo {
-  font-family: "Krub", serif;
+
+.navbar {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .dropdown-toggle::after {
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  line-height: 0.9;
-  color: #87ce34;
-  font-size: 0.86em;
-  font-style: italic;
-  text-shadow: -2px 2px 3px #135a1f;
-  font-style: normal;
+  vertical-align: middle;
+  margin-left: 5px;
+  transition: 0.5s;
+}
+
+.navbar .dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(-180deg);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  margin-right: 30px;
+  padding: 25px 0;
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+  .nav-bar {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    margin-right: 0;
+    padding: 10px 0;
+  }
+
+  .navbar-light .navbar-nav {
+    border-top: 1px solid #eeeeee;
+  }
+}
+
+.navbar-light .navbar-brand {
+  height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    top: 100%;
+    margin-top: 0;
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  .navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+  }
+}
+.search-input {
+  width: 100%;
+  padding: 0.85rem 0.5rem !important;
+  border: 1px solid #ced4da;
+  border-radius: 12px;
+  font-size: 14px;
+  color: black;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+.search-input::placeholder {
+  color: #b8bac4 !important;
+}
+
+/* Styling container utama */
+.ibu-card-batre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Jarak antar kartu */
+  background-color: white;
+  padding: 20px;
+  margin-top: 50px; /* Jarak ke atas dari elemen sebelumnya */
+}
+
+.filter-sort {
+  background-color: #f8f9fa;
+  height: 70px;
+  width: 1170px;
+  margin-top: 50px;
+  margin-left: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Styling kartu */
+.card-container {
+  position: relative;
+  width: 248px;
+  height: auto;
+  margin: 15px; /* Beri jarak antar kartu */
+}
+
+/* Card awal tanpa background */
+.card-batre {
+  width: 100%;
+  height: 100%;
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Card hover awalnya tersembunyi */
+.card-batre-hover {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.4s ease-out, box-shadow 0.4s ease-out;
+  z-index: 1;
+}
+
+.card-container:hover .card-batre-hover {
+  opacity: 1;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Saat hover, card hover muncul dengan efek smooth */
+.card-container:hover .card-batre {
+  color: black;
+}
+
+/* Styling elemen di dalam card */
+.card-batre img,
+.card-batre-hover img {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.card-batre h1,
+.card-batre-hover h1 {
+  color: black;
+  font-size: 17px;
+  font-family: "Krub", serif;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.card-batre p,
+.card-batre-hover p {
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 10px;
+  font-family: "Krub", serif;
+  margin-left: 15px;
+}
+
+.stock-batre i {
+  color: #95cb53;
+  font-family: "Krub", serif;
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+/* Tombol Add Chart */
+.card-batre-hover button {
+  background-color: #95cb53;
+  padding: 10px 75px;
+  color: white;
+  font-size: 15px;
+  font-family: "Krub", serif;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-weight: 600;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  margin-left: 15px;
+}
+
+.card-batre-hover button:hover {
+  background-color: #7aa63e;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .ibu-card-batre {
+    justify-content: space-evenly;
+    gap: 10px; /* Mengurangi jarak antar kartu pada mode HP */
+  }
+
+  .filter-sort {
+    width: 95%;
+    height: auto;
+    text-align: center;
+  }
+
+  .card-container {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .card-batre-hover {
+    opacity: 1;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-batre {
+    display: none;
+  }
+
+  .card-batre img,
+  .card-batre-hover img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-batre-hover button {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .card-batre-hover {
+    opacity: 1;
+    position: relative;
+  }
+
+  .card-batre {
+    display: none;
+  }
+
+  .card-batre h1,
+  .card-batre-hover h1 {
+    font-size: 14px;
+  }
+
+  .card-batre p,
+  .card-batre-hover p {
+    font-size: 16px;
+  }
+
+  .card-batre-hover button {
+    font-size: 14px;
+  }
 }
