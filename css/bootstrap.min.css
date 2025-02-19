@@ -568,7 +568,7 @@ progress {
   .container-md,
   .container-lg,
   .container-xl {
-    max-width: 1140px;
+    max-width: 1280px !important;
   }
 }
 @media (min-width: 1400px) {
@@ -1847,7 +1847,7 @@ progress {
   height: 1.5em;
 }
 .form-control::placeholder {
-  color: #6c757d;
+  color: #adbbd3 !important;
   opacity: 1;
 }
 .form-control:disabled,
