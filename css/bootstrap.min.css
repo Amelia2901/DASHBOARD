@@ -136,7 +136,6 @@ h6,
   font-size: 1rem;
 }
 p {
-  margin-top: 0;
   margin-bottom: 1rem;
 }
 abbr[title],
@@ -3974,8 +3973,8 @@ fieldset:disabled .btn {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 5px;
+  padding-right: 20px !important;
 }
 .card > hr {
   margin-right: 0;

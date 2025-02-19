@@ -107,7 +107,7 @@
         padding-top: 15px;
       }
 
-      .left-section, .right-section {
+      .left-section {
         background-color: #ffffff;
         border-radius: 18px;
         margin: 10px;
@@ -116,7 +116,7 @@
       .left-section {
         text-align: left;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 75%;
+        width: 100%;
         position: relative;
         box-sizing: border-box;
       }
@@ -322,6 +322,31 @@
             color: white;
             font-size: 45px;
           }
+          .icon-circle-like {
+            position: absolute;
+            top: 10px;
+            right: 10px; /* Pastikan ini tidak terlalu jauh */
+            transform: translateX(50%); /* Menyesuaikan agar lebih presisi */
+            background: white;
+            border-radius: 50%;
+            padding: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+}
+
+            .icon-circle-abu {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              background-color: #F1F3F5;
+              color: #000000;
+              font-size: 23px;
+            }
+
+
           .judul-card{
             font-family: "Krub", serif;
             font-style: normal;
@@ -346,7 +371,7 @@
             color: #1E1E1E;
             font-size: 20px ;
             font-weight: 600;
-            margin: 0;
+            margin: 0 !important;
 
           }
           .fiter-produk-option{
@@ -372,12 +397,72 @@
           }
           hr{
             border: 1px solid #B3A8A8;
+            opacity: 1;
           }
-          .container-md {
-            padding-left: 15px; /* Tambahkan padding kiri */
-            padding-right: 15px; /* Tambahkan padding kanan */
-        }
-        
+          .product-item {
+              position: relative;
+              text-align: left;
+            }  
+            .product-item div {
+              position: relative;
+              display: inline-block; 
+            }        
+            .product-item img {
+              display: block;
+              margin: 0 auto;
+              position: relative;
+              z-index: 1;
+              border-radius: 10px;
+            }
+            .icon-circle-like {
+              position: absolute;
+              top: 10px;
+              right: 29px;
+              background: white;
+              border-radius: 50%;
+              padding: 5px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              z-index: 999;
+            }
+          .status {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 5px;
+            text-align: center;
+            padding-top: 10px;
+
+            
+          }
+          .status .material-symbols-outlined {
+              font-size: 20px; /* Sesuaikan ukuran ikon */
+              align-items: center;
+              color: #95CB53;
+          }
+          .instock{
+            font-family: "Krub", serif;
+            font-style: normal;
+            color: #95CB53 !important;
+            font-size: 13px ;
+            font-weight: 700;
+          }
+       .item_name{
+            font-family: "Krub", serif;
+            font-style: normal;
+            color: #000000 !important;
+            font-size: 15px ;
+            font-weight: 500;
+            padding-top: 10px;
+          }
+         .price{
+            font-family: "Krub", serif;
+            font-style: normal;
+            color: #000000 !important;
+            font-size: 21px ;
+            font-weight: 400;
+            padding-top: 5px;
+
+         }
     </style>
   </head>
 
@@ -431,73 +516,74 @@
 
     <!-- Header Start -->
 <div class="container-md">
-  <div class="row">
-      <div class="col-12 col-md-10 offset-md-1"> <!-- Memberikan jarak seperti contoh -->
-          <div class="left-section">
-              <img id="banner-img" src="img/banner_baru.png" alt="Banner" />
-              <div class="overlay"></div>
-              <div class="text-content">
-                  <p class="brand">Akikita.id</p>
-                  <h2 class="title">Layanan Antar <br> Pasang Aki Gesit!</h2>
-                  <p class="location">Khusus wilayah Bandung</p>
-                  <button class="order-button">Pesan Sekarang</button>
-              </div>
-          </div>
-          <div class="right-section">
-              
-          </div>
-      </div>
+  <div class="left-section">
+    <img id="banner-img" src="img/banner_baru.png" alt="Banner" />
+    <div class="overlay"></div>
+    <div class="text-content">
+      <p class="brand">Akikita.id</p>
+      <h2 class="title">Layanan Antar <br> Pasang Aki Gesit!</h2>
+      <p class="location">Khusus wilayah Bandung</p>
+      <button class="order-button">Pesan Sekarang</button>
+    </div>
   </div>
-</div>
-<!-- Header End -->
+ </div>
+ 
+   
+ <!-- Header End -->
 
 <!-- Search Start -->
-<div class="container-md filter-container bg-primary wow fadeIn" data-wow-delay="0.1s">
-  <h6 class="judul-hitam">Temukan Akimu</h6>
-  <p class="sub-judul-hitam">Pilih Kendaraanmu</p>
-  <div class="filter-box container">
-      <div class="row g-3"> <!-- Mengubah g-12 menjadi g-3 untuk tampilan lebih rapat -->
-          <!-- Brand Select -->
-          <div class="col-md-2">
-              <select id="brandSelect" class="form-select border-0 py-3">
-                  <option selected>Pilih Brand</option>
-              </select>
-          </div>
-          
-          <!-- Model Select -->
-          <div class="col-md-2">
-              <select id="modelSelect" class="form-select border-0 py-3" disabled>
-                  <option selected>Pilih Model</option>
-              </select>
-          </div>
-          
-          <!-- Fuel Select -->
-          <div class="col-md-2">
-              <select id="fuelSelect" class="form-select border-0 py-3" disabled>
-                  <option selected>Pilih Fuel</option>
-              </select>
-          </div>
-          
-          <!-- Transmission Select -->
-          <div class="col-md-2">
-              <select id="transmissionSelect" class="form-select border-0 py-3" disabled>
-                  <option selected>Pilih Type Transmission</option>
-              </select>
-          </div>
-          
-          <!-- Year Select -->
-          <div class="col-md-2">
-              <select id="yearSelect" class="form-select border-0 py-3" disabled>
-                  <option selected>Pilih Tahun</option>
-              </select>
-          </div>
-          
-          <!-- Search Button -->
-          <div class="col-md-2">
-              <button class="btn w-100 py-2 text-black" style="background-color: #87ce34; border: none;" id="searchButton">Cari</button>
-          </div>
-      </div>
-  </div>
+
+<div
+ class="container-md filter-container bg-primary wow fadeIn"
+ data-wow-delay="0.1s"
+ 
+>
+<h6 class="judul-hitam" >Temukan Akimu</h6>
+<p class="sub-judul-hitam" >Pilih Kendaraanmu</p>
+<div class="filter-box container">
+ <div class="row g-12 ">
+   <!-- Brand Select -->
+   <div class="filter col-md-2">
+     <select id="brandSelect" class="form-select border-0 py-3">
+       <option selected>Pilih Brand</option>
+     </select>
+   </div>
+
+   <!-- Model Select -->
+   <div class="filter col-md-2">
+     <select id="modelSelect" class="form-select border-0 py-3" disabled>
+       <option selected>Pilih Model</option>
+     </select>
+   </div>
+
+   <!-- Fuel Select -->
+   <div class="filter col-md-2">
+     <select id="fuelSelect" class="form-select border-0 py-3" disabled>
+       <option selected>Pilih Fuel</option>
+     </select>
+   </div>
+
+   <!-- Transmission Select -->
+   <div class="filter col-md-2">
+     <select id="transmissionSelect" class="form-select border-0 py-3" disabled>
+       <option selected>Pilih Type Transmission</option>
+     </select>
+   </div>
+
+   <!-- Year Select -->
+   <div class="filter col-md-2">
+     <select id="yearSelect" class="form-select border-0 py-3" disabled>
+       <option selected>Pilih Tahun</option>
+     </select>
+   </div>
+
+   <!-- Search Button -->
+   <div class="col-md-2">
+     <button class="btn w-100 py-2 text-white" style="background-color: #87ce34; border: none; color: black !important;" id="searchButton">Cari</button>
+   </div>
+ </div>
+</div>
+
 </div>
 <!-- Search End -->
 
@@ -750,17 +836,119 @@
    
 <!-- Property List Start -->
 <div class="container-md dashboard-rekomen pt-5">
-  <div class="row" style="display: flex; justify-content: space-between; align-items: center;">
-    <div class="col-sm-6" style="display: flex; gap: 30px; align-items: center;">
+  <!-- Filter & View All -->
+  <div class="row align-items-center justify-content-between">
+    <div class="col-sm-6 d-flex gap-3 align-items-center">
       <p class="filter-produk">Filter Produk</p>
-      <p class="fiter-produk-option">All</p>
-      <p class="fiter-produk-option">Amaron Pro Rider</p>
-      <p class="fiter-produk-option">Amaron Quanta</p>
+      <p class="filter-produk-option">All</p>
+      <p class="filter-produk-option">Amaron Pro Rider</p>
+      <p class="filter-produk-option">Amaron Quanta</p>
     </div>
-    <div class="col-sm-6" style="display: flex; justify-content: flex-end; align-items: center; gap: 5px;">
-      <p class="viewall" style="align-items: center; display: flex;">View All <span class="material-symbols-outlined">
-        arrow_forward
-      </span></p>  
+    <div class="col-sm-6 d-flex justify-content-end align-items-center gap-2">
+      <p class="viewall d-flex align-items-center">
+        View All <span class="material-symbols-outlined">arrow_forward</span>
+      </p>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Product List -->
+  <div class="container">
+    <div class="row g-3 justify-content-center">
+      <!-- Product Item -->
+      <div class="col-lg-2 col-md-4 col-sm-6 product-item">
+        <div class="card">
+          <div class="position-relative">
+            <img alt="Amaron Quanta 200 battery" class="img-fluid" src="img/produk1.jpg" />
+            <span class="icon-circle-like material-symbols-outlined">favorite</span>
+          </div>
+          <h3 class="item_name">Amaron Quanta 200</h3>
+          <div class="price">
+            Rp6.500.000 <span class="icon-circle-abu material-symbols-outlined">shopping_cart</span>
+          </div>
+          <div class="status d-flex align-items-left gap-2">
+            <span class="material-symbols-outlined">package_2</span>
+            <span class="instock">In Stock</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 product-item">
+        <div class="card">
+          <div class="position-relative">
+            <img alt="Amaron Quanta 200 battery" class="img-fluid" src="img/produk1.jpg" />
+            <span class="icon-circle-like material-symbols-outlined">favorite</span>
+          </div>
+          <h3 class="item_name">Amaron Quanta 200</h3>
+          <div class="price">
+            Rp6.500.000 <span class="icon-circle-abu material-symbols-outlined">shopping_cart</span>
+          </div>
+          <div class="status d-flex align-items-center gap-2">
+            <span class="material-symbols-outlined">package_2</span>
+            <span class="instock">In Stock</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 product-item">
+        <div class="card">
+          <div class="position-relative">
+            <img alt="Amaron Quanta 200 battery" class="img-fluid" src="img/produk1.jpg" />
+            <span class="icon-circle-like material-symbols-outlined">favorite</span>
+          </div>
+          <h3 class="item_name">Amaron Quanta 200</h3>
+          <div class="price">
+            Rp6.500.000 <span class="icon-circle-abu material-symbols-outlined">shopping_cart</span>
+          </div>
+          <div class="status d-flex align-items-center gap-2">
+            <span class="material-symbols-outlined">package_2</span>
+            <span class="instock">In Stock</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 product-item">
+        <div class="card">
+          <div class="position-relative">
+            <img alt="Amaron Quanta 200 battery" class="img-fluid" src="img/produk1.jpg" />
+            <span class="icon-circle-like material-symbols-outlined">favorite</span>
+          </div>
+          <h3 class="item_name">Amaron Quanta 200</h3>
+          <div class="price">
+            Rp6.500.000 <span class="icon-circle-abu material-symbols-outlined">shopping_cart</span>
+          </div>
+          <div class="status d-flex align-items-center gap-2">
+            <span class="material-symbols-outlined">package_2</span>
+            <span class="instock">In Stock</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 product-item">
+        <div class="card">
+          <div class="position-relative">
+            <img alt="Amaron Quanta 200 battery" class="img-fluid" src="img/produk1.jpg" />
+            <span class="icon-circle-like material-symbols-outlined">favorite</span>
+          </div>
+          <h3 class="item_name">Amaron Quanta 200</h3>
+          <div class="price">
+            Rp6.500.000 <span class="icon-circle-abu material-symbols-outlined">shopping_cart</span>
+          </div>
+          <div class="status d-flex align-items-center gap-2">
+            <span class="material-symbols-outlined">package_2</span>
+            <span class="instock">In Stock</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination d-flex justify-content-center mt-3">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
   </div>
   <hr>
