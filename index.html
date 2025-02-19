@@ -374,10 +374,10 @@
             border: 1px solid #B3A8A8;
           }
           .container-md {
-            margin-right: 7% !important;
-            margin-left: 7% !important;
-
-          }
+            padding-left: 15px; /* Tambahkan padding kiri */
+            padding-right: 15px; /* Tambahkan padding kanan */
+        }
+        
     </style>
   </head>
 
@@ -431,78 +431,73 @@
 
     <!-- Header Start -->
 <div class="container-md">
-  <div class="left-section">
-    <img id="banner-img" src="img/banner_baru.png" alt="Banner" />
-    <div class="overlay"></div>
-    <div class="text-content">
-      <p class="brand">Akikita.id</p>
-      <h2 class="title">Layanan Antar <br> Pasang Aki Gesit!</h2>
-      <p class="location">Khusus wilayah Bandung</p>
-      <button class="order-button">Pesan Sekarang</button>
-    </div>
+  <div class="row">
+      <div class="col-12 col-md-10 offset-md-1"> <!-- Memberikan jarak seperti contoh -->
+          <div class="left-section">
+              <img id="banner-img" src="img/banner_baru.png" alt="Banner" />
+              <div class="overlay"></div>
+              <div class="text-content">
+                  <p class="brand">Akikita.id</p>
+                  <h2 class="title">Layanan Antar <br> Pasang Aki Gesit!</h2>
+                  <p class="location">Khusus wilayah Bandung</p>
+                  <button class="order-button">Pesan Sekarang</button>
+              </div>
+          </div>
+          <div class="right-section">
+              
+          </div>
+      </div>
   </div>
- 
-  <div class="right-section">
- 
-  </div>
- </div>
- 
-   
- <!-- Header End -->
+</div>
+<!-- Header End -->
 
 <!-- Search Start -->
-
-<div
- class="container-md filter-container bg-primary wow fadeIn"
- data-wow-delay="0.1s"
- 
->
-<h6 class="judul-hitam" >Temukan Akimu</h6>
-<p class="sub-judul-hitam" >Pilih Kendaraanmu</p>
-<div class="filter-box container">
- <div class="row g-12 ">
-   <!-- Brand Select -->
-   <div class="filter col-md-2">
-     <select id="brandSelect" class="form-select border-0 py-3">
-       <option selected>Pilih Brand</option>
-     </select>
-   </div>
-
-   <!-- Model Select -->
-   <div class="filter col-md-2">
-     <select id="modelSelect" class="form-select border-0 py-3" disabled>
-       <option selected>Pilih Model</option>
-     </select>
-   </div>
-
-   <!-- Fuel Select -->
-   <div class="filter col-md-2">
-     <select id="fuelSelect" class="form-select border-0 py-3" disabled>
-       <option selected>Pilih Fuel</option>
-     </select>
-   </div>
-
-   <!-- Transmission Select -->
-   <div class="filter col-md-2">
-     <select id="transmissionSelect" class="form-select border-0 py-3" disabled>
-       <option selected>Pilih Type Transmission</option>
-     </select>
-   </div>
-
-   <!-- Year Select -->
-   <div class="filter col-md-2">
-     <select id="yearSelect" class="form-select border-0 py-3" disabled>
-       <option selected>Pilih Tahun</option>
-     </select>
-   </div>
-
-   <!-- Search Button -->
-   <div class="col-md-2">
-     <button class="btn w-100 py-2 text-white" style="background-color: #87ce34; border: none; color: black !important;" id="searchButton">Cari</button>
-   </div>
- </div>
-</div>
-
+<div class="container-md filter-container bg-primary wow fadeIn" data-wow-delay="0.1s">
+  <h6 class="judul-hitam">Temukan Akimu</h6>
+  <p class="sub-judul-hitam">Pilih Kendaraanmu</p>
+  <div class="filter-box container">
+      <div class="row g-3"> <!-- Mengubah g-12 menjadi g-3 untuk tampilan lebih rapat -->
+          <!-- Brand Select -->
+          <div class="col-md-2">
+              <select id="brandSelect" class="form-select border-0 py-3">
+                  <option selected>Pilih Brand</option>
+              </select>
+          </div>
+          
+          <!-- Model Select -->
+          <div class="col-md-2">
+              <select id="modelSelect" class="form-select border-0 py-3" disabled>
+                  <option selected>Pilih Model</option>
+              </select>
+          </div>
+          
+          <!-- Fuel Select -->
+          <div class="col-md-2">
+              <select id="fuelSelect" class="form-select border-0 py-3" disabled>
+                  <option selected>Pilih Fuel</option>
+              </select>
+          </div>
+          
+          <!-- Transmission Select -->
+          <div class="col-md-2">
+              <select id="transmissionSelect" class="form-select border-0 py-3" disabled>
+                  <option selected>Pilih Type Transmission</option>
+              </select>
+          </div>
+          
+          <!-- Year Select -->
+          <div class="col-md-2">
+              <select id="yearSelect" class="form-select border-0 py-3" disabled>
+                  <option selected>Pilih Tahun</option>
+              </select>
+          </div>
+          
+          <!-- Search Button -->
+          <div class="col-md-2">
+              <button class="btn w-100 py-2 text-black" style="background-color: #87ce34; border: none;" id="searchButton">Cari</button>
+          </div>
+      </div>
+  </div>
 </div>
 <!-- Search End -->
 
