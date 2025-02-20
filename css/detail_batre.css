@@ -101,10 +101,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px; /* Jarak antar kartu */
   background-color: white;
-  padding: 20px;
-  margin-top: 50px; /* Jarak ke atas dari elemen sebelumnya */
 }
 
 .filter-sort {

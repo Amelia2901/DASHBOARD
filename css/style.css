@@ -798,20 +798,15 @@ input {
 .specifications .penjelasan td {
   font-weight: bold;
 }
-.dashboard-rekomen h1 {
-  color: #3a3a3c;
-  margin-left: 1000px;
-  font-size: 35px;
-}
 
-.dashboard-rekomen a {
+/* .dashboard-rekomen a {
   margin-left: 945px;
   text-decoration: underline;
 }
 
 .dashboard-rekomen p {
   color: #3a3a3c;
-}
+} */
 
 .tahapcontainer1 {
   display: flex;
@@ -848,7 +843,7 @@ input {
 }
 
 .footer {
-  background-color: #f5f5f5;
+  background-color: #fdfdfd;
   padding: 20px 0;
   border-top: 1px solid #ccc;
 }
@@ -859,25 +854,29 @@ input {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  margin-left: 100px;
+  margin-left: 70px;
 }
 .footer .column {
   flex: 1;
   min-width: 200px;
   margin: 10px 0;
+  font-family: "Krub", serif;
 }
 .footer .column h3 {
   margin-bottom: 10px;
   font-size: 20px;
   color: #3a3a3c;
   margin-top: 15px;
+  font-family: "Krub", serif;
 }
 .footer .column p,
 .footer .column a {
-  font-size: 16px;
+  font-size: 15px;
   color: #333;
   text-decoration: none;
   margin: 5px 0;
+  font-family: "Krub", serif;
+  width: 250px;
 }
 .footer .column a:hover {
   text-decoration: underline;
@@ -911,7 +910,57 @@ input {
 .footer img {
   max-width: 120px;
   margin-bottom: 10px;
+  background-color: #fdfdfd;
 }
+
+@media (max-width: 430px) {
+  .footer {
+    padding: 15px 0;
+    margin-top: 500px;
+    margin-left: 10px;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    padding: 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer .column {
+    width: 100%;
+    margin: 10px 0;
+    text-align: left; /* Tetap rata kiri */
+  }
+
+  .footer .column h3 {
+    font-size: 18px;
+  }
+
+  .footer .column p,
+  .footer .column a {
+    font-size: 14px;
+    width: auto; /* Biar nggak terlalu lebar di HP */
+  }
+
+  .footer img {
+    max-width: 100px;
+  }
+
+  .footer .whatsapp {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .copyright {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center; /* Tetap rata kiri */
+  }
+}
+
 .icon-atas {
   color: black !important;
   font-size: 25px;
@@ -986,4 +1035,1008 @@ select,
   -moz-appearance: none;
   appearance: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.text-judul {
+  color: #393341;
+  font-family: "Krub", serif;
+  font-weight: 900;
+  font-size: 4.1em;
+  line-height: 0.9;
+  font-style: normal;
+}
+.text-judul-ijo {
+  font-family: "Krub", serif;
+  font-weight: 900;
+  line-height: 0.9;
+  color: #87ce34;
+  font-size: 0.86em;
+  font-style: italic;
+  text-shadow: -2px 2px 3px #135a1f;
+  font-style: normal;
+}
+
+.elementor-icon i,
+.elementor-icon svg {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  display: block;
+}
+.icon-atas {
+  color: black !important;
+  font-size: 26px;
+  width: 2.5em !important;
+  margin-left: -50px;
+}
+.sub-judul {
+  color: #3a3a3c;
+  font-family: "Krub", serif;
+  font-weight: 500;
+  font-size: 32px;
+}
+.kontak-sekarang {
+  font-size: 23px !important;
+}
+.btn-whatsapp {
+  background-color: #87ce34 !important;
+}
+
+.button-search {
+  background-color: #87ce34 !important;
+  font-size: 12px !important;
+  font-family: "Krub", serif;
+  font-weight: 600;
+  background-color: var(--e-global-color-primary);
+  /* padding: 0.8em 0.4em; */
+  width: 180px !important;
+  height: 40px;
+  color: #ffffff;
+}
+.container {
+  padding: 0px;
+  padding-top: 15px;
+}
+
+.container-overlay {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 40px auto 250px auto;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+body {
+  overflow-x: hidden;
+}
+
+/* .left-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+} */
+
+.left-section img {
+  width: 1190px;
+  height: 490px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1190px;
+  height: 490px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.text-content {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: white;
+  z-index: 3;
+  font-family: "Krub", serif;
+  font-style: normal;
+  width: 80%;
+}
+
+.brand {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Krub", serif;
+  font-style: normal;
+  color: #000;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #000;
+  font-family: "Krub", serif;
+  font-style: normal;
+}
+
+.location {
+  font-size: 22px;
+  font-family: "Krub", serif;
+  font-weight: 550;
+  color: #444444;
+  font-style: normal;
+}
+
+.order-button {
+  background-color: #87ce34;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 15px;
+  font-weight: 600;
+}
+
+.order-button:hover {
+  background-color: #87ce34;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 430px) {
+  .left-section img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .brand {
+    font-size: 10px;
+    font-family: "Krub", serif;
+    margin-top: -220px;
+  }
+
+  .title {
+    font-size: 16px;
+    font-family: "Krub", serif;
+  }
+
+  .location {
+    font-size: 10px;
+    font-family: "Krub", serif;
+  }
+
+  .order-button {
+    font-size: 10px;
+    padding: 5px 12px;
+    font-family: "Krub", serif;
+  }
+}
+
+.right-section {
+  width: 25%;
+}
+.iconbox {
+  display: flex;
+  justify-content: center;
+}
+
+.right-section ul {
+  list-style: none;
+}
+.iconbox ul li {
+  padding: 1.375rem 1.25rem;
+}
+
+.icon-box i {
+  color: #87ce34;
+  width: 50px !important; /* Ukuran icon */
+  height: 50px !important;
+}
+
+.iconbox .iconbox-detail .entry-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: "Krub", serif;
+  color: #000;
+}
+.entry-description p {
+  color: #868e96;
+  font-size: 12px;
+  font-family: "Krub", serif;
+  font-style: normal;
+  letter-spacing: 0.7px;
+}
+
+.container-filter {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 20px auto 250px auto;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -250px;
+}
+
+.filter-container {
+  background-color: #212121 !important;
+  border-radius: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-top: 4%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.judul-hitam {
+  font-family: "Krub", serif;
+  font-weight: 500;
+  font-size: 35px !important;
+  color: white;
+  font-style: normal;
+}
+.sub-judul-hitam {
+  font-family: "Krub", serif;
+  font-weight: 500;
+  font-size: 20px !important;
+  color: white;
+  font-style: normal;
+}
+.filter-box {
+  padding-top: 0 !important;
+  justify-content: space-between;
+}
+.filter {
+  padding-right: 22px;
+}
+.form-select select {
+  font-family: "Krub", serif;
+  font-style: normal;
+}
+
+@media screen and (max-width: 430px) {
+  .container-filter {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    margin-top: -550px;
+  }
+
+  .filter-container {
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 8%;
+  }
+
+  .judul-hitam {
+    font-size: 24px !important;
+    text-align: center;
+  }
+
+  .sub-judul-hitam {
+    font-size: 16px !important;
+    text-align: center;
+  }
+
+  .filter-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter {
+    padding-right: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .form-select select {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.step-container {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 20px auto 250px auto;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -450px;
+}
+
+.deskripsi-tengah {
+  font-family: "Krub", serif;
+  font-style: normal;
+  color: #1e1e1e;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.judul-tengah {
+  font-family: "Krub", serif;
+  font-style: normal;
+  color: #1e1e1e;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container-center {
+  display: flex;
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal jika diperlukan */
+  gap: 15px;
+}
+
+.card-step {
+  height: 480px;
+  width: 387px;
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #aaaaaa;
+  box-shadow: 0px 5px 12px rgba(158, 158, 158, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Pusatkan elemen dalam card */
+  justify-content: center;
+  text-align: center;
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #212121;
+  color: white;
+  font-size: 45px;
+}
+.icon-circle-like {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Pastikan ini tidak terlalu jauh */
+  transform: translateX(50%); /* Menyesuaikan agar lebih presisi */
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.icon-circle-abu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f1f3f5;
+  color: #000000;
+  font-size: 23px;
+}
+
+.judul-card {
+  font-family: "Krub", serif;
+  font-style: normal;
+  color: #1e1e1e;
+  font-size: 25px;
+  font-weight: 600;
+}
+.deskripsi-card {
+  font-family: "Krub", serif;
+  font-style: normal;
+  color: #1e1e1e;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 430px) {
+  .step-container {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    margin-top: 40px;
+  }
+
+  .judul-tengah {
+    font-size: 20px;
+  }
+
+  .deskripsi-tengah {
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .container-center {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card-step {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-step .layer-card img {
+    width: 80px;
+    height: 70px;
+  }
+
+  .icon-circle,
+  .icon-circle-like {
+    display: none;
+  }
+
+  .judul-card {
+    font-size: 15px;
+    margin-top: -2px;
+  }
+
+  .deskripsi-card {
+    font-size: 14px;
+    margin-top: -5px;
+  }
+}
+
+.container-tokped {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 20px auto 250px auto;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -350px;
+}
+
+.container-tokped img {
+  width: 1190px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 430px) {
+  .container-tokped {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    margin-top: 30px; /* Sesuaikan kalau terlalu naik */
+  }
+
+  .container-tokped img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.layer-card {
+  padding-bottom: 0.7%;
+}
+
+.container-produk-rekomen {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 20px auto 250px auto;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -450px;
+}
+
+.filter-options {
+  display: flex;
+  gap: 20px;
+}
+
+.filter-produk {
+  font-family: "Krub", serif;
+  font-style: normal;
+  color: #1e1e1e;
+  font-size: 20px;
+  font-weight: 600;
+}
+.fiter-produk-option p {
+  font-family: "Krub", serif;
+  font-style: normal;
+  color: #aaaaaa !important;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 50px;
+}
+
+.filter-container-klik {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  margin-top: 40px;
+}
+.filter-options-klik {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.filter-produk-klik {
+  font-weight: bold;
+  color: black;
+  font-family: "Krub", serif;
+}
+.filter-produk-option-klik {
+  color: gray;
+  cursor: pointer;
+}
+.filter-produk-option.active {
+  color: #4caf50; /* Warna hijau untuk opsi yang aktif */
+  font-weight: bold;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 3px;
+}
+.viewall {
+  display: flex;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+}
+.material-icons {
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+hr {
+  border: 1px solid #b3a8a8;
+}
+
+.container-center-batre {
+  display: flex;
+  gap: 15px;
+}
+
+.card-batre {
+  width: 100%;
+  height: 100%;
+  background: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Styling elemen di dalam card */
+.card-batre img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.card-batre h1 {
+  color: black;
+  font-size: 17px;
+  font-family: "Krub", serif;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.card-batre p {
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 10px;
+  font-family: "Krub", serif;
+  margin-left: 15px;
+}
+
+.stock-batre i {
+  color: #95cb53;
+  font-family: "Krub", serif;
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.progress-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #d3d3d3; /* Warna abu-abu */
+}
+.dot.active {
+  background-color: #8bc34a; /* Warna hijau untuk titik aktif */
+}
+
+.container-dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.viewall-container button {
+  border: none;
+  background-color: white;
+}
+
+@media screen and (max-width: 430px) {
+  .container-produk-rekomen {
+    margin-top: -50px;
+  }
+
+  .filter-container-klik {
+    padding: 10px;
+    display: flex;
+  }
+
+  .filter-produk-klik {
+    font-size: 13px;
+    display: flex;
+    font-family: "Krub", serif;
+  }
+
+  .filter-produk-option-klik {
+    font-size: 10px;
+    display: none;
+  }
+
+  .viewall-container {
+    font-size: 10px;
+  }
+
+  .material-symbols-outlined {
+    font-size: 10px;
+  }
+
+  .container-center-batre {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-batre img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+  }
+
+  .card-batre h1 {
+    font-size: 8px;
+  }
+
+  .card-batre p {
+    font-size: 10px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+  }
+
+  .stock-batre i {
+    font-size: 9px;
+    margin-top: -10px;
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+.container-mengapakami {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 20px auto 250px auto;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -280px;
+}
+
+.mengapa-kami-border {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  margin-top: 40px;
+}
+
+.container-kartu-mengapa {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  width: calc(100% - 40px);
+  margin: 20px auto 250px auto;
+  height: 200px;
+  margin-top: -600px;
+}
+
+.card-mengapa {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: 0.3s;
+  height: 150px;
+}
+
+.card-mengapa:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-mengapa img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-left: 20px;
+}
+
+.card-content-mengapa {
+  flex: 1;
+}
+
+.card-title-mengapa {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 4px;
+  margin-left: 20px;
+  font-family: "Krub", serif;
+}
+
+.card-text-mengapa {
+  font-size: 15px;
+  color: #666;
+  margin-left: 20px;
+  font-family: "Krub", serif;
+}
+
+@media (max-width: 430px) {
+  .container-mengapakami {
+    margin-top: -450px;
+  }
+
+  .mengapa-kami-border {
+    padding: 15px;
+  }
+
+  .container-kartu-mengapa {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .card-mengapa img {
+    margin-left: 4px;
+  }
+  .card-title-mengapa {
+    font-size: 15px;
+  }
+
+  .card-text-mengapa {
+    font-size: 12px;
+  }
+}
+
+/* Tombol WhatsApp */
+.whatsapp-container {
+  position: fixed;
+  bottom: 10px;
+  right: 40px;
+  z-index: 1000;
+}
+
+#btn-wa {
+  background-color: #87ce34;
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#btn-wa:hover {
+  background-color: #87ce34;
+}
+
+.whatsapp-icon {
+  font-weight: 900;
+  margin-left: -10px;
+  height: 30px;
+}
+
+@media (max-width: 430px) {
+  .whatsapp-container {
+    bottom: 30px;
+    right: 15px;
+  }
+
+  #btn-wa {
+    padding: 12px 18px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+
+  .whatsapp-icon {
+    height: 20px;
+    margin-left: -5px;
+  }
+}
+
+.container-grid-banyak {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 15px;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 40px auto 250px auto;
+  height: 650px;
+  margin-top: -70px;
+}
+
+/* Sidebar */
+
+.sidebar-grid-banyak img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 824px;
+}
+
+/* Produk */
+.products-grid-banyak {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.product-card-grid-banyak {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 15px;
+  height: 400px;
+  margin-top: 10px;
+}
+
+.product-card-grid-banyak img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card-grid-banyak h1 {
+  color: black;
+  font-size: 17px;
+  font-family: "Krub", serif;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+.product-card-grid-banyak p {
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 10px;
+  font-family: "Krub", serif;
+  margin-left: 5px;
+}
+
+.product-card-grid-banyak .stock-batre i {
+  color: #95cb53;
+  font-family: "Krub", serif;
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: -10px;
+  margin-left: 5px;
+}
+
+.products-grid-banyak .product-card-grid-banyak button {
+  background-color: #87ce34;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: "Krub", serif;
+  font-size: 13px;
+  padding: 10px 50px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 430px) {
+  .container-grid-banyak {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 750px;
+    margin: 20px auto;
+    gap: 10px;
+    margin-top: 470px;
+  }
+
+  /* Sidebar */
+  .sidebar-grid-banyak img {
+    display: none;
+  }
+
+  /* Produk */
+  .products-grid-banyak {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di mode HP */
+    gap: 10px;
+  }
+
+  .product-card-grid-banyak {
+    height: auto;
+    padding: 10px;
+    margin-top: 5px;
+  }
+
+  .product-card-grid-banyak img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .product-card-grid-banyak h1 {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 3px;
+  }
+
+  .product-card-grid-banyak p {
+    font-size: 14px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+  }
+
+  .product-card-grid-banyak .stock-batre i {
+    font-size: 11px;
+    margin-left: 3px;
+    margin-top: -5px;
+  }
+
+  .products-grid-banyak .product-card-grid-banyak button {
+    font-size: 12px;
+    padding: 8px 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
 }

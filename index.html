@@ -15,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -40,444 +43,9 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
     <link rel='stylesheet' id='partdo-klbicon-css' href='https://store.akikita.web.id/wp-content/themes/partdo/assets/css/klbicon.css' type='text/css' media='all' />
-
-    <style>
-      .text-judul {
-        color: #393341;
-        font-family: "Krub", serif;
-        font-weight: 900;
-        font-size: 4.1em;
-        line-height: 0.9;
-        font-style: normal;
-
-      }
-      .text-judul-ijo {
-        font-family: "Krub", serif;
-        font-weight: 900;
-        line-height: 0.9;
-        color: #87ce34;
-        font-size: 0.86em;
-        font-style: italic;
-        text-shadow: -2px 2px 3px #135a1f;
-        font-style: normal;
-
-      }
-
-      .elementor-icon i,
-      .elementor-icon svg {
-        width: 1em;
-        height: 1em;
-        position: relative;
-        display: block;
-      }
-      .icon-atas {
-        color: black !important;
-        font-size: 26px;
-        width: 2.5em !important;
-        margin-left: -50px;
-      }
-      .sub-judul {
-        color: #3a3a3c;
-        font-family: "Krub", serif;
-        font-weight: 500;
-        font-size: 32px;
-      }
-      .kontak-sekarang {
-        font-size: 23px !important;
-      }
-      .btn-whatsapp {
-        background-color: #87ce34 !important;
-      }
-      .container-filter {
-        background-image: linear-gradient(180deg, #000 0%, #1c1229 100%) !important;
-      }
-      .button-search {
-        background-color: #87ce34 !important;
-        font-size: 12px !important;
-        font-family: "Krub", serif;
-        font-weight: 600;
-        background-color: var(--e-global-color-primary);
-        /* padding: 0.8em 0.4em; */
-        width: 180px !important;
-        height: 40px;
-        color: #ffffff;
-      }
-      .container {
-        padding: 0px;
-        padding-top: 15px;
-      }
-
-      .left-section {
-        background-color: #ffffff;
-        border-radius: 18px;
-        margin: 10px;
-      }
-
-      .left-section {
-        text-align: left;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        position: relative;
-        box-sizing: border-box;
-      }
-
-      #banner-img {
-        width: 100%;
-        display: block;
-        border-radius: 12px;
-      }
-
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.2); /* Overlay hitam 20% */
-        border-radius: 12px;
-        z-index: 2;
-      }
-
-      .text-content {
-        position: absolute;
-        top: 50%;
-        left: 46%;
-        transform: translate(-50%, -50%);
-        text-align: left;
-        color: white;
-        z-index: 3;
-        font-family: "Krub", serif;
-        font-style: normal;
-        width: 80%;
-      }
-
-      .brand {
-        font-size: 25px;
-        font-weight: 500;
-        font-family: "Krub", serif;
-        font-style: normal;
-        color:#000;
-
-      }
-
-      .title {
-        font-size: 48px;
-        font-weight: bold;
-        margin: 5px 0;
-        color:#000;
-        font-family: "Krub", serif;
-        font-style: normal;
-
-      }
-
-      .location {
-        font-size: 22px;
-        font-family: "Krub", serif;
-        font-weight: 550;
-        color:#444444;
-        font-style: normal;
-
-
-
-      }
-
-      .order-button {
-        background-color: #87ce34;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-        border-radius: 15px;
-        font-weight: 600;
-
-
-      }
-
-      .order-button:hover {
-        background-color: #87ce34;
-        border-radius: 20px;
-      }
-
-      .right-section {
-        width: 25%;
-
-      }
-      .iconbox{
-        display: flex;
-        justify-content: center;
-      }
-
-      .right-section ul {
-        list-style: none;
-      }
-      .iconbox ul li {
-        padding: 1.375rem 1.25rem;}
-
-        .icon-box i{
-          color: #87ce34;
-          width: 50px !important; /* Ukuran icon */
-          height: 50px !important;
-
-        }
-
-        .iconbox .iconbox-detail .entry-title {
-            font-size: 0.875rem;
-            font-weight: 600;
-            font-family: "Krub", serif;
-            color: #000;
-          }
-          .entry-description p{
-            color: #868E96;
-            font-size: 12px;
-            font-family: "Krub", serif;
-            font-style: normal;
-            letter-spacing: 0.7px;
-          }
-          .filter-container{
-            background-color: #212121 !important;
-            border-radius : 20px;
-            padding-right: 50px;
-            padding-left: 50px;
-            padding-top: 20px;
-            padding-bottom: 30px;
-            margin-top: 4%;
-
-
-          }
-          .judul-hitam{
-            font-family: "Krub", serif;
-            font-weight: 500;
-            font-size: 35px !important;
-            color: white;
-            font-style: normal;
-
-          }
-          .sub-judul-hitam{
-            font-family: "Krub", serif;
-            font-weight: 500;
-            font-size: 20px !important;
-            color: white;
-            font-style: normal;
-
-          }
-          .filter-box{
-            padding-top: 0 !important;
-            justify-content: space-between;
-          }
-          .filter{
-            padding-right: 22px;
-          }
-          .form-select select{
-            font-family: "Krub", serif;
-            font-style: normal;
-          }
-          .deskripsi-tengah{
-            font-family: "Krub", serif;
-            font-style: normal;
-            color: #1E1E1E;
-            font-size: 25px ;
-            font-weight: 500;
-          }
-          .judul-tengah{
-            font-family: "Krub", serif;
-            font-style: normal;
-            color: #1E1E1E;
-            font-size: 40px;
-            font-weight: 600;
-          }
-
-          .container-center {
-            display: flex;
-            justify-content: center; /* Pusatkan secara horizontal */
-            align-items: center; /* Pusatkan secara vertikal jika diperlukan */
-          }
-
-
-          .card-step{
-            height: 480px;
-            width: 387px;
-            position: relative;
-            background-color: #FFFFFF;
-            border: 1px solid #AAAAAA;  
-            box-shadow: 0px 5px 12px rgba(158, 158, 158, 0.10);
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Pusatkan elemen dalam card */
-            justify-content: center;
-            text-align: center;
-          }
-
-          .icon-circle {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: #212121;
-            color: white;
-            font-size: 45px;
-          }
-          .icon-circle-like {
-            position: absolute;
-            top: 10px;
-            right: 10px; /* Pastikan ini tidak terlalu jauh */
-            transform: translateX(50%); /* Menyesuaikan agar lebih presisi */
-            background: white;
-            border-radius: 50%;
-            padding: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 999;
-}
-
-            .icon-circle-abu {
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-              width: 30px;
-              height: 30px;
-              border-radius: 50%;
-              background-color: #F1F3F5;
-              color: #000000;
-              font-size: 23px;
-            }
-
-
-          .judul-card{
-            font-family: "Krub", serif;
-            font-style: normal;
-            color: #1E1E1E;
-            font-size: 25px ;
-            font-weight: 600;
-
-          }
-          .deskripsi-card{
-            font-family: "Krub", serif;
-            font-style: normal;
-            color: #1E1E1E;
-            font-size: 19px ;
-            font-weight: 600;
-          }
-          .layer-card{
-            padding-bottom: 0.7%;
-          }
-          .filter-produk{
-            font-family: "Krub", serif;
-            font-style: normal;
-            color: #1E1E1E;
-            font-size: 20px ;
-            font-weight: 600;
-            margin: 0 !important;
-
-          }
-          .fiter-produk-option{
-            font-family: "Krub", serif;
-            font-style: normal;
-            color: #AAAAAA !important;
-            font-size: 15px ;
-            font-weight: 500;
-            margin: 0;
-
-          }
-          .fiter-produk-option p{
-            margin: 0;
-          }
-          .viewall{
-            font-family: "Krub", serif;
-            font-style: normal;
-            color: #000000 !important;
-            font-size: 15px ;
-            font-weight: 600;
-            margin: 0;
-            align-items: center;
-          }
-          hr{
-            border: 1px solid #B3A8A8;
-            opacity: 1;
-          }
-          .product-item {
-              position: relative;
-              text-align: left;
-            }  
-            .product-item div {
-              position: relative;
-              display: inline-block; 
-            }        
-            .product-item img {
-              display: block;
-              margin: 0 auto;
-              position: relative;
-              z-index: 1;
-              border-radius: 10px;
-            }
-            .icon-circle-like {
-              position: absolute;
-              top: 10px;
-              right: 29px;
-              background: white;
-              border-radius: 50%;
-              padding: 5px;
-              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-              z-index: 999;
-            }
-          .status {
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            gap: 5px;
-            text-align: center;
-            padding-top: 10px;
-
-            
-          }
-          .status .material-symbols-outlined {
-              font-size: 20px; /* Sesuaikan ukuran ikon */
-              align-items: center;
-              color: #95CB53;
-          }
-          .instock{
-            font-family: "Krub", serif;
-            font-style: normal;
-            color: #95CB53 !important;
-            font-size: 13px ;
-            font-weight: 700;
-          }
-       .item_name{
-            font-family: "Krub", serif;
-            font-style: normal;
-            color: #000000 !important;
-            font-size: 15px ;
-            font-weight: 500;
-            padding-top: 10px;
-          }
-         .price{
-            font-family: "Krub", serif;
-            font-style: normal;
-            color: #000000 !important;
-            font-size: 21px ;
-            font-weight: 400;
-            padding-top: 5px;
-
-         }
-    </style>
   </head>
 
   <body>
-  <div class="container-xxl bg-white p-0">
-      <!-- Spinner Start -->
-      <div
-        id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-      >
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
-      </div>
-      <!-- Spinner End -->
 
      <!-- Navbar Start -->
   <div class="header-border"></div>
@@ -511,11 +79,12 @@
    </div>
  </nav>
  </div>
+ 
  <!-- Navbar End -->
 
 
     <!-- Header Start -->
-<div class="container-md">
+<div class="container-overlay">
   <div class="left-section">
     <img id="banner-img" src="img/banner_baru.png" alt="Banner" />
     <div class="overlay"></div>
@@ -533,58 +102,60 @@
 
 <!-- Search Start -->
 
-<div
- class="container-md filter-container bg-primary wow fadeIn"
- data-wow-delay="0.1s"
- 
->
-<h6 class="judul-hitam" >Temukan Akimu</h6>
-<p class="sub-judul-hitam" >Pilih Kendaraanmu</p>
-<div class="filter-box container">
- <div class="row g-12 ">
-   <!-- Brand Select -->
-   <div class="filter col-md-2">
-     <select id="brandSelect" class="form-select border-0 py-3">
-       <option selected>Pilih Brand</option>
-     </select>
-   </div>
+<div class="container-filter">
+  <div class="filter-container">
+    <h6 class="judul-hitam">Temukan Akimu</h6>
+    <p class="sub-judul-hitam">Pilih Kendaraanmu</p>
+    <div class="filter-box container">
+      <div class="row g-3">
+        <!-- Brand Select -->
+        <div class="col-md-2">
+          <select id="brandSelect" class="form-select border-0 py-3">
+            <option selected>Pilih Brand</option>
+          </select>
+        </div>
 
-   <!-- Model Select -->
-   <div class="filter col-md-2">
-     <select id="modelSelect" class="form-select border-0 py-3" disabled>
-       <option selected>Pilih Model</option>
-     </select>
-   </div>
+        <!-- Model Select -->
+        <div class="col-md-2">
+          <select id="modelSelect" class="form-select border-0 py-3" disabled>
+            <option selected>Pilih Model</option>
+          </select>
+        </div>
 
-   <!-- Fuel Select -->
-   <div class="filter col-md-2">
-     <select id="fuelSelect" class="form-select border-0 py-3" disabled>
-       <option selected>Pilih Fuel</option>
-     </select>
-   </div>
+        <!-- Fuel Select -->
+        <div class="col-md-2">
+          <select id="fuelSelect" class="form-select border-0 py-3" disabled>
+            <option selected>Pilih Fuel</option>
+          </select>
+        </div>
 
-   <!-- Transmission Select -->
-   <div class="filter col-md-2">
-     <select id="transmissionSelect" class="form-select border-0 py-3" disabled>
-       <option selected>Pilih Type Transmission</option>
-     </select>
-   </div>
+        <!-- Transmission Select -->
+        <div class="col-md-2">
+          <select id="transmissionSelect" class="form-select border-0 py-3" disabled>
+            <option selected>Pilih Type Transmission</option>
+          </select>
+        </div>
 
-   <!-- Year Select -->
-   <div class="filter col-md-2">
-     <select id="yearSelect" class="form-select border-0 py-3" disabled>
-       <option selected>Pilih Tahun</option>
-     </select>
-   </div>
+        <!-- Year Select -->
+        <div class="col-md-2">
+          <select id="yearSelect" class="form-select border-0 py-3" disabled>
+            <option selected>Pilih Tahun</option>
+          </select>
+        </div>
 
-   <!-- Search Button -->
-   <div class="col-md-2">
-     <button class="btn w-100 py-2 text-white" style="background-color: #87ce34; border: none; color: black !important;" id="searchButton">Cari</button>
-   </div>
- </div>
+        <!-- Search Button -->
+        <div class="col-md-2">
+          <button class="btn w-100 py-2 text-white" 
+                  style="background-color: #87ce34; border: none; color: black !important;" 
+                  id="searchButton">
+            Cari
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-</div>
 <!-- Search End -->
 
 
@@ -748,82 +319,71 @@
       </script>
 
     <!-- Category Start -->
-<div class="container-md py-5">
-  <div class="container">
-    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
-      <h2 class="judul-tengah mb-3">Pasang Akimu Dengan Akikita</h2>
-      <p style="margin-top: -5px;" class="deskripsi-tengah">Proses Pemesanan di Akikita.id</p>
-    </div>
-      <div class="row">
-        <div class="container-center col-sm-4">
-          <div class="col-sm-4 card-step">
-            <div class="row layer-card">
-              <img src="img/step1.png" alt="">
-            </div>
-            <div class="row layer-card">
-              <span class="icon-circle material-symbols-outlined">
-                devices
-              </span>
-            </div>
-            <div class="row layer-card" style="padding-top:10px;">
-              <h3 class="judul-card">Step 1</h3>
-            </div>
-            <div class="row layer-card">
-              <p class="deskripsi-card">Pilih Aki Kendaraanmu</p>
-            </div>
+    <div class="step-container">
+      <h2 class="judul-tengah">Pasang Akimu Dengan Akikita</h2>
+      <p class="deskripsi-tengah">Proses Pemesanan di Akikita.id</p>
+    
+      <div class="container-center">
+        <!-- Step 1 -->
+        <div class="card-step">
+          <div class="layer-card">
+            <img src="img/step1.png" alt="">
+          </div>
+          <div class="layer-card">
+            <span class="icon-circle material-symbols-outlined">devices</span>
+          </div>
+          <div class="layer-card" style="padding-top:10px;">
+            <h3 class="judul-card">Step 1</h3>
+          </div>
+          <div class="layer-card">
+            <p class="deskripsi-card">Pilih Aki Kendaraanmu</p>
           </div>
         </div>
- 
-        <div class="container-center col-sm-4">
-          <div class="col-sm-4 card-step">
-            <div class="row layer-card">
-              <img src="img/step2.png" alt="">
-            </div>
-            <div class="row layer-card">
-              <span class="icon-circle">
-                <img src="img/whatsapp.png" alt="">                    
-              </span>
-            </div>
-            <div class="row layer-card" style="padding-top:10px;">
-              <h3 class="judul-card">Step 2</h3>
-            </div>
-            <div class="row layer-card">
-              <p class="deskripsi-card">Tentukan Waktu & <br> 
-                Lokasi Pemasangan</p>
-            </div>
+    
+        <!-- Step 2 -->
+        <div class="card-step">
+          <div class="layer-card">
+            <img src="img/step2.png" alt="">
+          </div>
+          <div class="layer-card">
+            <span class="icon-circle">
+              <img src="img/whatsapp.png" alt="">
+            </span>
+          </div>
+          <div class="layer-card" style="padding-top:10px;">
+            <h3 class="judul-card">Step 2</h3>
+          </div>
+          <div class="layer-card">
+            <p class="deskripsi-card">Tentukan Waktu & <br> Lokasi Pemasangan</p>
           </div>
         </div>
- 
-        <div class="container-center col-sm-4">
-          <div class="col-sm-4 card-step">
-            <div class="row layer-card">
-              <img src="img/step3.png" alt="">
-            </div>
-            <div class="row layer-card">
-              <span class="icon-circle">
-                <img src="img/teknisi.png" alt="">                    
-              </span>
-            </div>
-            <div class="row layer-card" style="padding-top:10px;">
-              <h3 class="judul-card">Step 3</h3>
-            </div>
-            <div class="row layer-card">
-              <p class="deskripsi-card">Teknisi Akikita Datang <br>
-                Pasang Aki</p>
-            </div>
+    
+        <!-- Step 3 -->
+        <div class="card-step">
+          <div class="layer-card">
+            <img src="img/step3.png" alt="">
+          </div>
+          <div class="layer-card">
+            <span class="icon-circle">
+              <img src="img/teknisi.png" alt="">
+            </span>
+          </div>
+          <div class="layer-card" style="padding-top:10px;">
+            <h3 class="judul-card">Step 3</h3>
+          </div>
+          <div class="layer-card">
+            <p class="deskripsi-card">Teknisi Akikita Datang <br> Pasang Aki</p>
           </div>
         </div>
-        
-        
       </div>
     </div>
- </div>
+    
  <!-- Category End -->
  
 
 
-                <!-- Tokped gerak  -->
-     <div class="d-flex justify-content-center align-items-center" style="">
+  <!-- Tokped gerak  -->
+     <div class="container-tokped">
       <a href="https://www.tokopedia.com/akikitaid">
         <img src="img/banner_tokopedia.png" alt="Tokopedia">
       </a>
@@ -835,124 +395,91 @@
 
    
 <!-- Property List Start -->
-<div class="container-md dashboard-rekomen pt-5">
-  <!-- Filter & View All -->
-  <div class="row align-items-center justify-content-between">
-    <div class="col-sm-6 d-flex gap-3 align-items-center">
-      <p class="filter-produk">Filter Produk</p>
-      <p class="filter-produk-option">All</p>
-      <p class="filter-produk-option">Amaron Pro Rider</p>
-      <p class="filter-produk-option">Amaron Quanta</p>
+<div class="container-produk-rekomen">
+  
+    <!-- Filter & View All -->
+    <div class="filter-container-klik">
+      <div class="filter-options-klik">
+        <p class="filter-produk-klik">Filter Produk</p>
+        <p class="filter-produk-option-klik">All</p>
+        <p class="filter-produk-option-klik">Amaron Pro Rider</p>
+        <p class="filter-produk-option-klik">Amaron Quanta</p>
+      </div>
+      <div class="viewall-container">
+        <button class="viewall">
+          View All <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
     </div>
-    <div class="col-sm-6 d-flex justify-content-end align-items-center gap-2">
-      <p class="viewall d-flex align-items-center">
-        View All <span class="material-symbols-outlined">arrow_forward</span>
-      </p>
+  
+
+    <!-- Product List -->
+    <div class="container-center-batre">
+      <div class="card-batre">
+        <img src="img/QUANTA 200.png" alt="Amaron Quanta 200" />
+        <h1>Amaron Quanta 200</h1>
+        <p>Rp. 650.000</p>
+        <div class="stock-batre">
+          <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+        </div>
+      </div>
+
+      <div class="card-batre">
+        <img src="img/QUANTA 200.png" alt="Amaron Quanta 200" />
+        <h1>Amaron Quanta 200</h1>
+        <p>Rp. 650.000</p>
+        <div class="stock-batre">
+          <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+        </div>
+      </div>
+
+      <div class="card-batre">
+        <img src="img/QUANTA 200.png" alt="Amaron Quanta 200" />
+        <h1>Amaron Quanta 200</h1>
+        <p>Rp. 650.000</p>
+        <div class="stock-batre">
+          <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+        </div>
+      </div>
+
+      <div class="card-batre">
+        <img src="img/QUANTA 200.png" alt="Amaron Quanta 200" />
+        <h1>Amaron Quanta 200</h1>
+        <p>Rp. 650.000</p>
+        <div class="stock-batre">
+          <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+        </div>
+      </div>
+
+      <div class="card-batre">
+        <img src="img/QUANTA 200.png" alt="Amaron Quanta 200" />
+        <h1>Amaron Quanta 200</h1>
+        <p>Rp. 650.000</p>
+        <div class="stock-batre">
+          <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+        </div>
+      </div>
     </div>
+    <hr>
+
+<div class="container-dot">
+
+    <div class="progress-indicator">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
   </div>
-  <hr>
 
-  <!-- Product List -->
-  <div class="container">
-    <div class="row g-3 justify-content-center">
-      <!-- Product Item -->
-      <div class="col-lg-2 col-md-4 col-sm-6 product-item">
-        <div class="card">
-          <div class="position-relative">
-            <img alt="Amaron Quanta 200 battery" class="img-fluid" src="img/produk1.jpg" />
-            <span class="icon-circle-like material-symbols-outlined">favorite</span>
-          </div>
-          <h3 class="item_name">Amaron Quanta 200</h3>
-          <div class="price">
-            Rp6.500.000 <span class="icon-circle-abu material-symbols-outlined">shopping_cart</span>
-          </div>
-          <div class="status d-flex align-items-left gap-2">
-            <span class="material-symbols-outlined">package_2</span>
-            <span class="instock">In Stock</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-2 col-md-4 col-sm-6 product-item">
-        <div class="card">
-          <div class="position-relative">
-            <img alt="Amaron Quanta 200 battery" class="img-fluid" src="img/produk1.jpg" />
-            <span class="icon-circle-like material-symbols-outlined">favorite</span>
-          </div>
-          <h3 class="item_name">Amaron Quanta 200</h3>
-          <div class="price">
-            Rp6.500.000 <span class="icon-circle-abu material-symbols-outlined">shopping_cart</span>
-          </div>
-          <div class="status d-flex align-items-center gap-2">
-            <span class="material-symbols-outlined">package_2</span>
-            <span class="instock">In Stock</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-2 col-md-4 col-sm-6 product-item">
-        <div class="card">
-          <div class="position-relative">
-            <img alt="Amaron Quanta 200 battery" class="img-fluid" src="img/produk1.jpg" />
-            <span class="icon-circle-like material-symbols-outlined">favorite</span>
-          </div>
-          <h3 class="item_name">Amaron Quanta 200</h3>
-          <div class="price">
-            Rp6.500.000 <span class="icon-circle-abu material-symbols-outlined">shopping_cart</span>
-          </div>
-          <div class="status d-flex align-items-center gap-2">
-            <span class="material-symbols-outlined">package_2</span>
-            <span class="instock">In Stock</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-2 col-md-4 col-sm-6 product-item">
-        <div class="card">
-          <div class="position-relative">
-            <img alt="Amaron Quanta 200 battery" class="img-fluid" src="img/produk1.jpg" />
-            <span class="icon-circle-like material-symbols-outlined">favorite</span>
-          </div>
-          <h3 class="item_name">Amaron Quanta 200</h3>
-          <div class="price">
-            Rp6.500.000 <span class="icon-circle-abu material-symbols-outlined">shopping_cart</span>
-          </div>
-          <div class="status d-flex align-items-center gap-2">
-            <span class="material-symbols-outlined">package_2</span>
-            <span class="instock">In Stock</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-2 col-md-4 col-sm-6 product-item">
-        <div class="card">
-          <div class="position-relative">
-            <img alt="Amaron Quanta 200 battery" class="img-fluid" src="img/produk1.jpg" />
-            <span class="icon-circle-like material-symbols-outlined">favorite</span>
-          </div>
-          <h3 class="item_name">Amaron Quanta 200</h3>
-          <div class="price">
-            Rp6.500.000 <span class="icon-circle-abu material-symbols-outlined">shopping_cart</span>
-          </div>
-          <div class="status d-flex align-items-center gap-2">
-            <span class="material-symbols-outlined">package_2</span>
-            <span class="instock">In Stock</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pagination -->
-    <div class="pagination d-flex justify-content-center mt-3">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
   </div>
-  <hr>
+  
+
+  </div>
 </div>
+
 <!-- Property List End -->
 
 
@@ -1008,136 +535,219 @@
 
 
       <!-- Team Start -->
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div
-            class="text-center mx-auto mb-5 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="max-width: 600px"
-          >
-            <h1 style="color: #3a3a3c;">Mengapa Akikita.id?</h1>
-           
-          </div>
 
-          <div class="tahapcontainer1">
-          <div class="alasanaki">
-            <img src="img/tahap 1.png" alt="">
-           <div class="text-block">
-            <h1>
-              Teknisi Terlatih
-             </h1>
-             <p>
-              Tim mekanik kami telah melalui pelatihan teknisi dan siap melayani Anda.
-             </p>  
-           </div>  
-          </div> 
-          <div class="alasanaki">
-            <img src="img/tahap 2.png" alt="">
-           <div class="text-block">
-            <h1>
-              Produk Original
-            </h1>
-             <p>
-              Produk kami sesuai dengan spesifikasi dan standar kualitas internasional.
-            </p>  
-           </div>  
-          </div>  
-          </div>
-
-          <div class="tahapcontainer1">
-            <div class="alasanaki">
-              <img src="img/tahap 3.png" alt="">
-             <div class="text-block">
-              <h1>
-                Garansi Resmi
-               </h1>
-               <p>
-                Semua produk kami dilengkapi jaminan resmi dari produsen. <br><a href="/syaratKetentuan.html">Klik untuk baca Syarat & Ketentuan Garansi Produk</a>
-               </p>  
-             </div>  
-            </div> 
-            <div class="alasanaki">
-              <img src="img/tahap 4.png" alt="">
-             <div class="text-block">
-              <h1>
-                Gratis Antar Pasang
-              </h1>
-               <p>
-                Khusus untuk wilayah Kota & Kab Bandung, akikita.id memberi layanan antar pasang aki GRATIS
-
-              </p>  
-             </div>  
-            </div>  
-            </div>
-  
-
-
-            
-             
-          </div>
+      <div class="container-mengapakami">
+        <div class="mengapa-kami-border">
+          <p class="filter-produk-klik">Mengapa Akikita.id ?</p>
         </div>
       </div>
-      <!-- Team End -->
 
+      <div class="container-kartu-mengapa">
+        <div class="card-mengapa">
+            <img src="img/Teknisi Terlatih.jpg" alt="Teknisi Terlatih">
+            <div class="card-content-mengapa">
+                <p class="card-title-mengapa">Teknisi Terlatih</p>
+                <p class="card-text-mengapa">Tim mekanik kami telah melalui pelatihan teknisi dan siap melayani Anda.</p>
+            </div>
+        </div>
+    
+        <div class="card-mengapa">
+            <img src="img/Stock Ready.jpg" alt="Produk Original">
+            <div class="card-content-mengapa">
+                <p class="card-title-mengapa">Produk Original</p>
+                <p class="card-text-mengapa">Produk kami sesuai dengan spesifikasi dan standar kualitas internasional.</p>
+            </div>
+        </div>
+    
+        <div class="card-mengapa">
+            <img src="img/tahap 3.png" alt="Garansi Resmi">
+            <div class="card-content-mengapa">
+                <p class="card-title-mengapa">Garansi Resmi</p>
+                <p class="card-text-mengapa">Semua produk kami dilengkapi jaminan resmi dari produsen.</p>
+            </div>
+        </div>
+    
+        <div class="card-mengapa">
+            <img src="img/Antar Pasang.jpg" alt="Gratis Antar Pasang">
+            <div class="card-content-mengapa">
+                <p class="card-title-mengapa">Gratis Antar Pasang</p>
+                <p class="card-text-mengapa">Khusus untuk wilayah Kota & Kab Bandung, akikita.id memberi layanan antar pasang aki GRATIS.</p>
+            </div>
+        </div>
+    </div> 
+      <!-- Team End -->
       
+      <!-- grid banyak  start -->
+
+      <div class="container-grid-banyak">
+        <!-- Sidebar -->
+        <div class="sidebar-grid-banyak">
+            <img src="img/AKIKITA.ID (1).png" alt="Aki Amaron">
+        </div>
+    
+        <!-- Produk -->
+        <div class="products-grid-banyak">
+            <div class="product-card-grid-banyak">
+                <img src="img/QUANTA 200.png" alt="Amaron Quanta 200">
+                <h1>Amaron Quanta 200</h1>
+                <p>Rp. 650.000</p>
+                <div class="stock-batre">
+                    <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+                </div>
+                <button>Lihat Detail</button>
+            </div>
+    
+            <div class="product-card-grid-banyak">
+                <img src="img/QUANTA 200.png" alt="Amaron Quanta 200">
+                <h1>Amaron Quanta 200</h1>
+                <p>Rp. 650.000</p>
+                <div class="stock-batre">
+                    <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+                </div>
+                <button>Lihat Detail</button>
+            </div>
+    
+            <div class="product-card-grid-banyak">
+                <img src="img/QUANTA 200.png" alt="Amaron Quanta 200">
+                <h1>Amaron Quanta 200</h1>
+                <p>Rp. 650.000</p>
+                <div class="stock-batre">
+                    <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+                </div>
+                <button>Lihat Detail</button>
+            </div>
+    
+            <div class="product-card-grid-banyak">
+                <img src="img/QUANTA 200.png" alt="Amaron Quanta 200">
+                <h1>Amaron Quanta 200</h1>
+                <p>Rp. 650.000</p>
+                <div class="stock-batre">
+                    <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+                </div>
+                <button>Lihat Detail</button>
+            </div>
+    
+            <!-- Baris kedua -->
+            <div class="product-card-grid-banyak">
+                <img src="img/QUANTA 200.png" alt="Amaron Quanta 200">
+                <h1>Amaron Quanta 200</h1>
+                <p>Rp. 650.000</p>
+                <div class="stock-batre">
+                    <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+                </div>
+                <button>Lihat Detail</button>
+            </div>
+    
+            <div class="product-card-grid-banyak">
+                <img src="img/QUANTA 200.png" alt="Amaron Quanta 200">
+                <h1>Amaron Quanta 200</h1>
+                <p>Rp. 650.000</p>
+                <div class="stock-batre">
+                    <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+                </div>
+                <button>Lihat Detail</button>
+            </div>
+    
+            <div class="product-card-grid-banyak">
+                <img src="img/QUANTA 200.png" alt="Amaron Quanta 200">
+                <h1>Amaron Quanta 200</h1>
+                <p>Rp. 650.000</p>
+                <div class="stock-batre">
+                    <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+                </div>
+                <button>Lihat Detail</button>
+            </div>
+    
+            <div class="product-card-grid-banyak">
+                <img src="img/QUANTA 200.png" alt="Amaron Quanta 200">
+                <h1>Amaron Quanta 200</h1>
+                <p>Rp. 650.000</p>
+                <div class="stock-batre">
+                    <i class="klbth-icon-ecommerce-package-ready"> In Stock</i>
+                </div>
+                <button>Lihat Detail</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+      <!-- grid banyak end  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- footrt mulai -->
+
 
       <div class="footer">
         <div class="container">
+            <!-- Kolom 1 -->
             <div class="column">
-                <img src="img/logo-kecil.png" alt="Akikita.id logo">
+                <img src="img/logo-aki.png" alt="Akikita.id logo">
                 <p><strong>Akikita.id</strong> adalah layanan antar pasang aki untuk kendaraan di wilayah Bandung. Teknisi terlatih kami siap melayani Anda.</p>
+            </div>
+    
+            <!-- Kolom 2 -->
+            <div class="column">
                 <h3>Kantor Utama</h3>
                 <p class="contact-info"><i class="fas fa-map-marker-alt"></i> Jalan Raya Daan Mogot KM. 18, Green Sedayu Bizpark DM5 Nomor 58, Provinsi DKI Jakarta</p>
                 <p class="contact-info"><i class="fas fa-phone"></i> +62-8222-8800-175</p>
                 <p class="contact-info"><i class="fas fa-envelope"></i> akikita.id@gmail.com</p>
-              </div>
-            <div style="margin-left: 100px;" class="column">
+            </div>
+    
+            <!-- Kolom 3 -->
+            <div class="column">
                 <h3>Navigasi</h3>
                 <p><a href="#">Halaman Utama</a></p>
                 <p><a href="#">Syarat &amp; Ketentuan Garansi</a></p>
+    
                 <h3>Produk</h3>
                 <p><a href="#">Aki Mobil</a></p>
                 <p><a href="#">Aki UPS</a></p>
             </div>
+    
+            <!-- Kolom 4 -->
             <div class="column">
                 <h3>Ikuti Kami</h3>
                 <p><a href="#">Facebook</a></p>
                 <p><a href="#">Instagram</a></p>
                 <p><a href="#">TikTok</a></p>
+    
                 <h3>Toko E-Commerce Lain</h3>
                 <p><a href="#">Tokopedia</a></p>
             </div>
         </div>
-      </div>
-      <div class="copyright">
+    </div>
+    
+    <div class="copyright">
         © 2024 Akikita.id
     </div>
 
+<!-- Tombol Back to Top -->
+    
 
-
-      <!-- Back to Top -->
-      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-        ><i class="bi bi-arrow-up"></i
-      ></a>
-    </div>
-
-    <div style="
-      position: fixed;
-      bottom: 35px;
-      right: 110px;
-    ">
-      <button type="button" id="btn-wa" class="btn btn-primary rounded p-3 fs-5">
-        <i class="fab fa-whatsapp ml-5"></i> (+62) 82228800175
+    <!-- Tombol WhatsApp -->
+    <div class="whatsapp-container">
+      <button id="btn-wa">
+        <i class="fa-brands fa-whatsapp">  </i> (+62) 82228800175
       </button>
     </div>
 
-    <script>
-      $(function() {
-        $("#btn-wa").on("click", function() {
-          window.open("https://api.whatsapp.com/send?phone=6282228800175");
-        });
-      })
-    </script>
+      
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
